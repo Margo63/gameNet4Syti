@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/Interface/infoFrame.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/game/Button.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/game/lvl.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/game1/Car.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/game1/Container.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/game1/Instance.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/game1/Panel.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/game1/Trash.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/game2/Bird.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/game3/Doctor.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/game3/Hospitale_Room.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/game3/House.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/MainBut.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/MainFrame.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/MainTimer.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/variables.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/player/Interaction.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/player/Player.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/quest/Lvl3_Frame.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/quest/Quest.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/selection/selectionGame.java" charset="windows-1251" />
+  </component>
+</project>

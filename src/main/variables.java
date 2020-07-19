@@ -1,0 +1,180 @@
+package main;
+import java.awt.Dimension;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+import all.collision;
+
+
+public class variables {
+	public static Image fon = new ImageIcon("image/fon_menu.jpg").getImage();//фон, который рисуем
+	public static Image fonMenu = new ImageIcon("image/fon_menu.jpg").getImage(); //фон меню
+	public static Image fon1 = new ImageIcon("image/background.png").getImage(); //фон уровня
+	public static Image heart = new ImageIcon("image/life_2.png").getImage();
+	public static Image m = new ImageIcon("image/icon1.png").getImage();
+	public static Image black = new ImageIcon("image/kolba.png").getImage();
+	public static Image girl = new ImageIcon("image/girl.png").getImage();
+
+	
+	public static Boolean checkLvl=true;
+	
+	//point
+	public static Image num0= new ImageIcon("image/point/num0.png").getImage();
+	public static Image num1= new ImageIcon("image/point/num1.png").getImage();
+	public static Image num2= new ImageIcon("image/point/num2.png").getImage();
+	public static Image num3= new ImageIcon("image/point/num3.png").getImage();
+	public static Image num4= new ImageIcon("image/point/num4.png").getImage();
+	public static Image num5= new ImageIcon("image/point/num5.png").getImage();
+	public static Image num6= new ImageIcon("image/point/num6.png").getImage();
+	public static Image num7= new ImageIcon("image/point/num7.png").getImage();
+	public static Image num8= new ImageIcon("image/point/num8.png").getImage();
+	public static Image num9= new ImageIcon("image/point/num9.png").getImage();
+	public static Image num =new ImageIcon("image/point/num0.png").getImage();
+	public static Image plus = new ImageIcon("image/1/plus.png").getImage();
+	
+	
+	//lvl1
+	public static Image street = new ImageIcon("image/roadW.png").getImage();
+
+	public static Image gray_street = new ImageIcon("image/gray street.png").getImage();
+	public static Image red = new ImageIcon("image/red.png").getImage();
+	public static Image green = new ImageIcon("image/green.png").getImage();
+	public static Image blue = new ImageIcon("image/blue.png").getImage();
+	public static Image gray = new ImageIcon("image/gray.png").getImage();
+	public static Image orange = new ImageIcon("image/orange.png").getImage();
+	
+	//мусор
+	public static Image mm= new ImageIcon("image/1/musor.png").getImage();
+/*	public static Image m_2= new ImageIcon("image/1/bum.png").getImage();
+	public static Image plastic= new ImageIcon("image/1/plastic.png").getImage();
+	public static Image met= new ImageIcon("image/1/metal.png").getImage();
+	public static Image glass= new ImageIcon("image/1/m4.png").getImage();
+	public static Image org= new ImageIcon("image/1/organic1.jpg").getImage();*/
+
+	public static Image m_2= new ImageIcon("image/1/trash/paper.png").getImage();
+	public static Image plastic= new ImageIcon("image/1/trash/plastic.png").getImage();
+	public static Image met= new ImageIcon("image/1/trash/bank.png").getImage();
+	public static Image glass= new ImageIcon("image/1/trash/glass.png").getImage();
+	public static Image org= new ImageIcon("image/1/trash/banana.png").getImage();
+	public static Image apple= new ImageIcon("image/1/trash/apple.png").getImage();
+	public static Image cap= new ImageIcon("image/1/trash/cap.png").getImage();
+	public static Image cardboard= new ImageIcon("image/1/trash/cardboard.png").getImage();
+	public static Image cd= new ImageIcon("image/1/trash/cd.png").getImage();
+	public static Image chips= new ImageIcon("image/1/trash/chips.png").getImage();
+	public static Image container= new ImageIcon("image/1/trash/container.png").getImage();
+	public static Image plastic_bag= new ImageIcon("image/1/trash/plastic_bag.png").getImage();
+
+	//контейнер
+	public static Image cont= new ImageIcon("image/1/buk.jpg").getImage();
+	public static Image cont_pap= new ImageIcon("image/1/cont_pap.png").getImage();
+	public static Image cont_pl= new ImageIcon("image/1/cont_pl.png").getImage();
+	public static Image cont_gl= new ImageIcon("image/1/cont_gl.png").getImage();
+	public static Image cont_met= new ImageIcon("image/1/cont_m.png").getImage();
+	public static Image cont_org= new ImageIcon("image/1/cont_b.png").getImage();
+	public static Image cont_sim= new ImageIcon("image/1/1.png").getImage();
+	
+	public static Image tr= new ImageIcon("image/1/transition.png").getImage();
+	public static Image car= new ImageIcon("image/car.jpg").getImage();
+	public static Image car_gasoline = new ImageIcon("image/1/car.png").getImage();
+	
+	public static Image ok= new ImageIcon("image/1/Text/ok.png").getImage();
+	public static Image net= new ImageIcon("image/1/Text/ne_stoyt.png").getImage();
+	public static Image mol= new ImageIcon("image/1/Text/molodez.png").getImage();
+	
+	//lvl2
+	public static Image park = new ImageIcon("image/park.jpg").getImage();
+	public static Image bird = new ImageIcon("image/bird.png").getImage();
+	public static Image cat = new ImageIcon("image/cat.jpeg").getImage();
+	public static Image veterenar = new ImageIcon("image/hospital.png").getImage();
+	public static Image city = new ImageIcon("image/city.jpg").getImage();
+	public static Image home = new ImageIcon("image/home.png").getImage();
+	
+	public static int bird_x=150,bird_y=400;
+	public static int vet_x=700,vet_y=300;
+	public static int home_x=0,home_y=300;
+	
+	//lvl3
+	public static Image hospital = new ImageIcon("image/hospital.png").getImage();
+	public static Image office = new ImageIcon("image/office.jpg").getImage();
+	//больница
+	public static Image hos_room = new ImageIcon("image/hj.jpg").getImage();
+	public static Image doctor = new ImageIcon("image/veterenar.jpg").getImage();
+	public static Image door = new ImageIcon("image/game3/door.jpg").getImage();
+
+	public static Image napravlenie = new ImageIcon("image/game3/napravlenie.jpg").getImage();
+	public static Image blood_ask = new ImageIcon("image/game3/text/b.png").getImage();
+	public static Image doc_ask = new ImageIcon("image/game3/text/blood.png").getImage();
+	public static Image door_ask = new ImageIcon("image/game3/text/door.png").getImage();
+	//КЦВ
+	public static Image of_room = new ImageIcon("image/s1200.jpg").getImage();
+	//магазин
+	public static Image shop_room = new ImageIcon("image/q.jpg").getImage();
+
+	
+	public static Image infImg = null;
+	public static Image null_image = null;
+	public static Image car_panel = null;
+	public static JPanel MainPanel ;//панель
+
+	public static Boolean directions=true;
+	
+	public static int directionX=0;
+	public static int directionY=0;
+	
+
+	
+	//получим размер экрана компьютера
+			static Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
+			public static int width = (int)size.getWidth(); //ширина экрана
+			public static int height = (int) size.getHeight(); //высота экрана
+			public static int fx=0;
+			public static int fy=0;
+			public static int yh=0;
+			public static int xh=width-heart.getWidth(null);
+			
+			
+	//уровень
+	public static int gameLvl = 0;
+	
+	
+	
+	//персонаж
+	public static Image player = new ImageIcon("image/1/pers/e1.png").getImage(); //персонаж
+	public static int x = player.getWidth(MainPanel);
+	
+	/*высчитываем y в соответствии с размером экрана пользователя*/
+	public static int y = height - player.getHeight(null)-100; 
+	public static Image [] playerAnim = new Image[7];//массив с изображениями
+	public static Image[] playerAnimmRight= new Image[7];
+	public static Image[] playerAnimmLeft= new Image[7];
+	public static Image[] playerAnimmUp= new Image[7];
+	public static Image[] playerAnimmDown= new Image[7];
+	
+
+	
+	
+
+	public variables(){
+	int a;
+		for (int i = 1; i<7; i++) {
+			playerAnim[i-1] = new ImageIcon("image/1/pers/e" +i+ ".png").getImage();
+			playerAnimmRight[i-1]= new ImageIcon("image/1/pers/r"+i+".png").getImage();
+			playerAnimmLeft[i-1]= new ImageIcon("image/1/pers/l"+i+".png").getImage();
+			playerAnimmUp[i-1]= new ImageIcon("image/1/pers/f"+i+".png").getImage();
+			playerAnimmDown[i-1]= new ImageIcon("image/1/pers/b"+i+".png").getImage();
+		}
+		for (int i=0;i<6;i++){
+			//playerAnimmRight[i]= new ImageIcon("image/girl/r"+i+".png").getImage();
+			//playerAnimmLeft[i]= new ImageIcon("image/girl/l"+i+".png").getImage();
+		}
+		
+		
+	}
+	
+}
