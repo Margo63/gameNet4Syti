@@ -29,6 +29,7 @@ public class Panel {
 		obj();
 		but();
 		Button.button();
+		Button.but_setting();
 
 
 
@@ -39,7 +40,7 @@ public class Panel {
 		player.array = variables.playerAnim;
 		player.pers = variables.player;
 		player.x = 0;
-		player.y = 400;
+		player.y = 500;
 		player.arrayD = variables.playerAnimmDown;
 		player.arrayR = variables.playerAnimmRight;
 		player.arrayL = variables.playerAnimmLeft;

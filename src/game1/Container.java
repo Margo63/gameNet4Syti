@@ -8,7 +8,7 @@ public class Container {
 	public Image img;
 	public int x, y,type;
 	public static int point;
-	public static boolean cont1=false,cont2=false,cont3=false,cont4=false,cont5=false;
+	public static boolean cont1=false,cont2=false,cont3=false,cont4=false,cont5=false,cont0=false;
 	public boolean collisTrue = false;
 	
 Container(int x, int y, Image img,int type){
@@ -27,11 +27,12 @@ public void trash_cont() {
 		 
 		 
 		 switch(type) {
-		 case 1: cont1=true;  cont2=false;  cont3=false;  cont4=false;  cont5=false;   break;
-		 case 2: cont1=false; cont2=true;   cont3=false;  cont4=false;  cont5=false;   break;
-		 case 3: cont1=false; cont2=false;  cont3=true;   cont4=false;  cont5=false;   break;
-		 case 4: cont1=false; cont2=false;  cont3=false;  cont4=true;   cont5=false;   break;
-		 case 5: cont1=false; cont2=false;  cont3=false;  cont4=false;  cont5=true;    break;
+		 	case 0: cont0=true;   cont1=false;  cont2=false;  cont3=false;  cont4=false;  cont5=false;   break;
+		    case 1: cont0=false;  cont1=true;   cont2=false;  cont3=false;  cont4=false;  cont5=false;   break;
+		    case 2: cont0=false;  cont1=false;  cont2=true;   cont3=false;  cont4=false;  cont5=false;   break;
+		    case 3: cont0=false;  cont1=false;  cont2=false;  cont3=true;   cont4=false;  cont5=false;   break;
+		    case 4: cont0=false;  cont1=false;  cont2=false;  cont3=false;  cont4=true;   cont5=false;   break;
+		    case 5: cont0=false;  cont1=false;  cont2=false;  cont3=false;  cont4=false;  cont5=true;    break;
 			 
 		 }
 		 

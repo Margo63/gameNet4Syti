@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 import game.Button;
+import game.Settings;
 import game.lvl;
 import game1.*;
 
@@ -71,47 +72,173 @@ public class MainBut extends JButton {
 						     variables.MainPanel.repaint();
 						break;
 					
-					case 9: if(Container.cont2 && Trash.point_pap>0) { Container.point++; 
+					case 9: if(Container.cont2 && Trash.point_pap>0&&Trash.num1) { Container.point++;
 					        Point.pl=true;
-					        new Point();}
-						    if(Trash.point_pap>0)Trash.point_pap--;
+					        new Point();
+					    	Trash.point_pap--;
+					    	Trash.num1=false;
+					    	Quest.b.setVisible(false);
+					        }
+
 						    //Quest.f_quest.dispose();
 						    Quest.p_quest.repaint(); 
 						    break;
 						    
-					case 10: if(Container.cont1 && Trash.point_pl>0) { Container.point++;
+					case 10: if(Container.cont1 && Trash.point_pl>0&&Trash.num2) { Container.point++;
 					         Point.pl=true;
-					         new Point();}
-						     if(Trash.point_pl>0)Trash.point_pl--;
+					         new Point();
+						     Trash.point_pl--;
+						     Trash.num2=false;
+						     Quest.b1.setVisible(false);
+					         }
+
 						     //Quest.f_quest.dispose();
 					         Quest.p_quest.repaint(); 
 					         break;
 					         
-					case 11: if(Container.cont3 && Trash.point_gl>0) { Container.point++;
+					case 11: if(Container.cont3 && Trash.point_gl>0&&Trash.num5) { Container.point++;
 					         Point.pl=true;
-					         new Point();}
-					         if(Trash.point_gl>0)Trash.point_gl--;
+					         new Point();
+						     Trash.point_gl--;
+						     Trash.num5=false;
+						     Quest.b2.setVisible(false);
+					         }
+
                             // Quest.f_quest.dispose();
 						     Quest.p_quest.repaint(); 
 						     break;
 						     
-					case 12: if(Container.cont4 && Trash.point_org>0) { Container.point++;
+					case 12: if(Container.cont4 && Trash.point_org>0&&Trash.num4) { Container.point++;
 					         Point.pl=true;
-					         new Point();}
-					         if(Trash.point_org>0) Trash.point_org--;
+					         new Point();
+					         Trash.point_org--;
+					         Trash.num4=false;
+					         Quest.b3.setVisible(false);
+
+					}
+					        // if(Trash.point_org>0) Trash.point_org--;
                             // Quest.f_quest.dispose();
 						     Quest.p_quest.repaint();
 						     break;
 						     
-					case 13: if(Container.cont5 && Trash.point_met>0) {
+					case 13: if(Container.cont5 && Trash.point_met>0&&Trash.num3) {
 						     Container.point++; 
 					         Point.pl=true;
 					         new Point();
+						     Trash.point_met--;
+						     Trash.num3=false;
+						     Quest.b4.setVisible(false);
 					         }
-					         if(Trash.point_met>0)Trash.point_met--;
+
 					        // Quest.f_quest.dispose();
 					         Quest.p_quest.repaint(); 
 					         break;
+
+					case 20:
+						if(Container.cont4 && Trash.point_org>0&&Trash.num6) {
+							Container.point++;
+							Point.pl=true;
+							new Point();
+							Trash.point_org--;
+							Trash.num6=false;
+							Quest.b5.setVisible(false);
+						}
+						//if(Trash.point_org>0)Trash.point_org--;
+						// Quest.f_quest.dispose();
+						Quest.p_quest.repaint();
+						break;
+
+					case 21:
+						if(Container.cont0 && Trash.point_no>0&&Trash.num7) {
+							Container.point++;
+							Point.pl=true;
+							new Point();
+							Trash.point_no--;
+							Trash.num7=false;
+							Quest.b6.setVisible(false);
+						}
+							Quest.p_quest.repaint();
+						break;
+					case 22:
+						if(Container.cont0 && Trash.point_no>0&&Trash.num8) {
+							Container.point++;
+							Point.pl=true;
+							new Point();
+							Trash.point_no--;
+							Trash.num8=false;
+							Quest.b7.setVisible(false);
+						}
+
+						// Quest.f_quest.dispose();
+						Quest.p_quest.repaint();
+						break;
+					case 23:
+						if(Container.cont0 && Trash.point_no>0&&Trash.num9) {
+							Container.point++;
+							Point.pl=true;
+							new Point();
+							Trash.point_no--;
+							Trash.num9=false;
+							Quest.b8.setVisible(false);
+
+						}
+
+						// Quest.f_quest.dispose();
+						Quest.p_quest.repaint();
+						break;
+					case 24:
+						if(Container.cont2 && Trash.point_pap>0&&Trash.num10) {
+							Container.point++;
+							Point.pl=true;
+							new Point();
+							Trash.point_pap--;
+							Trash.num10=false;
+							Quest.b9.setVisible(false);
+
+						}
+
+						// Quest.f_quest.dispose();
+						Quest.p_quest.repaint();
+						break;
+					case 25:
+						if(Container.cont5 && Trash.point_met>0&&Trash.num11) {
+							Container.point++;
+							Point.pl=true;
+							new Point();
+							Trash.point_met--;
+							Trash.num11=false;
+							Quest.b10.setVisible(false);
+						}
+
+						// Quest.f_quest.dispose();
+						Quest.p_quest.repaint();
+						break;
+					case 26:
+						if(Container.cont0 && Trash.point_no>0&&Trash.num12) {
+							Container.point++;
+							Point.pl=true;
+							new Point();
+							Trash.point_no--;
+							Trash.num12=false;
+							Quest.b11.setVisible(false);
+						}
+
+						// Quest.f_quest.dispose();
+						Quest.p_quest.repaint();
+						break;
+					case 27:
+						if(Container.cont2 && Trash.point_pap>0&&Trash.num13) {
+							Container.point++;
+							Point.pl=true;
+							new Point();
+							Trash.point_pap--;
+							Trash.num13=false;
+							Quest.b12.setVisible(false);
+						}
+
+						// Quest.f_quest.dispose();
+						Quest.p_quest.repaint();
+						break;
 					         
 					case 14:
 						Container.point++; 
@@ -170,10 +297,15 @@ public class MainBut extends JButton {
 						break;
 
                     case 19:
-                        if(Hospitale_Room.type==1) Inventory.blood=1;
-                        if(Hospitale_Room.type==2) Inventory.blood=0;
-						if(Hospitale_Room.type==3) variables.gameLvl=-3;
+                        if(Hospitale_Room.type==1) Inventory.blood=true;
+                        if(Hospitale_Room.type==2 && Inventory.blood==true) Inventory.blood=false;
+                        if(Hospitale_Room.type==3) variables.gameLvl=-3;
+
                         break;
+					case 28:
+						new Settings();
+                        break;
+
 					
 					
 				}

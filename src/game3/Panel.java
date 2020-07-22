@@ -25,6 +25,8 @@ public class Panel {
 	int s=variables.height-variables.height/3-variables.height/12;
 	int gs=variables.height-variables.height/12;
 	int gs2 = variables.height-variables.height/3-variables.height/6;
+	int house_gray=variables.height-variables.height/3-variables.height/6-variables.gray.getHeight(null);
+	int house_shop=variables.height-variables.height/3-variables.height/6-variables.shop.getHeight(null);
 	
 public Panel() {
 		
@@ -68,9 +70,9 @@ void but() {
 }
 void house(){
 	hospital = new House(1,1,variables.hospital,1);
-	shop = new House(900,1,variables.green,3);
+	shop = new House(900,house_shop,variables.shop,3);
 	office = new House(600,1,variables.office,2);
-	gray = new House(300,1,variables.gray,0);
+	gray = new House(300,house_gray,variables.gray,0);
 
 	street = new Street(variables.street,0,s,2);
 	gray_street = new Street(variables.gray_street,0,gs,2);

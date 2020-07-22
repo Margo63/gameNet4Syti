@@ -93,7 +93,13 @@ public class Player {
 
 						
 				}
-				
+
+				if(e.getKeyCode()==KeyEvent.VK_P) {
+
+					//Inventory.f.dispose();
+
+
+				}
 				
 				if(e.getKeyCode()==KeyEvent.VK_E) {
 					if (Dialogue.dialogTrue) {
@@ -175,8 +181,8 @@ public class Player {
 	}
 	
 	void moveHome(){
-		  	Instance.green.move();
-			Instance.red.move();
+		  //	Instance.green.move();
+			//Instance.red.move();
 			Instance.blue.move();
 			Instance.orange.move();
 			Instance.gray.move();
@@ -237,8 +243,8 @@ public class Player {
 	void collision(){ //проверяем столкновение
 		if (variables.gameLvl == 1) {
 			
-			Instance.green.collision();
-			Instance.red.collision();
+			//Instance.green.collision();
+			//Instance.red.collision();
 			Instance.blue.collision();
 			Instance.orange.collision();
 			Instance.gray.collision();
@@ -274,8 +280,8 @@ public class Player {
 			collisTrue = Instance.green.collisTrue || Instance.red.collisTrue
 					|| Instance.blue.collisTrue || Instance.orange.collisTrue ||Instance.gray.collisTrue
 
-			//	|| Instance.cont_pap.collisTrue||Instance.cont_pl.collisTrue||Instance.cont_gl.collisTrue
-			//	|| Instance.cont_met.collisTrue||Instance.cont_org.collisTrue
+				|| Instance.cont_pap.collisTrue||Instance.cont_pl.collisTrue||Instance.cont_gl.collisTrue
+				|| Instance.cont_met.collisTrue||Instance.cont_org.collisTrue
 			;
 			
 			
@@ -346,7 +352,7 @@ public class Player {
 		  @Override
 		  public void actionPerformed(ActionEvent e) {
 			  if (variables.gameLvl == 1) {
-				  Instance.green.collision();
+				  Instance.gray.collision();
 			  }
 			  if(variables.gameLvl==3){
 				  game3.Panel.gray.coll();
@@ -359,6 +365,16 @@ public class Player {
 						y+=directionY;
 					i++;
 			  }
+
+
+			  if (i<array.length-1 && !collisTrue2) {
+				  pers = array[i];
+				  x+=directionX;
+				  y+=directionY;
+				  i++;
+			  }
+
+
 			  if (i>=array.length-1) {
 
 				  if(variables.gameLvl == 1) {
@@ -378,6 +394,11 @@ public class Player {
 				  i = 0;
 				  pers = array[0];
 				  time.stop();
+			  }
+			  if(collisTrue2){
+			  	i=0;
+			  	pers=array[0];
+			  	time.stop();
 			  }
 			  variables.MainPanel.repaint();
 			  

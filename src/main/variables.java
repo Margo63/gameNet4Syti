@@ -45,18 +45,11 @@ public class variables {
 	public static Image gray_street = new ImageIcon("image/gray street.png").getImage();
 	public static Image red = new ImageIcon("image/red.png").getImage();
 	public static Image green = new ImageIcon("image/green.png").getImage();
-	public static Image blue = new ImageIcon("image/blue.png").getImage();
-	public static Image gray = new ImageIcon("image/gray.png").getImage();
-	public static Image orange = new ImageIcon("image/orange.png").getImage();
+	public static Image blue = new ImageIcon("image/house/house3.png").getImage();
+	public static Image gray = new ImageIcon("image/house/house2.png").getImage();
+	public static Image orange = new ImageIcon("image/house/house1.png").getImage();
 	
 	//мусор
-	public static Image mm= new ImageIcon("image/1/musor.png").getImage();
-/*	public static Image m_2= new ImageIcon("image/1/bum.png").getImage();
-	public static Image plastic= new ImageIcon("image/1/plastic.png").getImage();
-	public static Image met= new ImageIcon("image/1/metal.png").getImage();
-	public static Image glass= new ImageIcon("image/1/m4.png").getImage();
-	public static Image org= new ImageIcon("image/1/organic1.jpg").getImage();*/
-
 	public static Image m_2= new ImageIcon("image/1/trash/paper.png").getImage();
 	public static Image plastic= new ImageIcon("image/1/trash/plastic.png").getImage();
 	public static Image met= new ImageIcon("image/1/trash/bank.png").getImage();
@@ -78,11 +71,13 @@ public class variables {
 	public static Image cont_met= new ImageIcon("image/1/cont_m.png").getImage();
 	public static Image cont_org= new ImageIcon("image/1/cont_b.png").getImage();
 	public static Image cont_sim= new ImageIcon("image/1/1.png").getImage();
-	
+
+	//машинки и переход
 	public static Image tr= new ImageIcon("image/1/transition.png").getImage();
 	public static Image car= new ImageIcon("image/car.jpg").getImage();
 	public static Image car_gasoline = new ImageIcon("image/1/car.png").getImage();
-	
+
+	//надписи для 1 уровня
 	public static Image ok= new ImageIcon("image/1/Text/ok.png").getImage();
 	public static Image net= new ImageIcon("image/1/Text/ne_stoyt.png").getImage();
 	public static Image mol= new ImageIcon("image/1/Text/molodez.png").getImage();
@@ -102,15 +97,21 @@ public class variables {
 	//lvl3
 	public static Image hospital = new ImageIcon("image/hospital.png").getImage();
 	public static Image office = new ImageIcon("image/office.jpg").getImage();
+	public static Image shop = new ImageIcon("image/house/shop.png").getImage();
 	//больница
 	public static Image hos_room = new ImageIcon("image/hj.jpg").getImage();
+	public static Image hos_room2 = new ImageIcon("image/game3/s1200.jpg").getImage();
 	public static Image doctor = new ImageIcon("image/veterenar.jpg").getImage();
 	public static Image door = new ImageIcon("image/game3/door.jpg").getImage();
 
 	public static Image napravlenie = new ImageIcon("image/game3/napravlenie.jpg").getImage();
+
+	//dialog hospitale
 	public static Image blood_ask = new ImageIcon("image/game3/text/b.png").getImage();
+	public static Image blood_ask2 = new ImageIcon("image/game3/text/blood2.png").getImage();
 	public static Image doc_ask = new ImageIcon("image/game3/text/blood.png").getImage();
 	public static Image door_ask = new ImageIcon("image/game3/text/door.png").getImage();
+
 	//КЦВ
 	public static Image of_room = new ImageIcon("image/s1200.jpg").getImage();
 	//магазин

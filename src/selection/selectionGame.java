@@ -93,6 +93,7 @@ public class selectionGame {
 		MainFrame.but1.setVisible(false);
 		MainFrame.but2.setVisible(false);
 		Button.but.setVisible(false);
+		Button.but_set.setVisible(false);
 
 	}
 

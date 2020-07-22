@@ -52,6 +52,10 @@ public class Instance {
 	int gs2 = variables.height-variables.height/3-variables.height/6;
 	int tr =variables.height-variables.height/3-variables.height/12;
 	int c=variables.height-variables.height/3-variables.height/6-variables.car.getHeight(null);
+	int c2=variables.height-variables.height/3-variables.height/6-variables.car_gasoline.getHeight(null)+50;
+	int house=variables.height-variables.height/3-variables.height/6-variables.orange.getHeight(null);
+	int house2=variables.height-variables.height/3-variables.height/6-variables.blue.getHeight(null);
+	int house3=variables.height-variables.height/3-variables.height/6-variables.gray.getHeight(null);
 
 	
 	//создание объектов
@@ -82,11 +86,11 @@ public class Instance {
 		gray = new Home(956, 190, variables.gray);
 		*/
 		
-		green = new Home(780, 10, variables.green);
-		red = new Home(290, 10, variables.red);
-		blue = new Home(550, 10, variables.blue);
-		orange = new Home(-90, 10, variables.orange);
-		gray = new Home(1020, 10, variables.gray);
+		//green = new Home(780, 10, variables.green);
+		//red = new Home(290, 10, variables.red);
+		blue = new Home(550, house2, variables.blue);
+		orange = new Home(-90, house, variables.orange);
+		gray = new Home(1020, house3, variables.gray);
 
 
 		street = new Street(variables.street,0,s,2);
@@ -95,27 +99,27 @@ public class Instance {
 		gray_street2 = new Street(variables.gray_street,0,gs2,2);
 		
 		transition = new Street(variables.tr,880,tr,1);
-		car1 = new Car(variables.car,400,c,1);
+		car1 = new Car(variables.car_gasoline,450,c2,1);
 		car2 = new Car(variables.car,800,c,2);
 		
 	}
 	void trash() {
 		
 		
-		paper = new Trash(600,400,variables.m_2,2);
-		paper_2 = new Trash(300,380,variables.m_2,2);
-		plastic = new Trash(400,500,variables.plastic,1);
-		met = new Trash(100,510,variables.met,5);
-		org = new Trash(600,500,variables.org,4);
-		glass = new Trash(323,444,variables.glass,3);
+		paper = new Trash(600,400,variables.m_2,2,      1);
+		plastic = new Trash(400,500,variables.plastic,1,2);
+		met = new Trash(100,510,variables.met,5,        3);
+		org = new Trash(600,500,variables.org,4,        4);
+		glass = new Trash(323,444,variables.glass,3,    5);
 
-		apple = new Trash(700,444,variables.apple,4);
-		cd = new Trash(500,444,variables.cd,0);
-		cap = new Trash(289,400,variables.cap,5);
-		cardboard = new Trash(666,444,variables.cardboard,2);
-		plastic_bag = new Trash(800,444,variables.plastic_bag,1);
-		container = new Trash(600,600,variables.container,0);
-		chips = new Trash(323,500,variables.chips,0);
+		apple = new Trash(700,444,variables.apple,4,    6);
+		cd = new Trash(500,444,variables.cd,0,          7);
+		container = new Trash(600,600,variables.container,0,8);
+		plastic_bag = new Trash(800,444,variables.plastic_bag,0,9);
+		cardboard = new Trash(666,444,variables.cardboard,2,    10);
+		cap = new Trash(289,400,variables.cap,5,        11);
+		chips = new Trash(323,500,variables.chips,0,    12);
+		paper_2 = new Trash(300,380,variables.m_2,2,    13);
 		
 		cont_pap = new Container(0,600,variables.cont_pap,2);
 		cont_pl = new Container(900,600,variables.cont_pl,1);

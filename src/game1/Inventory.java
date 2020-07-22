@@ -25,7 +25,7 @@ public class Inventory {
 	public static Number org;
 	public static JLabel l,l2,l3,l4,l5;
 	public static JFrame f;
-	public static int blood=0;
+	public static boolean blood=false;
 public Inventory(){
 	f = new JFrame();
 	f.setUndecorated(true); 
@@ -42,36 +42,37 @@ public Inventory(){
 		protected void paintComponent(Graphics g) {
 			super.paintComponent(g);
 			if(variables.gameLvl==1) {
-				g.drawImage(variables.m_2,     0, 0, null);
-				g.drawImage(variables.plastic, 0,    variables.m_2.getHeight(null), null);
-				g.drawImage(variables.met,     0, variables.m_2.getHeight(null)+variables.plastic.getHeight(null), null);
-				g.drawImage(variables.org,     0, variables.m_2.getHeight(null)+variables.plastic.getHeight(null)+variables.met.getHeight(null), null);
-				g.drawImage(variables.glass,   0, variables.m_2.getHeight(null)+variables.plastic.getHeight(null)+variables.met.getHeight(null)+variables.org.getHeight(null), null);
+			    if(Trash.num1)	g.drawImage(variables.m_2,     0, 0, null);
+				if(Trash.num2)  g.drawImage(variables.plastic, 0,    variables.m_2.getHeight(null), null);
+				if(Trash.num3)  g.drawImage(variables.met,     0, variables.m_2.getHeight(null)+variables.plastic.getHeight(null), null);
+				if(Trash.num4)  g.drawImage(variables.org,     0, variables.m_2.getHeight(null)+variables.plastic.getHeight(null)+variables.met.getHeight(null), null);
+				if(Trash.num5)  g.drawImage(variables.glass,   0, variables.m_2.getHeight(null)+variables.plastic.getHeight(null)+variables.met.getHeight(null)+variables.org.getHeight(null), null);
 
-				g.drawImage(variables.apple,      120, 0, null);
-				g.drawImage(variables.cd,         120,    variables.apple.getHeight(null), null);
-				g.drawImage(variables.container,  120, variables.apple.getHeight(null)+variables.cd.getHeight(null), null);
-				g.drawImage(variables.plastic_bag,120, variables.apple.getHeight(null)+variables.cd.getHeight(null)+variables.container.getHeight(null), null);
-				g.drawImage(variables.cardboard,  120, variables.apple.getHeight(null)+variables.cd.getHeight(null)+variables.container.getHeight(null)+variables.plastic_bag.getHeight(null), null);
+				if(Trash.num6)  g.drawImage(variables.apple,      100, 0, null);
+				if(Trash.num7)  g.drawImage(variables.cd,         100,    variables.apple.getHeight(null), null);
+				if(Trash.num8)  g.drawImage(variables.container,  100, variables.apple.getHeight(null)+variables.cd.getHeight(null), null);
+				if(Trash.num9)  g.drawImage(variables.plastic_bag,100, variables.apple.getHeight(null)+variables.cd.getHeight(null)+variables.container.getHeight(null), null);
+				if(Trash.num10)  g.drawImage(variables.cardboard,  100, variables.apple.getHeight(null)+variables.cd.getHeight(null)+variables.container.getHeight(null)+variables.plastic_bag.getHeight(null), null);
 
-				g.drawImage(variables.cap,   240, 0, null);
-				g.drawImage(variables.chips, 240, variables.chips.getHeight(null), null);
+				if(Trash.num11)  g.drawImage(variables.cap,   200, 0, null);
+				if(Trash.num12)  g.drawImage(variables.chips, 200, variables.cap.getHeight(null), null);
+				if(Trash.num13)	g.drawImage(variables.m_2,    200, variables.cap.getHeight(null)+variables.chips.getHeight(null), null);
 
 
-				img(Trash.point_pap,g,variables.plastic.getWidth(null)+10,0);
-				img(Trash.point_pl,g, variables.plastic.getWidth(null)+10,variables.m_2.getHeight(null));
-				img(Trash.point_met,g,variables.plastic.getWidth(null)+10,variables.m_2.getHeight(null)+variables.plastic.getHeight(null));
-				img(Trash.point_org,g,variables.plastic.getWidth(null)+10,variables.m_2.getHeight(null)+variables.plastic.getHeight(null)+variables.met.getHeight(null));
-				img(Trash.point_gl,g, variables.plastic.getWidth(null)+10,variables.m_2.getHeight(null)+variables.plastic.getHeight(null)+variables.met.getHeight(null)+variables.org.getHeight(null));
+			//	img(Trash.point_pap,g,variables.plastic.getWidth(null)+10,0);
+			//	img(Trash.point_pl,g, variables.plastic.getWidth(null)+10,variables.m_2.getHeight(null));
+			//	img(Trash.point_met,g,variables.plastic.getWidth(null)+10,variables.m_2.getHeight(null)+variables.plastic.getHeight(null));
+			//	img(Trash.point_org,g,variables.plastic.getWidth(null)+10,variables.m_2.getHeight(null)+variables.plastic.getHeight(null)+variables.met.getHeight(null));
+			//	img(Trash.point_gl,g, variables.plastic.getWidth(null)+10,variables.m_2.getHeight(null)+variables.plastic.getHeight(null)+variables.met.getHeight(null)+variables.org.getHeight(null));
 
-				img(Trash.point_card,g,130,variables.apple.getHeight(null)+variables.cd.getHeight(null)+variables.container.getHeight(null)+variables.plastic_bag.getHeight(null));
+				//img(Trash.point_card,g,130,variables.apple.getHeight(null)+variables.cd.getHeight(null)+variables.container.getHeight(null)+variables.plastic_bag.getHeight(null));
 			
 			}
 			if(variables.gameLvl==2) {
 				g.drawImage(variables.bird, 0, 50, null);
 			}
 			if(variables.gameLvl==3||variables.gameLvl==-2||variables.gameLvl==-3){
-			if(blood==1)	g.drawImage(variables.napravlenie,0,0,150,100,null);
+			if(blood)	g.drawImage(variables.napravlenie,0,0,150,100,null);
 			}
 		}
 	};

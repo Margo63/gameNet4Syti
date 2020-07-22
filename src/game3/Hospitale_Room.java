@@ -1,6 +1,7 @@
 package game3;
 
 import game.Button;
+import game1.Inventory;
 import main.MainBut;
 import main.variables;
 
@@ -31,11 +32,13 @@ public class Hospitale_Room  {
          p_blood =new JPanel() {
              protected void paintComponent(Graphics g) {
                  super.paintComponent(g);
-switch (type){
-    case 1:  g.drawImage(variables.doc_ask, 0,0, null);  break;
-    case 2:  g.drawImage(variables.blood_ask, 0,0, null);  break;
-    case 3:  g.drawImage(variables.door_ask, 0,0, null);  break;
-}
+           switch (type){
+            case 1:  g.drawImage(variables.doc_ask, 0,0, null);  break;
+            case 3:  g.drawImage(variables.door_ask, 0,0, null);  break;
+
+          }
+          if(type==2&&Inventory.blood==true) g.drawImage(variables.blood_ask, 0,0, null);
+          if(type==2&&Inventory.blood==false) g.drawImage(variables.blood_ask2, 0,0, null);
 
 
              }

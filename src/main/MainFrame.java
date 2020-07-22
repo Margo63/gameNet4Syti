@@ -95,10 +95,10 @@ public class MainFrame{
 		g.drawImage(Instance.gray_street2.im, Instance.gray_street2.x, Instance.gray_street2.y,variables.gray_street.getWidth(null),variables.height/12,  null);
 
 		
-		g.drawImage(Instance.green.img, Instance.green.x, Instance.green.y, null);
+//		g.drawImage(Instance.green.img, Instance.green.x, Instance.green.y, null);
 		g.drawImage(Instance.blue.img, Instance.blue.x, Instance.blue.y, null);
 		g.drawImage(Instance.gray.img, Instance.gray.x, Instance.gray.y, null);
-		g.drawImage(Instance.red.img, Instance.red.x, Instance.red.y, null);
+//		g.drawImage(Instance.red.img, Instance.red.x, Instance.red.y, null);
 		g.drawImage(Instance.orange.img, Instance.orange.x, Instance.orange.y, null);
 		
 		g.drawImage(Instance.paper.img, Instance.paper.x, Instance.paper.y, null);
@@ -175,6 +175,7 @@ public class MainFrame{
 	}
 
 	void paintBlood(Graphics g){
+	  g.drawImage(variables.hos_room2,0,0,variables.width,variables.height,null);
 	  g.drawImage(game3.Panel.doc_blood.image, game3.Panel.doc_blood.x,game3.Panel.doc_blood.y,null);
 	  g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
 	}

@@ -9,6 +9,7 @@ import javax.swing.*;
 public class Button {
     public static MainBut but;
     public static MainBut but_3;
+    public static MainBut but_set;
 
     public Button(){
 
@@ -33,23 +34,20 @@ public class Button {
         but = new MainBut();
         but.MenuButt(1, "Назад в меню", variables.width-150,  0, variables.MainPanel);
         but.setVisible(true);
-
-
-      /*  try {
-            but.setVisible(true);
-        }
-        catch(NullPointerException){
-            JButton button = new JButton();//MainBut but = new MainBut();??
-            variables.MainPanel.add(button);
-        }*/
-
-
-        //but_3.setVisible(false);
         variables.MainPanel.add(but);
         variables.MainPanel.repaint();
 
         but.setFocusable(false);
         MainFrame.frame.setFocusable(true);
+    }
+    public static void but_setting(){
+        but_set = new MainBut();
+        but_set.MenuButt(28,"Setting",variables.width-300,0,variables.MainPanel);
+        but_set.setVisible(true);
+        variables.MainPanel.repaint();
+        but_set.setFocusable(false);
+        MainFrame.frame.setFocusable(true);
+
     }
 
 }
