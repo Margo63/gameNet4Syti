@@ -27,13 +27,13 @@ public class Hospitale_Room  {
          f_blood= new JFrame();
          f_blood.setUndecorated(true);
          f_blood.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
-       //  f_blood.setVisible(true);
+         f_blood.setVisible(true);
         // f_blood.setFocusable(false);
          p_blood =new JPanel() {
              protected void paintComponent(Graphics g) {
                  super.paintComponent(g);
            switch (type){
-            case 1:  g.drawImage(variables.doc_ask, 0,0, null);  break;
+            case 1:  g.drawImage(variables.doc_ask, 0,0, null);   break;
             case 3:  g.drawImage(variables.door_ask, 0,0, null);  break;
 
           }
@@ -46,7 +46,7 @@ public class Hospitale_Room  {
          p_blood.setLayout(null);
          but_doc = new MainBut();
          but_doc.MenuButt(19,"OK",100,200,p_blood);
-         but_doc.setSize(100,100);
+
 
 
          f_blood.add(p_blood);

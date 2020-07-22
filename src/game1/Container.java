@@ -37,10 +37,11 @@ public void trash_cont() {
 		 }
 		 
 		 new Quest();
-		 
+		 collisTrue=true;
 	 }
 	 else{
 	 	//Quest.f_quest.setVisible(false);
+		 collisTrue=false;
 	 }
 	 
 	

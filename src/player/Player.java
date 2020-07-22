@@ -277,11 +277,10 @@ public class Player {
 			Instance.car1.car_coll();
 			Instance.car2.car_coll();
 
-			collisTrue = Instance.green.collisTrue || Instance.red.collisTrue
-					|| Instance.blue.collisTrue || Instance.orange.collisTrue ||Instance.gray.collisTrue
+			collisTrue = Instance.blue.collisTrue || Instance.orange.collisTrue ||Instance.gray.collisTrue
 
 				|| Instance.cont_pap.collisTrue||Instance.cont_pl.collisTrue||Instance.cont_gl.collisTrue
-				|| Instance.cont_met.collisTrue||Instance.cont_org.collisTrue
+				|| Instance.cont_met.collisTrue||Instance.cont_org.collisTrue||Instance.cont_sim.collisTrue
 			;
 			
 			
@@ -359,7 +358,7 @@ public class Player {
 			  }
 			
 			 
-			  if (i<array.length-1 && !collisTrue) {
+			  if (i<array.length-1 && !collisTrue&&variables.gameLvl==1) {
 				  pers = array[i];
 						x+=directionX;
 						y+=directionY;
@@ -367,7 +366,7 @@ public class Player {
 			  }
 
 
-			  if (i<array.length-1 && !collisTrue2) {
+			  if (i<array.length-1 && !collisTrue2&&(variables.gameLvl==3||variables.gameLvl==-2||variables.gameLvl==-3)) {
 				  pers = array[i];
 				  x+=directionX;
 				  y+=directionY;

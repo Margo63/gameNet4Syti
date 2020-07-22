@@ -18,7 +18,7 @@ public class Button {
     public static void button_3(){
 
         but_3 = new MainBut();
-        but_3.MenuButt(8,"Назад",variables.width-300,  0, variables.MainPanel);
+        but_3.MenuButt(8,"Назад",variables.width-150,  0, variables.MainPanel);
 
         but_3.setVisible(false);
 

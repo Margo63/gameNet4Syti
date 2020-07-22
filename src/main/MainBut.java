@@ -289,6 +289,8 @@ public class MainBut extends JButton {
 							  case 2: System.out.println("Вошел в КЦВ"); break;
 							  case 3: System.out.println("Вошел в магазин"); break;
 						  }
+						Lvl3_Frame.open_frame.dispose();
+						Lvl3_Frame.open_panel.repaint();
 						break;
 
 					case 18:
@@ -301,7 +303,15 @@ public class MainBut extends JButton {
                         if(Hospitale_Room.type==2 && Inventory.blood==true) Inventory.blood=false;
                         if(Hospitale_Room.type==3) variables.gameLvl=-3;
 
+                        Hospitale_Room.f_blood.dispose();
+						Hospitale_Room.p_blood.repaint();
+						System.out.println("close");
                         break;
+
+					case 29:
+						Hospitale_Room.f_blood.dispose();
+						Hospitale_Room.p_blood.repaint();
+
 					case 28:
 						new Settings();
                         break;
