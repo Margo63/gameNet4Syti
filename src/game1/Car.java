@@ -6,6 +6,7 @@ import java.awt.Image;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import game.Button;
 import main.MainBut;
 import main.variables;
 
@@ -62,6 +63,7 @@ this.type=type_car;    //1-машина с бензином,  2-машина с собакой
 	        p =new JPanel() {
         	protected void paintComponent(Graphics g) {
 				super.paintComponent(g);
+				g.drawImage(variables.white_fon,  0, 0, variables.width,variables.height,   null);
 				 g.drawImage(variables.car_panel, 0,0, null);
 				 
         	}
@@ -96,6 +98,7 @@ this.type=type_car;    //1-машина с бензином,  2-машина с собакой
 		}
 		
 		f.add(p);
+		Button.but_close(p,f);
 	}
 	
 }

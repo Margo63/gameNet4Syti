@@ -21,6 +21,8 @@ public class variables {
 	public static Image black = new ImageIcon("image/kolba.png").getImage();
 	public static Image girl = new ImageIcon("image/girl.png").getImage();
 
+	public static Image close= new ImageIcon("image/close.png").getImage();
+	public static Image white_fon= new ImageIcon("image/white_fon.png").getImage();
 	
 	public static Boolean checkLvl=true;
 	

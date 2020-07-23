@@ -12,6 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import game.Button;
 import main.MainBut;
 import main.variables;
 
@@ -41,6 +42,7 @@ public Inventory(){
  p= new JPanel() {
 		protected void paintComponent(Graphics g) {
 			super.paintComponent(g);
+			g.drawImage(variables.white_fon,  0, 0, variables.width,variables.height,   null);
 			if(variables.gameLvl==1) {
 			    if(Trash.num1)	g.drawImage(variables.m_2,     0, 0, null);
 				if(Trash.num2)  g.drawImage(variables.plastic, 0,    variables.m_2.getHeight(null), null);
@@ -76,9 +78,10 @@ public Inventory(){
 			}
 		}
 	};
-	
+	Button.but_close(p,f);
 	f.add(p);
-	
+	p.setLayout(null);
+
 
 }
 
@@ -95,7 +98,7 @@ void num() {
 	org = new Number(l4,Trash.point_org,p);
 	gl = new Number(l5,Trash.point_gl,p);
 	
-}*/
+}
 void img(int kol,Graphics g,int x,int y) {
 	if(kol==0) g.drawImage(variables.num0, x, y,variables.num0.getWidth(null)/2,variables.num0.getHeight(null)/2, null);
 	if(kol==1) g.drawImage(variables.num1, x, y,variables.num1.getWidth(null)/2,variables.num1.getHeight(null)/2, null);
@@ -108,7 +111,7 @@ void img(int kol,Graphics g,int x,int y) {
 	if(kol==8) g.drawImage(variables.num8, x, y,variables.num8.getWidth(null)/2,variables.num8.getHeight(null)/2, null);
 	if(kol==9) g.drawImage(variables.num9, x, y,variables.num9.getWidth(null)/2,variables.num9.getHeight(null)/2, null);
 	 
-}
+}*/
  
 
 }

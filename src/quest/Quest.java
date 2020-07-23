@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import game.Button;
 import game1.Container;
 import game1.Instance;
 import game1.Trash;
@@ -41,6 +42,7 @@ public class Quest {
 		 p_quest = new JPanel() {
 			 protected void paintComponent(Graphics g) {
 					super.paintComponent(g);
+				 g.drawImage(variables.white_fon,  0, 0, variables.width,variables.height,   null);
 					//img(Trash.point_pap,g,0,0);
 			    	//img(Trash.point_pl,g,variables.m_2.getWidth(null)+10,0);
 					//img(Trash.point_gl,g,variables.plastic.getWidth(null)+variables.m_2.getWidth(null)+10,0);
@@ -198,10 +200,11 @@ public class Quest {
 	     b12.w=variables.m_2.getWidth(null);
 	     b12.h=variables.m_2.getHeight(null);
 	     //////////////////////////////////////////////
+
 		 p_quest.setLayout(null);
 		 p_quest.add(quest);
 		 f_quest.add(p_quest);
-		 
+	     Button.but_close(p_quest,f_quest);
   }
  
  

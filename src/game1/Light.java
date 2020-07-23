@@ -39,7 +39,7 @@ public class Light {
 					  i++;
 					 
 					  
-					  if((/*i==3||*/i==4) && Street.street) {
+					  if((i==3||i==4) && Street.street) {
 						  new Point();
 						//  variables.MainPanel.repaint();
 						  Point.pl=true;

@@ -5,11 +5,15 @@ import main.MainFrame;
 import main.variables;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Button {
     public static MainBut but;
     public static MainBut but_3;
     public static MainBut but_set;
+    public static JButton but_cl;
 
     public Button(){
 
@@ -47,6 +51,26 @@ public class Button {
         variables.MainPanel.repaint();
         but_set.setFocusable(false);
         MainFrame.frame.setFocusable(true);
+
+    }
+    public static void but_close(JPanel p,JFrame f){
+        but_cl = new JButton(){
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+
+                g.drawImage(variables.close,0,0,null);
+
+            }
+        };
+        but_cl.setBounds(f.getWidth()-50,0,50,50);
+        but_cl.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                f.dispose();
+            }
+        });
+        p.add(but_cl);
+
 
     }
 

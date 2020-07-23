@@ -24,5 +24,7 @@ public static JPanel p_setting;
             }
         };
       f_setting.add(p_setting);
+      p_setting.setLayout(null);
+      Button.but_close(p_setting,f_setting);
     }
 }

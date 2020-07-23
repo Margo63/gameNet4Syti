@@ -90,6 +90,8 @@ public class MainFrame{
 	
 	void painGame1(Graphics g) {
 
+		g.drawImage(variables.white_fon,  0, 0, variables.width,variables.height,   null);
+
 		g.drawImage(Instance.street.im,      Instance.street.x, Instance.street.y, variables.street.getWidth(null),variables.height/3,   null);
 		g.drawImage(Instance.gray_street.im, Instance.gray_street.x, Instance.gray_street.y,variables.gray_street.getWidth(null),variables.height/12,  null);
 		g.drawImage(Instance.gray_street2.im, Instance.gray_street2.x, Instance.gray_street2.y,variables.gray_street.getWidth(null),variables.height/12,  null);
