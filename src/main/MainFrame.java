@@ -79,6 +79,10 @@ public class MainFrame{
 					case -4:
 						paintOffice(g);
 						break;
+
+					case -5:
+						paintShop(g);
+						break;
 				}
 				
 			
@@ -189,6 +193,19 @@ public class MainFrame{
 	void paintOffice(Graphics g){
 		g.drawImage(variables.of_room,0,0,variables.width,variables.height,null);
 		g.drawImage(game3.Panel.stand.im,game3.Panel.stand.x,game3.Panel.stand.y,null);
+		g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
+	}
+	void paintShop(Graphics g){
+		g.drawImage(variables.shop_room,0,0,variables.width,variables.height,null);
+
+		g.drawImage(game3.Panel.milk.im,game3.Panel.milk.x,game3.Panel.milk.y,null);
+		g.drawImage(game3.Panel.bread.im,game3.Panel.bread.x,game3.Panel.bread.y,null);
+		g.drawImage(game3.Panel.meat.im,game3.Panel.meat.x,game3.Panel.meat.y,null);
+		g.drawImage(game3.Panel.vegetables.im,game3.Panel.vegetables.x,game3.Panel.vegetables.y,null);
+		g.drawImage(game3.Panel.fruit.im,game3.Panel.fruit.x,game3.Panel.fruit.y,null);
+		g.drawImage(game3.Panel.egg.im,game3.Panel.egg.x,game3.Panel.egg.y,null);
+		g.drawImage(game3.Panel.grocery.im,game3.Panel.grocery.x,game3.Panel.grocery.y,null);
+
 		g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
 	}
 }

@@ -1,5 +1,7 @@
 package game3;
 
+import quest.Fruit;
+
 import java.awt.*;
 
 public class Shop_Room {
@@ -20,15 +22,17 @@ public class Shop_Room {
                 game3.Panel.player.y+game3.Panel.player.directionY*3<y+im.getHeight(null)-20 &&
                 game3.Panel.player.y+game3.Panel.player.directionY*3+game3.Panel.player.pers.getHeight(null)>=y-20){
             switch(type){
-                case 1: break;
+                case 1:  break;
                 case 2: break;
                 case 3: break;
                 case 4: break;
                 case 5: break;
                 case 6: break;
-                case 7: break;
+                case 7: new Fruit();  break;
 
             }
         }
     }
+
+
 }

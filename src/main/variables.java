@@ -120,6 +120,14 @@ public class variables {
 	//магазин
 	public static Image shop_room = new ImageIcon("image/q.jpg").getImage();
 
+	public static Image milk_stand = new ImageIcon("image/game3/shop/milk.png").getImage();
+	public static Image grocery_stand = new ImageIcon("image/game3/shop/bakaleya.png").getImage();
+	public static Image meat_stand = new ImageIcon("image/game3/shop/meat.png").getImage();
+	public static Image egg_stand = new ImageIcon("image/game3/shop/egg.png").getImage();
+	public static Image fruit_stand = new ImageIcon("image/game3/shop/fruits.png").getImage();
+	public static Image vegetables_stand = new ImageIcon("image/game3/shop/vegetables.png").getImage();
+	public static Image bread_stand = new ImageIcon("image/game3/shop/bread.png").getImage();
+
 	
 	public static Image infImg = null;
 	public static Image null_image = null;

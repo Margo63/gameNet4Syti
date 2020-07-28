@@ -289,7 +289,7 @@ public class MainBut extends JButton {
 							  case 0: System.out.println("просто дом"); break;
 							  case 1: System.out.println("Вошел в больницу");  new Hospitale_Room(); break;
 							  case 2: System.out.println("Вошел в КЦВ");       new Office(); break;
-							  case 3: System.out.println("Вошел в магазин"); new Shop();break;
+							  case 3: System.out.println("Вошел в магазин");   new Shop();break;
 						  }
 						Lvl3_Frame.open_frame.dispose();
 						Lvl3_Frame.open_panel.repaint();
@@ -334,6 +334,10 @@ public class MainBut extends JButton {
 					case 28:
 						new Settings();
                         break;
+
+					case -1:
+
+						break;
 
 					
 					

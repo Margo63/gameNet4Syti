@@ -139,17 +139,7 @@ public class Player {
 				  if (variables.gameLvl == 2) {
 					  collisionDialog();
 				  }
-				if (variables.gameLvl == -2) {
-					game3.Panel.doctor.coll(1);
-					game3.Panel.door.coll(3);
-					}
-				if(variables.gameLvl==-3){
-					game3.Panel.doc_blood.coll(2);
-				}
 
-				if(variables.gameLvl==-4){
-					game3.Panel.stand.coll();
-				}
 				  
 				collision();
 				
@@ -286,6 +276,28 @@ public class Player {
 			collisTrue2= game3.Panel.shop.collisTrue2||game3.Panel.hospital.collisTrue2||game3.Panel.office.collisTrue2||game3.Panel.gray.collisTrue2;
 
 		}
+		if (variables.gameLvl == -2) {
+			game3.Panel.doctor.coll(1);
+			game3.Panel.door.coll(3);
+		}
+		if(variables.gameLvl==-3){
+			game3.Panel.doc_blood.coll(2);
+		}
+
+		if(variables.gameLvl==-4){
+			game3.Panel.stand.coll();
+		}
+
+		if(variables.gameLvl==-5){
+			game3.Panel.fruit.coll();
+			game3.Panel.vegetables.coll();
+			game3.Panel.milk.coll();
+			game3.Panel.meat.coll();
+			game3.Panel.egg.coll();
+			game3.Panel.bread.coll();
+			game3.Panel.grocery.coll();
+		}
+
 		
 
 	}
@@ -352,7 +364,7 @@ public class Player {
 			  }
 
 
-			  if (i<array.length-1 && !collisTrue2&&(variables.gameLvl==3||(variables.gameLvl>-5&&variables.gameLvl<-1))) {
+			  if (i<array.length-1 && !collisTrue2&&(variables.gameLvl==3||(variables.gameLvl>-6 && variables.gameLvl<-1))) {
 				  pers = array[i];
 				  x+=directionX;
 				  y+=directionY;

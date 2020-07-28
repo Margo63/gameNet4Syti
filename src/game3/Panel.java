@@ -23,6 +23,14 @@ public class Panel {
 	public static Doctor doc_blood;
 	public static Office_Room stand;
 
+	public static Shop_Room milk;
+	public static Shop_Room bread;
+	public static Shop_Room egg;
+	public static Shop_Room fruit;
+	public static Shop_Room vegetables;
+	public static Shop_Room grocery;
+	public static Shop_Room meat;
+
 	int s=variables.height-variables.height/3-variables.height/12;
 	int gs=variables.height-variables.height/12;
 	int gs2 = variables.height-variables.height/3-variables.height/6;
@@ -51,6 +59,7 @@ public Panel() {
     doc();
     door();
 	office();
+	department();
 	}
 void but() {
 	selectionGame.but3.setVisible(false);
@@ -117,5 +126,15 @@ void office(){
 	stand = new Office_Room();
 	stand.Stand(500,400,variables.stand);
 }
+
+ void department(){
+	grocery= new Shop_Room(0,0,variables.grocery_stand,1);
+	milk= new Shop_Room(250,0,variables.milk_stand,2);
+	bread= new Shop_Room(500,0,variables.bread_stand,3);
+	meat= new Shop_Room(750,0,variables.meat_stand,4);
+	egg= new Shop_Room(0,600,variables.egg_stand,5);
+	vegetables= new Shop_Room(250,600,variables.vegetables_stand,6);
+	fruit= new Shop_Room(500,600,variables.fruit_stand,7);
+ }
 
 }
