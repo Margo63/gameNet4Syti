@@ -142,28 +142,14 @@ public class Player {
 				if (variables.gameLvl == -2) {
 					game3.Panel.doctor.coll(1);
 					game3.Panel.door.coll(3);
-					/*if(x >= game3.Panel.doctor.x-50 &&
-							x <= game3.Panel.doctor.x+game3.Panel.doctor.image.getWidth(null)+50 &&
-							y+pers.getHeight(null)/2>=game3.Panel.doctor.y-50 &&
-							y+pers.getHeight(null)/2<=game3.Panel.doctor.y+game3.Panel.doctor.image.getHeight(null)+50
-							){
-						Hospitale_Room.type=1;
-						System.out.println("доктор");
-						Hospitale_Room.blood();
 					}
-					if(x >= game3.Panel.door.x-50 &&
-							x <= game3.Panel.door.x+game3.Panel.door.image.getWidth(null)+50 &&
-							y+pers.getHeight(null)/2>=game3.Panel.door.y-50 &&
-							y+pers.getHeight(null)/2<=game3.Panel.door.y+game3.Panel.door.image.getHeight(null)+50
-					){
-						Hospitale_Room.type=3;
-						Hospitale_Room.blood();
-					}*/
-				}
 				if(variables.gameLvl==-3){
 					game3.Panel.doc_blood.coll(2);
 				}
-				  
+
+				if(variables.gameLvl==-4){
+					game3.Panel.stand.coll();
+				}
 				  
 				collision();
 				
@@ -366,7 +352,7 @@ public class Player {
 			  }
 
 
-			  if (i<array.length-1 && !collisTrue2&&(variables.gameLvl==3||variables.gameLvl==-2||variables.gameLvl==-3)) {
+			  if (i<array.length-1 && !collisTrue2&&(variables.gameLvl==3||(variables.gameLvl>-5&&variables.gameLvl<-1))) {
 				  pers = array[i];
 				  x+=directionX;
 				  y+=directionY;

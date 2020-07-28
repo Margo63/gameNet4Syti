@@ -21,6 +21,7 @@ public class Panel {
 	public static Doctor doctor;
 	public static Doctor door;
 	public static Doctor doc_blood;
+	public static Office_Room stand;
 
 	int s=variables.height-variables.height/3-variables.height/12;
 	int gs=variables.height-variables.height/12;
@@ -49,6 +50,7 @@ public Panel() {
 	house();
     doc();
     door();
+	office();
 	}
 void but() {
 	selectionGame.but3.setVisible(false);
@@ -72,7 +74,7 @@ void house(){
 	hospital = new House(1,1,variables.hospital,1);
 	shop = new House(900,house_shop,variables.shop,3);
 	office = new House(600,1,variables.office,2);
-	gray = new House(300,house_gray,variables.gray,0);
+	gray = new House(1200,house_gray,variables.gray,0);
 
 	street = new Street(variables.street,0,s,2);
 	gray_street = new Street(variables.gray_street,0,gs,2);
@@ -109,6 +111,11 @@ void door(){
 	door.x=100;
 	door.y=100;
 	door.image = variables.door;
+}
+
+void office(){
+	stand = new Office_Room();
+	stand.Stand(500,400,variables.stand);
 }
 
 }

@@ -75,6 +75,10 @@ public class MainFrame{
 					case -3:
 						paintBlood(g);
 						break;
+
+					case -4:
+						paintOffice(g);
+						break;
 				}
 				
 			
@@ -182,4 +186,9 @@ public class MainFrame{
 	  g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
 	}
 
+	void paintOffice(Graphics g){
+		g.drawImage(variables.of_room,0,0,variables.width,variables.height,null);
+		g.drawImage(game3.Panel.stand.im,game3.Panel.stand.x,game3.Panel.stand.y,null);
+		g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
+	}
 }

@@ -116,6 +116,7 @@ public class variables {
 
 	//КЦВ
 	public static Image of_room = new ImageIcon("image/s1200.jpg").getImage();
+	public static Image stand = new ImageIcon("image/hospital.jpg").getImage();
 	//магазин
 	public static Image shop_room = new ImageIcon("image/q.jpg").getImage();
 

@@ -52,7 +52,7 @@ public class Doctor {
             }
 
             System.out.println("доктор");
-            Hospitale_Room.f_blood.setVisible(true);
+            //Hospitale_Room.f_blood.setVisible(true);
             //Hospitale_Room.f_blood.setFocusable(false);
             Hospitale_Room.blood();
 
