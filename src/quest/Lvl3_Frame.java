@@ -1,5 +1,6 @@
 package quest;
 
+import game3.Office;
 import main.MainBut;
 import main.variables;
 
@@ -21,8 +22,14 @@ public class Lvl3_Frame {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
 
+                /*if(!Office.t_1){
+                    g.drawImage(variables.blood_ask,0,0,null);
+                }*/
+
+                //при столкновении брать тип и по типу добавл€ть картинку "не получил задание дл€ входа в здание или получите задание дл€ входа в здание"
             }
             };
+
         yes = new MainBut();
         yes.MenuButt(17,"¬ойти в здание",10,10,open_panel);
         no= new MainBut();

@@ -16,6 +16,7 @@ import game1.*;
 import game3.Hospitale_Room;
 import game3.House;
 import game3.Office;
+import game3.Shop;
 import make_out.Fmini3;
 import quest.Lvl3_Frame;
 import quest.Quest;
@@ -288,7 +289,7 @@ public class MainBut extends JButton {
 							  case 0: System.out.println("просто дом"); break;
 							  case 1: System.out.println("Вошел в больницу");  new Hospitale_Room(); break;
 							  case 2: System.out.println("Вошел в КЦВ");       new Office(); break;
-							  case 3: System.out.println("Вошел в магазин"); break;
+							  case 3: System.out.println("Вошел в магазин"); new Shop();break;
 						  }
 						Lvl3_Frame.open_frame.dispose();
 						Lvl3_Frame.open_panel.repaint();
@@ -311,8 +312,25 @@ public class MainBut extends JButton {
                         break;
 
 					case 29:
-
-
+						Office.t_1=true;
+						Office.task_1.setVisible(false);
+						Office.p_office.repaint();
+                         break;
+					case 30:
+						Office.t_2=true;
+						Office.task_2.setVisible(false);
+						Office.p_office.repaint();
+						break;
+					case 31:
+						Office.t_3=true;
+						Office.task_3.setVisible(false);
+						Office.p_office.repaint();
+						break;
+					case 32:
+						Office.t_4=true;
+						Office.task_4.setVisible(false);
+						Office.p_office.repaint();
+						break;
 					case 28:
 						new Settings();
                         break;

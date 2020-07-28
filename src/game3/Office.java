@@ -15,6 +15,7 @@ public class Office {
    public static MainBut task_2;
    public static MainBut task_3;
    public static MainBut task_4;
+   public static boolean t_1=false,t_2=false,t_3=false,t_4=false;
 
     public Office(){
         variables.gameLvl=-4;
@@ -37,16 +38,17 @@ public static void of_frame(){
     p_office.setLayout(null);
 
    task_1=new MainBut();
-   task_1.MenuButt(29,"Задание 1",0,0,p_office);
+   if(!t_1) task_1.MenuButt(29,"Задание 1",0,0,p_office);
+
 
     task_2=new MainBut();
-    task_2.MenuButt(30,"Задание 2",160,0,p_office);
+    if(!t_2) task_2.MenuButt(30,"Задание 2",160,0,p_office);
 
     task_3=new MainBut();
-    task_3.MenuButt(31,"Задание 3",0,60,p_office);
+    if(!t_3) task_3.MenuButt(31,"Задание 3",0,60,p_office);
 
     task_4=new MainBut();
-    task_4.MenuButt(32,"Задание 4",160,60,p_office);
+    if(!t_4) task_4.MenuButt(32,"Задание 4",160,60,p_office);
 
 
     f_office.add(p_office);

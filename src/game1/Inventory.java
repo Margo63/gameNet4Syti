@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import game.Button;
+import game3.Office;
 import main.MainBut;
 import main.variables;
 
@@ -73,8 +74,12 @@ public Inventory(){
 			if(variables.gameLvl==2) {
 				g.drawImage(variables.bird, 0, 50, null);
 			}
-			if(variables.gameLvl==3||variables.gameLvl==-2||variables.gameLvl==-3){
-			if(blood)	g.drawImage(variables.napravlenie,0,0,150,100,null);
+			if(variables.gameLvl==3||(variables.gameLvl<-1&&variables.gameLvl>-5)){
+			    if(blood)	g.drawImage(variables.napravlenie,0,0,150,100,null);
+			    if(Office.t_1) g.drawImage(variables.napravlenie,0,0,75,100,null);
+				if(Office.t_2) g.drawImage(variables.napravlenie,80,0,75,100,null);
+				if(Office.t_3) g.drawImage(variables.napravlenie,160,0,75,100,null);
+				if(Office.t_4) g.drawImage(variables.napravlenie,240,0,75,100,null);
 			}
 		}
 	};
