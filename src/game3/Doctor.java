@@ -13,7 +13,7 @@ public class Doctor {
     Image [] images = new Image [5];
     Timer time;
     int i =0;
-
+    //1-начальный разговор 2-сбор крови в кабинете 3-дверь 4-квартира1  5-квартира2
     void animation() {
         time= new Timer(300, new ActionListener() {
             @Override
@@ -46,21 +46,21 @@ public class Doctor {
                 Panel.player.y+Panel.player.pers.getHeight(null)/2<=y+image.getHeight(null)/*+50*/
         ){
             switch(type){
-                case 1:   Hospitale_Room.type=1;   break;
-                case 2:   Hospitale_Room.type=2;   break;
-                case 3:   Hospitale_Room.type=3;   break;
+                case 1:   Hospitale_Room.type=1;  Hospitale_Room.blood();  break;
+                case 2:   Hospitale_Room.type=2;  Hospitale_Room.blood();  break;
+                case 3:   Hospitale_Room.type=3;  Hospitale_Room.blood();  break;
+                case 4:    break;
             }
 
             System.out.println("доктор");
             //Hospitale_Room.f_blood.setVisible(true);
             //Hospitale_Room.f_blood.setFocusable(false);
-            Hospitale_Room.blood();
+
 
 
         }
         else{
-            Hospitale_Room.blood();
-            Hospitale_Room.f_blood.dispose();
+
 
 
 

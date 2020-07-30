@@ -17,7 +17,7 @@ public class Light {
 	public static  Timer time_light;
 	int i;
 	int n=1200;
-	public static int x=100,y=100;
+	public static int x=100, y=variables.height-variables.height/3-variables.height/12-light.getHeight(null);;
 	
 	Light() {
 		

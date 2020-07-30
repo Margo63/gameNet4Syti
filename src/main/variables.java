@@ -76,7 +76,7 @@ public class variables {
 
 	//машинки и переход
 	public static Image tr= new ImageIcon("image/1/transition.png").getImage();
-	public static Image car= new ImageIcon("image/car.jpg").getImage();
+	public static Image car= new ImageIcon("image/1/car2.png").getImage();
 	public static Image car_gasoline = new ImageIcon("image/1/car.png").getImage();
 
 	//надписи для 1 уровня
@@ -128,6 +128,7 @@ public class variables {
 	public static Image vegetables_stand = new ImageIcon("image/game3/shop/vegetables.png").getImage();
 	public static Image bread_stand = new ImageIcon("image/game3/shop/bread.png").getImage();
 
+	public static Image flat_room = new ImageIcon("image/q.jpg").getImage();
 	
 	public static Image infImg = null;
 	public static Image null_image = null;

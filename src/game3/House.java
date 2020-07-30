@@ -27,6 +27,7 @@ public static int w_h=0;//what house для определения типа дома при столкновении;
 
            // collisTrue2=true;
 			new Lvl3_Frame();
+
 			switch(house){
 				case 0: System.out.println("house"); w_h=0; break;
 				case 1: System.out.println("hospitale");w_h=1; break;

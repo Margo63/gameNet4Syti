@@ -83,6 +83,10 @@ public class MainFrame{
 					case -5:
 						paintShop(g);
 						break;
+
+					case -6:
+						paintFlat(g);
+						break;
 				}
 				
 			
@@ -187,6 +191,7 @@ public class MainFrame{
 	void paintBlood(Graphics g){
 	  g.drawImage(variables.hos_room2,0,0,variables.width,variables.height,null);
 	  g.drawImage(game3.Panel.doc_blood.image, game3.Panel.doc_blood.x,game3.Panel.doc_blood.y,null);
+		if(Point.pl)   g.drawImage(variables.plus, Point.plus_x, Point.plus_y,  null);
 	  g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
 	}
 
@@ -205,6 +210,15 @@ public class MainFrame{
 		g.drawImage(game3.Panel.fruit.im,game3.Panel.fruit.x,game3.Panel.fruit.y,null);
 		g.drawImage(game3.Panel.egg.im,game3.Panel.egg.x,game3.Panel.egg.y,null);
 		g.drawImage(game3.Panel.grocery.im,game3.Panel.grocery.x,game3.Panel.grocery.y,null);
+
+		g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
+	}
+
+	void paintFlat(Graphics g){
+		g.drawImage(variables.flat_room,0,0,variables.width,variables.height,null);
+
+		g.drawImage(game3.Panel.flat1.image, game3.Panel.flat1.x,game3.Panel.flat1.y,null);
+		g.drawImage(game3.Panel.flat2.image, game3.Panel.flat2.x,game3.Panel.flat2.y,null);
 
 		g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
 	}

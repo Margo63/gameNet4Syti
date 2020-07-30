@@ -16,6 +16,7 @@ public class Hospitale_Room  {
     public static JPanel p_blood;
     public static JFrame f_blood;
     public static MainBut but_doc;
+
     public static int type=0; //1-начальный разговор 2-сбор крови в кабинете 3-дверь
      public Hospitale_Room(){
          but();
@@ -23,6 +24,7 @@ public class Hospitale_Room  {
          variables.MainPanel.repaint();
      }
      public static void blood(){
+
 
          f_blood= new JFrame();
          f_blood.setUndecorated(true);

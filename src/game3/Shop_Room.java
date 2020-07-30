@@ -1,11 +1,11 @@
 package game3;
 
-import quest.Fruit;
+import quest.*;
 
 import java.awt.*;
 
 public class Shop_Room {
-    public  int x,y,type; //1-бакалея 2-молоко 3-хлеб 4-мясо 5-яйцо 6-овощи 7-фрукты
+    public  int x,y,type; //1-бакалея 2-молоко 3-хлеб 4-мясо 5-конфети 6-овощи 7-фрукты
     public Image im;
 
     Shop_Room(int x,int y,Image im,int type){
@@ -22,13 +22,13 @@ public class Shop_Room {
                 game3.Panel.player.y+game3.Panel.player.directionY*3<y+im.getHeight(null)-20 &&
                 game3.Panel.player.y+game3.Panel.player.directionY*3+game3.Panel.player.pers.getHeight(null)>=y-20){
             switch(type){
-                case 1:  break;
-                case 2: break;
-                case 3: break;
-                case 4: break;
-                case 5: break;
-                case 6: break;
-                case 7: new Fruit();  break;
+                case 1: new Grocery();    break;
+                case 2: new Milk();       break;
+                case 3: new Bread();      break;
+                case 4: new Meat();       break;
+                case 5: new Candy();        break;
+                case 6: new Vegetables(); break;
+                case 7: new Fruit();      break;
 
             }
         }

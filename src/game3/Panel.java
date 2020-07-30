@@ -31,6 +31,9 @@ public class Panel {
 	public static Shop_Room grocery;
 	public static Shop_Room meat;
 
+	public static Flat flat1;
+	public static Flat flat2;
+
 	int s=variables.height-variables.height/3-variables.height/12;
 	int gs=variables.height-variables.height/12;
 	int gs2 = variables.height-variables.height/3-variables.height/6;
@@ -60,6 +63,7 @@ public Panel() {
     door();
 	office();
 	department();
+	flat();
 	}
 void but() {
 	selectionGame.but3.setVisible(false);
@@ -81,9 +85,9 @@ void but() {
 }
 void house(){
 	hospital = new House(1,1,variables.hospital,1);
-	shop = new House(900,house_shop,variables.shop,3);
-	office = new House(600,1,variables.office,2);
-	gray = new House(1200,house_gray,variables.gray,0);
+	shop = new House(600,house_shop,variables.shop,3);
+	office = new House(300,1,variables.office,2);
+	gray = new House(1000,house_gray,variables.gray,0);
 
 	street = new Street(variables.street,0,s,2);
 	gray_street = new Street(variables.gray_street,0,gs,2);
@@ -125,6 +129,14 @@ void door(){
 void office(){
 	stand = new Office_Room();
 	stand.Stand(500,400,variables.stand);
+}
+
+void flat(){
+	flat1= new Flat(100,100,variables.cardboard);
+
+
+	flat2 = new Flat(400,100,variables.cardboard);
+
 }
 
  void department(){

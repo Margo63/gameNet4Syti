@@ -142,7 +142,7 @@ public class Player {
 
 				  
 				collision();
-				
+
 				
 				
 				
@@ -298,6 +298,11 @@ public class Player {
 			game3.Panel.grocery.coll();
 		}
 
+		if(variables.gameLvl==-6){
+			game3.Panel.flat1.coll(1);
+			game3.Panel.flat2.coll(2);
+		}
+
 		
 
 	}
@@ -364,7 +369,7 @@ public class Player {
 			  }
 
 
-			  if (i<array.length-1 && !collisTrue2&&(variables.gameLvl==3||(variables.gameLvl>-6 && variables.gameLvl<-1))) {
+			  if (i<array.length-1 && !collisTrue2&&(variables.gameLvl==3||(variables.gameLvl>-8 && variables.gameLvl<-1))) {
 				  pers = array[i];
 				  x+=directionX;
 				  y+=directionY;
