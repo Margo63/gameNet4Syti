@@ -62,8 +62,9 @@ public class Button {
 
             }
         };
-        but_cl.setBounds(f.getWidth()-50,0,50,50);
+        but_cl.setBounds( f.getWidth()-50,0,50,50);
         but_cl.addActionListener(new ActionListener() {
+
             @Override
             public void actionPerformed(ActionEvent e) {
                 f.dispose();

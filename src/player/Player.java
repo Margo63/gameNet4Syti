@@ -210,6 +210,11 @@ public class Player {
 		 game3.Panel.hospital.move();
 		 game3.Panel.office.move();
 
+
+		 game3.Panel.street.move_st();
+		 game3.Panel.gray_street.move_st();
+		 game3.Panel.gray_street2.move_st();
+
 	}
 	
 	
@@ -279,13 +284,19 @@ public class Player {
 		if (variables.gameLvl == -2) {
 			game3.Panel.doctor.coll(1);
 			game3.Panel.door.coll(3);
+
+			collisTrue2=game3.Panel.doctor.collisTrue2||game3.Panel.door.collisTrue2;
 		}
 		if(variables.gameLvl==-3){
 			game3.Panel.doc_blood.coll(2);
+
+			collisTrue2=game3.Panel.doc_blood.collisTrue2;
 		}
 
 		if(variables.gameLvl==-4){
 			game3.Panel.stand.coll();
+
+			collisTrue2=game3.Panel.stand.collisTrue2;
 		}
 
 		if(variables.gameLvl==-5){
@@ -296,11 +307,17 @@ public class Player {
 			game3.Panel.egg.coll();
 			game3.Panel.bread.coll();
 			game3.Panel.grocery.coll();
+
+			collisTrue2=game3.Panel.fruit.collisTrue2||game3.Panel.vegetables.collisTrue2||game3.Panel.milk.collisTrue2||game3.Panel.meat.collisTrue2||
+					game3.Panel.egg.collisTrue2||game3.Panel.bread.collisTrue2||game3.Panel.grocery.collisTrue2;
 		}
 
 		if(variables.gameLvl==-6){
-			game3.Panel.flat1.coll(1);
-			game3.Panel.flat2.coll(2);
+			game3.Panel.flat1.coll();
+			game3.Panel.flat2.coll();
+			game3.Panel.flat3.coll();
+
+			collisTrue2=game3.Panel.flat1.collisTrue2||game3.Panel.flat2.collisTrue2||game3.Panel.flat3.collisTrue2;
 		}
 
 		
@@ -369,7 +386,7 @@ public class Player {
 			  }
 
 
-			  if (i<array.length-1 && !collisTrue2&&(variables.gameLvl==3||(variables.gameLvl>-8 && variables.gameLvl<-1))) {
+			  if (i<array.length-1 && !collisTrue2 &&(variables.gameLvl==3||(variables.gameLvl>-8 && variables.gameLvl<-1))) {
 				  pers = array[i];
 				  x+=directionX;
 				  y+=directionY;

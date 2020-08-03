@@ -104,10 +104,10 @@ public class MainFrame{
 
 		g.drawImage(variables.white_fon,  0, 0, variables.width,variables.height,   null);
 
-		g.drawImage(Instance.street.im,      Instance.street.x, Instance.street.y, variables.street.getWidth(null),variables.height/3,   null);
-		g.drawImage(Instance.gray_street.im, Instance.gray_street.x, Instance.gray_street.y,variables.gray_street.getWidth(null),variables.height/12,  null);
-		g.drawImage(Instance.gray_street2.im, Instance.gray_street2.x, Instance.gray_street2.y,variables.gray_street.getWidth(null),variables.height/12,  null);
 
+		g.drawImage(Instance.gray_street.im, Instance.gray_street.x, Instance.gray_street.y, null);
+		g.drawImage(Instance.gray_street2.im, Instance.gray_street2.x, Instance.gray_street2.y,  null);
+		g.drawImage(Instance.street.im,      Instance.street.x, Instance.street.y,    null);
 		
 //		g.drawImage(Instance.green.img, Instance.green.x, Instance.green.y, null);
 		g.drawImage(Instance.blue.img, Instance.blue.x, Instance.blue.y, null);
@@ -219,6 +219,7 @@ public class MainFrame{
 
 		g.drawImage(game3.Panel.flat1.image, game3.Panel.flat1.x,game3.Panel.flat1.y,null);
 		g.drawImage(game3.Panel.flat2.image, game3.Panel.flat2.x,game3.Panel.flat2.y,null);
+		g.drawImage(game3.Panel.flat3.image, game3.Panel.flat3.x,game3.Panel.flat3.y,null);
 
 		g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
 	}

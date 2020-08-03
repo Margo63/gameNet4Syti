@@ -20,6 +20,7 @@ public static JPanel p_setting;
                 super.paintComponent(g);
                 switch(variables.gameLvl){
                     case 1: g.drawImage(variables.blood_ask,0,0,null); break;
+                    case 3: break;
                 }
             }
         };

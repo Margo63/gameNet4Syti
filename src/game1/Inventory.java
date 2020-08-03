@@ -84,46 +84,48 @@ public Inventory(){
 				if(Office.t_3) g.drawImage(variables.napravlenie,160,0,75,100,null);
 				if(Office.t_4) g.drawImage(variables.napravlenie,240,0,75,100,null);
 
+
+				if(Fruit.f_1) g.drawImage(variables.napravlenie,0,  0,60,60,null);
+				if(Fruit.f_2) g.drawImage(variables.napravlenie,70, 0,60,60,null);
+				if(Fruit.f_3) g.drawImage(variables.napravlenie,140,0,60,60,null);
+				if(Fruit.f_4) g.drawImage(variables.napravlenie,210,0,60,60,null);
+				if(Fruit.f_5) g.drawImage(variables.napravlenie,280,0,60,60,null);
+
+				if(Vegetables.v_1) g.drawImage(variables.plastic_bag,0,  70,60,60,null);
+				if(Vegetables.v_2) g.drawImage(variables.chips,      70, 70,60,60,null);
+				if(Vegetables.v_3) g.drawImage(variables.car,        140,70,60,60,null);
+				if(Vegetables.v_4) g.drawImage(variables.cardboard,  210,70,60,60,null);
+				if(Vegetables.v_5) g.drawImage(variables.container,  280,70,60,60,null);
+
+				if(Grocery.g_1) g.drawImage(variables.plastic_bag,   0,  140,60,60,null);
+				if(Grocery.g_2) g.drawImage(variables.chips,         70, 140,60,60,null);
+				if(Grocery.g_3) g.drawImage(variables.car,           140,140,60,60,null);
+				if(Grocery.g_4) g.drawImage(variables.cardboard,     210,140,60,60,null);
+				if(Grocery.g_5) g.drawImage(variables.container,     280,140,60,60,null);
+				if(Grocery.g_6) g.drawImage(variables.plastic_bag,   0,  210,60,60,null);
+				if(Grocery.g_7) g.drawImage(variables.chips,         70, 210,60,60,null);
+
+				if(Milk.mi_1) g.drawImage(variables.car,             140,210,60,60,null);
+				if(Milk.mi_2) g.drawImage(variables.cardboard,       210,210,60,60,null);
+				if(Milk.mi_3) g.drawImage(variables.container,       280,210,60,60,null);
+				if(Milk.mi_4) g.drawImage(variables.container,       0,  280,60,60,null);
+
+				if(Bread.b_1) g.drawImage(variables.chips,           70, 280,60,60,null);
+				if(Bread.b_2) g.drawImage(variables.car,             140,280,60,60,null);
+				if(Bread.b_3) g.drawImage(variables.cardboard,       210,280,60,60,null);
+
+				if(Meat.me_1) g.drawImage(variables.chips,           280, 280,60,60,null);
+				if(Meat.me_2) g.drawImage(variables.car,             0,350,60,60,null);
+				if(Meat.me_3) g.drawImage(variables.cardboard,       70,350,60,60,null);
+
+				if(Candy.c_1) g.drawImage(variables.chips,           140, 350,60,60,null);
+				if(Candy.c_2) g.drawImage(variables.car,             210,350,60,60,null);
+				if(Candy.c_3) g.drawImage(variables.cardboard,       280,350,60,60,null);
+
+
 			}
 
 		   if(variables.gameLvl==-5){
-			   if(Fruit.f_1) g.drawImage(variables.napravlenie,0,  0,60,60,null);
-			   if(Fruit.f_2) g.drawImage(variables.napravlenie,70, 0,60,60,null);
-			   if(Fruit.f_3) g.drawImage(variables.napravlenie,140,0,60,60,null);
-			   if(Fruit.f_4) g.drawImage(variables.napravlenie,210,0,60,60,null);
-			   if(Fruit.f_5) g.drawImage(variables.napravlenie,280,0,60,60,null);
-
-			   if(Vegetables.v_1) g.drawImage(variables.plastic_bag,0,  70,60,60,null);
-			   if(Vegetables.v_2) g.drawImage(variables.chips,      70, 70,60,60,null);
-			   if(Vegetables.v_3) g.drawImage(variables.car,        140,70,60,60,null);
-			   if(Vegetables.v_4) g.drawImage(variables.cardboard,  210,70,60,60,null);
-			   if(Vegetables.v_5) g.drawImage(variables.container,  280,70,60,60,null);
-
-			   if(Grocery.g_1) g.drawImage(variables.plastic_bag,   0,  140,60,60,null);
-			   if(Grocery.g_2) g.drawImage(variables.chips,         70, 140,60,60,null);
-			   if(Grocery.g_3) g.drawImage(variables.car,           140,140,60,60,null);
-			   if(Grocery.g_4) g.drawImage(variables.cardboard,     210,140,60,60,null);
-			   if(Grocery.g_5) g.drawImage(variables.container,     280,140,60,60,null);
-			   if(Grocery.g_6) g.drawImage(variables.plastic_bag,   0,  210,60,60,null);
-			   if(Grocery.g_7) g.drawImage(variables.chips,         70, 210,60,60,null);
-
-			   if(Milk.mi_1) g.drawImage(variables.car,             140,210,60,60,null);
-			   if(Milk.mi_2) g.drawImage(variables.cardboard,       210,210,60,60,null);
-			   if(Milk.mi_3) g.drawImage(variables.container,       280,210,60,60,null);
-			   if(Milk.mi_4) g.drawImage(variables.container,       0,  280,60,60,null);
-
-			   if(Bread.b_1) g.drawImage(variables.chips,           70, 280,60,60,null);
-			   if(Bread.b_2) g.drawImage(variables.car,             140,280,60,60,null);
-			   if(Bread.b_3) g.drawImage(variables.cardboard,       210,280,60,60,null);
-
-			   if(Meat.me_1) g.drawImage(variables.chips,           280, 280,60,60,null);
-			   if(Meat.me_2) g.drawImage(variables.car,             0,350,60,60,null);
-			   if(Meat.me_3) g.drawImage(variables.cardboard,       70,350,60,60,null);
-
-			   if(Candy.c_1) g.drawImage(variables.chips,           140, 350,60,60,null);
-			   if(Candy.c_2) g.drawImage(variables.car,             210,350,60,60,null);
-			   if(Candy.c_3) g.drawImage(variables.cardboard,       280,350,60,60,null);
-
 
 
 

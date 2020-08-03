@@ -13,6 +13,7 @@ public class Doctor {
     Image [] images = new Image [5];
     Timer time;
     int i =0;
+    public boolean collisTrue2=false;
     //1-начальный разговор 2-сбор крови в кабинете 3-дверь 4-квартира1  5-квартира2
     void animation() {
         time= new Timer(300, new ActionListener() {
@@ -45,6 +46,7 @@ public class Doctor {
                 Panel.player.y+Panel.player.pers.getHeight(null)/2>=y/*-50*/ &&
                 Panel.player.y+Panel.player.pers.getHeight(null)/2<=y+image.getHeight(null)/*+50*/
         ){
+            collisTrue2=true;
             switch(type){
                 case 1:   Hospitale_Room.type=1;  Hospitale_Room.blood();  break;
                 case 2:   Hospitale_Room.type=2;  Hospitale_Room.blood();  break;
@@ -61,7 +63,7 @@ public class Doctor {
         }
         else{
 
-
+            collisTrue2=false;
 
 
         }

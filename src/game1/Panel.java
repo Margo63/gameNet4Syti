@@ -112,6 +112,9 @@ public class Panel {
 		selectionGame.but8.setVisible(false);
 		selectionGame.but9.setVisible(false);
 
+		//Button.but.setVisible(true);
+		//Button.but_set.setVisible(true);
+
 	/*	but = new MainBut();
 		but.MenuButt(1, "Назад", x,  0, variables.MainPanel);
 		but.setVisible(true);

@@ -25,7 +25,9 @@ public static int w_h=0;//what house для определения типа дома при столкновении;
 				game3.Panel.player.y+game3.Panel.player.directionY*3<y+image.getHeight(null)-20 &&
 				game3.Panel.player.y+game3.Panel.player.directionY*3+game3.Panel.player.pers.getHeight(null)>=y-20){
 
-           // collisTrue2=true;
+            collisTrue2=true;
+
+
 			new Lvl3_Frame();
 
 			switch(house){

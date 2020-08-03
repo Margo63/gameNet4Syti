@@ -3,6 +3,8 @@ package game1;
 import game.Street;
 import main.variables;
 
+import javax.swing.*;
+
 public class Instance {
 	
 	
@@ -42,15 +44,15 @@ public class Instance {
 	public static Car car2;
 
 
-//	int s=variables.height-variables.street.getHeight(null)-variables.gray_street.getHeight(null);
-//	int gs=variables.height-variables.gray_street.getHeight(null);
-//	int gs2=variables.height-variables.street.getHeight(null)-2*variables.gray_street.getHeight(null);
-//	int tr=variables.height-variables.street.getHeight(null)-variables.gray_street.getHeight(null);
+	int s=variables.height-variables.street.getHeight(null)-variables.gray_street.getHeight(null);
+	int gs=variables.height-variables.gray_street.getHeight(null);
+	int gs2=variables.height-variables.street.getHeight(null)-2*variables.gray_street.getHeight(null)+300;
+	int tr=variables.height-variables.street.getHeight(null)-variables.gray_street.getHeight(null);
 
-	int s=variables.height-variables.height/3-variables.height/12;
-	int gs=variables.height-variables.height/12;
-	int gs2 = variables.height-variables.height/3-variables.height/6;
-	int tr =variables.height-variables.height/3-variables.height/12;
+//	int s=variables.height-variables.height/3-variables.height/12;
+//	int gs=variables.height-variables.height/12;
+//	int gs2 = variables.height-variables.height/3-variables.height/6;
+//	int tr =variables.height-variables.height/3-variables.height/12;
 	int c=variables.height-variables.height/3-variables.height/6-variables.car.getHeight(null);
 	int c2=variables.height-variables.height/3-variables.height/6-variables.car_gasoline.getHeight(null)+50;
 	int house=variables.height-variables.height/3-variables.height/6-variables.orange.getHeight(null);
@@ -99,9 +101,18 @@ public class Instance {
 		gray_street2 = new Street(variables.gray_street,0,gs2,2);
 		
 		transition = new Street(variables.tr,880,tr,1);
+
 		car1 = new Car(variables.car_gasoline,450,c2,1);
 		car2 = new Car(variables.car,800,c,2);
-		
+
+
+
+		for (int i = 0; i<6; i++) {
+			car2.images[i] =
+					new ImageIcon("image/1/car+dog_"+i+".png").getImage();
+		}
+		car2.img = car2.images[0];
+		car2.animation();
 	}
 	void trash() {
 		

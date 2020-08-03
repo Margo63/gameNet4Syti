@@ -2,9 +2,10 @@ package game1;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 import game.Button;
 import main.MainBut;
@@ -20,12 +21,15 @@ int h;
 
 public int x,y,type;
 public Image img;
-public Car(Image im,int x,int y,int type_car){
-this.img=im;
-this.x=x;
-this.y=y;
-this.type=type_car;    //1-машина с бензином,  2-машина с собакой
-}
+
+
+    public Car(Image im,int x,int y,int type_car){
+
+    	this.img=im;
+       this.x=x;
+       this.y=y;
+       this.type=type_car;    //1-машина с бензином,  2-машина с собакой
+    }
 	public void car_coll() {
 		 if(Panel.player.x-Panel.player.directionX*5+Panel.player.pers.getWidth(null)>=x &&
 					Panel.player.x-Panel.player.directionX*5<=x+img.getWidth(null) &&
@@ -99,6 +103,31 @@ this.type=type_car;    //1-машина с бензином,  2-машина с собакой
 		
 		f.add(p);
 		Button.but_close(p,f);
+	}
+
+
+
+int i ;
+Timer time;
+
+Image [] images = new Image [7];
+
+
+	void animation() {
+		time= new Timer(300, new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (i<5) {
+					i++;
+				}
+				else {
+					i = 0;
+				}
+				img = images[i];
+				variables.MainPanel.repaint();
+			}
+		});
+		time.start();
 	}
 	
 }

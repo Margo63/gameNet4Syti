@@ -15,9 +15,9 @@ public class Panel {
     public static House office;
     public static House shop;
     public static House gray;
-    public static Street street;
-    public static Street gray_street;
-	public static Street gray_street2;
+    public static Street3 street;
+    public static Street3 gray_street;
+	public static Street3 gray_street2;
 	public static Doctor doctor;
 	public static Doctor door;
 	public static Doctor doc_blood;
@@ -33,6 +33,7 @@ public class Panel {
 
 	public static Flat flat1;
 	public static Flat flat2;
+	public static Flat flat3;
 
 	int s=variables.height-variables.height/3-variables.height/12;
 	int gs=variables.height-variables.height/12;
@@ -55,6 +56,7 @@ public Panel() {
 	//
 
 	Button.button();
+	Button.but_setting();
 
 
 	but();
@@ -89,9 +91,9 @@ void house(){
 	office = new House(300,1,variables.office,2);
 	gray = new House(1000,house_gray,variables.gray,0);
 
-	street = new Street(variables.street,0,s,2);
-	gray_street = new Street(variables.gray_street,0,gs,2);
-	gray_street2 = new Street(variables.gray_street,0,gs2,2);
+	street = new Street3(variables.street,0,s,2);
+	gray_street = new Street3(variables.gray_street,0,gs,2);
+	gray_street2 = new Street3(variables.gray_street,0,gs2,2);
 
 
 }
@@ -132,10 +134,10 @@ void office(){
 }
 
 void flat(){
-	flat1= new Flat(100,100,variables.cardboard);
+	flat1= new Flat(700,100,variables.door,1);
+	flat2 = new Flat(400,100,variables.door,2);
+	flat3 = new Flat(900,100,variables.door,3);
 
-
-	flat2 = new Flat(400,100,variables.cardboard);
 
 }
 

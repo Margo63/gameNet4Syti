@@ -283,9 +283,13 @@ public class MainBut extends JButton {
 								  variables.MainPanel.repaint();
 
 								  break;
-							  case 1: System.out.println("Вошел в больницу");  if(Office.t_1)  new Hospitale_Room(); break;
+							  case 1: System.out.println("Вошел в больницу"); // if(Office.t_1)
+
+
+							  	new Hospitale_Room(); break;
 							  case 2: System.out.println("Вошел в КЦВ");       new Office(); break;
-							  case 3: System.out.println("Вошел в магазин");   if(Office.t_2||Office.t_3)new Shop();break;
+							  case 3: System.out.println("Вошел в магазин");  // if(Office.t_2||Office.t_3)
+								   new Shop();break;
 						  }
 						Lvl3_Frame.open_frame.dispose();
 						//Lvl3_Frame.open_panel.repaint();
@@ -338,6 +342,12 @@ public class MainBut extends JButton {
 
 					case 33:
 						Flat.f_ask.dispose();
+
+						switch(Flat.type_frame){
+							case 1:	Fruit.f_4=false;   Vegetables.v_5=false;Bread.b_3=false;Milk.mi_1=false;Grocery.g_2=false;Meat.me_1=false; break;
+							case 2: Fruit.f_3=false;  Vegetables.v_1=false;   Bread.b_1=false;  Milk.mi_4=false;  Grocery.g_7=false;  Meat.me_3=false;  Candy.c_3=false; break;
+						}
+
 
 						break;
 

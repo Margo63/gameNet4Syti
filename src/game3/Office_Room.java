@@ -7,6 +7,7 @@ import java.awt.*;
 public class Office_Room {
     public Image im;
     public int x, y;
+    public boolean collisTrue2=false;
     public void Stand(int x,int y,Image im){
 this.x=x;
 this.y=y;
@@ -17,8 +18,13 @@ public void coll(){
             game3.Panel.player.x- game3.Panel.player.directionX*5<=x+im.getWidth(null) &&
             game3.Panel.player.y+ game3.Panel.player.directionY*5<y+im.getHeight(null) &&
             game3.Panel.player.y+ game3.Panel.player.directionY*5+ game3.Panel.player.pers.getHeight(null)>=y){
-System.out.println("столкнулся");
+
+        collisTrue2=true;
  Office.of_frame();
+
+    }
+    else{
+        collisTrue2=false;
     }
 }
 }

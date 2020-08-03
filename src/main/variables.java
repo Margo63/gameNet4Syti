@@ -42,7 +42,7 @@ public class variables {
 	
 	
 	//lvl1
-	public static Image street = new ImageIcon("image/roadW.png").getImage();
+	public static Image street = new ImageIcon("image/road.png").getImage();
 
 	public static Image gray_street = new ImageIcon("image/gray street.png").getImage();
 	public static Image red = new ImageIcon("image/red.png").getImage();
@@ -76,7 +76,7 @@ public class variables {
 
 	//машинки и переход
 	public static Image tr= new ImageIcon("image/1/transition.png").getImage();
-	public static Image car= new ImageIcon("image/1/car2.png").getImage();
+	public static Image car= new ImageIcon("image/1/car+dog_0.png").getImage();
 	public static Image car_gasoline = new ImageIcon("image/1/car.png").getImage();
 
 	//надписи для 1 уровня
