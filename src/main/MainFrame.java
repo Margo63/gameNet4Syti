@@ -69,6 +69,11 @@ public class MainFrame{
 					case 3:
 						painGame3(g);
 						break;
+
+					case 4:
+						painGame4(g);
+						break;
+
 					case -2:
                         paintHospitale(g);
 						break;
@@ -222,5 +227,11 @@ public class MainFrame{
 		g.drawImage(game3.Panel.flat3.image, game3.Panel.flat3.x,game3.Panel.flat3.y,null);
 
 		g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
+	}
+
+	void painGame4(Graphics g)
+	{
+
+		g.drawImage(variables.fon1,0,0,variables.width,variables.height,  null);
 	}
 }

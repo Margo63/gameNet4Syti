@@ -64,6 +64,13 @@ public class MainBut extends JButton {
 						     variables.MainPanel.repaint();
 						break;
 
+
+					case 100: variables.gameLvl=4;
+					          new game4.Choice();
+					          variables.MainPanel.repaint();
+
+					      break;
+
 					case 9: if(Container.cont2 && Trash.point_pap>0&&Trash.num1) { Container.point++;
 					        Point.pl=true;
 					        new Point();
@@ -539,7 +546,36 @@ public class MainBut extends JButton {
                         break;
 
 
-
+					case 101:
+						Container.point--;
+						break;
+					case 102:
+						Container.point--;;
+						break;
+					case 103:
+						Container.point--;
+						break;
+					case 104:
+						Container.point--;
+						break;
+					case 105:
+						Container.point--;
+						break;
+					case 106:
+						Container.point--;
+						break;
+					case 107:
+						Container.point--;
+						break;
+					case 108:
+						Container.point--;
+						break;
+					case 109:
+						Container.point--;
+						break;
+					case 110:
+						Container.point--;
+						break;
 
 
 				}

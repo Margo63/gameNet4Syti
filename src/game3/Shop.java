@@ -5,7 +5,7 @@ import main.variables;
 
 import java.awt.*;
 
-public class Shop {
+public class Shop {//номера отрицательные
 
     public Shop(){
         variables.gameLvl=-5;
