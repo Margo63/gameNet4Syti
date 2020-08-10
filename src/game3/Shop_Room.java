@@ -5,9 +5,11 @@ import quest.*;
 import java.awt.*;
 
 public class Shop_Room {
-    public  int x,y,type; //1-бакалея 2-молоко 3-хлеб 4-мясо 5-конфети 6-овощи 7-фрукты
+    public  int x,y,type; //1-бакалея 2-молоко 3-хлеб 4-мясо 5-конфеты 6-овощи 7-фрукты
     public Image im;
     public boolean  collisTrue2=false;
+
+
     Shop_Room(int x,int y,Image im,int type){
         this.x=x;
         this.y=y;

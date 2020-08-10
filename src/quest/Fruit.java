@@ -17,11 +17,16 @@ public class Fruit {
     public static MainBut b4;
     public static MainBut b5;
     public static boolean f_1=false,f_2=false,f_3=false,f_4=false,f_5=false;
+    public static int kol=0;
 
   public  Fruit(){
-        f = new JFrame();
-        f.setUndecorated(true);
-        f.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
+      if(kol<1){
+          kol++;
+          f = new JFrame();
+          f.setUndecorated(true);
+          f.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
+
+      }
         f.setVisible(true);
         p = new JPanel() {
             protected void paintComponent(Graphics g) {

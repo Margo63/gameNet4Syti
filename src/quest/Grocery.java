@@ -19,12 +19,16 @@ public class Grocery {
     public static MainBut b6;
     public static MainBut b7;
     public static boolean g_1=false,g_2=false,g_3=false,g_4=false,g_5=false,g_6=false,g_7=false;
+    public static int kol=0;
 
     public Grocery(){
+      if(kol<1){
+          kol++;
+          f = new JFrame();
+          f.setUndecorated(true);
+          f.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
 
-        f = new JFrame();
-        f.setUndecorated(true);
-        f.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
+      }
         f.setVisible(true);
         p = new JPanel() {
             protected void paintComponent(Graphics g) {

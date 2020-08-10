@@ -18,7 +18,7 @@ public static MainBut b3;
 public static JPanel p;
 public static JFrame f;
 int h;
-
+int kol=0;
 public int x,y,type;
 public Image img;
 
@@ -60,7 +60,11 @@ public Image img;
 	
 	public void frame() {
 		variables.car_panel=variables.null_image;
-		f= new JFrame();
+		if(kol<1){
+			f= new JFrame();
+				kol++;
+		}
+
 		f.setUndecorated(true);
 		f.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
 		f.setVisible(true);

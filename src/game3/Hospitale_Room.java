@@ -16,6 +16,7 @@ public class Hospitale_Room  {
     public static JPanel p_blood;
     public static JFrame f_blood;
     public static MainBut but_doc;
+    public static int kol=0;
 
     public static int type=0; //1-начальный разговор 2-сбор крови в кабинете 3-дверь
      public Hospitale_Room(){
@@ -25,11 +26,14 @@ public class Hospitale_Room  {
      }
      public static void blood(){
 
+         if(kol<1){
+             kol++;
+             f_blood= new JFrame();
+             f_blood.setUndecorated(true);
+             f_blood.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
 
-         f_blood= new JFrame();
-         f_blood.setUndecorated(true);
-         f_blood.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
-         f_blood.setVisible(true);
+         }
+        f_blood.setVisible(true);
         // f_blood.setFocusable(false);
          p_blood =new JPanel() {
              protected void paintComponent(Graphics g) {

@@ -30,13 +30,22 @@ public class Inventory {
 	public static JLabel l,l2,l3,l4,l5;
 	public static JFrame f;
 	public static int x_inventory;
+	public static int kol=0;
 	public static boolean blood=false;
 public Inventory(){
-	f = new JFrame();
-	f.setUndecorated(true); 
-	f.setMinimumSize(new Dimension(variables.width/3,variables.height/2));
+	if(kol<1){
+		f = new JFrame();
+		kol++;
+		f.setUndecorated(true);
+		f.setMinimumSize(new Dimension(variables.width/3,variables.height/2));
 
-	f.setFocusable(true);
+		f.setFocusable(true);
+		}
+
+
+
+
+
 
 	
 	

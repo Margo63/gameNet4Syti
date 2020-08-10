@@ -16,11 +16,18 @@ public class Vegetables {
     public static MainBut b4;
     public static MainBut b5;
     public static boolean v_1=false,v_2=false,v_3=false,v_4=false,v_5=false;
+    public static int kol=0;
+
     public Vegetables(){
 
-        f = new JFrame();
-        f.setUndecorated(true);
-        f.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
+        if(kol<1){
+            kol++;
+            f = new JFrame();
+            f.setUndecorated(true);
+            f.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
+
+        }
+
         f.setVisible(true);
         p = new JPanel() {
             protected void paintComponent(Graphics g) {

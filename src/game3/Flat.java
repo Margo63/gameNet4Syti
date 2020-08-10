@@ -18,6 +18,7 @@ public class Flat {
     public static  JFrame f_ask;
     public static JPanel p_ask;
     public  boolean collisTrue2=false;
+    public static int kol=0;
 
     public Flat(int x,int y,Image image,int type) {
 
@@ -67,10 +68,14 @@ public class Flat {
     }
 
     public void frame(){
-        f_ask = new JFrame();
-        f_ask.setUndecorated(true);
-        f_ask.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
-        f_ask.setVisible(true);
+        if(kol<1){
+            kol++;
+            f_ask = new JFrame();
+            f_ask.setUndecorated(true);
+            f_ask.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
+
+        }
+         f_ask.setVisible(true);
         p_ask = new JPanel(){
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);

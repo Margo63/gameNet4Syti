@@ -91,6 +91,7 @@ public class Player {
 					new Inventory();
 					Inventory.f.setVisible(true);
 
+
 						
 				}
 

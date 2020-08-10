@@ -16,6 +16,7 @@ public class Office {
    public static MainBut task_3;
    public static MainBut task_4;
    public static boolean t_1=false,t_2=false,t_3=false,t_4=false;
+   public static int kol=0;
 
     public Office(){
         variables.gameLvl=-4;
@@ -23,9 +24,13 @@ public class Office {
     }
 
 public static void of_frame(){
-    f_office= new JFrame();
-    f_office.setUndecorated(true);
-    f_office.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
+    if(kol<1){
+        kol++;
+        f_office= new JFrame();
+        f_office.setUndecorated(true);
+        f_office.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
+
+    }
     f_office.setVisible(true);
     // f_blood.setFocusable(false);
     p_office =new JPanel() {

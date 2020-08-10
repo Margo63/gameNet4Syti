@@ -37,6 +37,7 @@ public void trash_cont() {
 		 }
 		 
 		 new Quest();
+		 Quest.f_quest.setVisible(true);
 		 collisTrue=true;
 	 }
 	 else{

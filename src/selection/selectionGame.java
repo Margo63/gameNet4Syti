@@ -94,16 +94,7 @@ public class selectionGame {
 		MainFrame.but1.setVisible(false);
 		MainFrame.but2.setVisible(false);
 
-		Choice.q_b0.setVisible(false);
-		Choice.q_b1.setVisible(false);
-		Choice.q_b2.setVisible(false);
-		Choice.q_b3.setVisible(false);
-		Choice.q_b4.setVisible(false);
-		Choice.q_b5.setVisible(false);
-		Choice.q_b6.setVisible(false);
-		Choice.q_b7.setVisible(false);
-		Choice.q_b8.setVisible(false);
-		Choice.q_b9.setVisible(false);
+
 
 		Button.but.setVisible(false);
 		Button.but_set.setVisible(false);
@@ -114,6 +105,17 @@ public class selectionGame {
 		}
 		catch(NullPointerException nullPointerException) {
 		}
+
+			Choice.q_b0.setVisible(false);
+			Choice.q_b1.setVisible(false);
+			Choice.q_b2.setVisible(false);
+			Choice.q_b3.setVisible(false);
+			Choice.q_b4.setVisible(false);
+			Choice.q_b5.setVisible(false);
+			Choice.q_b6.setVisible(false);
+			Choice.q_b7.setVisible(false);
+			Choice.q_b8.setVisible(false);
+			Choice.q_b9.setVisible(false);
 	}
 
 }

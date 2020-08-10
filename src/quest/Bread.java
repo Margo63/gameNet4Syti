@@ -15,12 +15,16 @@ public class Bread {
     public static MainBut b2;
     public static MainBut b3;
     public static boolean b_1=false,b_2=false,b_3=false;
-
+    public static int kol=0;
     public Bread(){
 
-        f = new JFrame();
-        f.setUndecorated(true);
-        f.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
+      if(kol<1){
+          kol++;
+          f = new JFrame();
+          f.setUndecorated(true);
+          f.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
+      }
+
         f.setVisible(true);
         p = new JPanel() {
             protected void paintComponent(Graphics g) {
