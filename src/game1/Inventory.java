@@ -42,15 +42,6 @@ public Inventory(){
 		f.setFocusable(true);
 		}
 
-
-
-
-
-
-	
-	
-     	
-	
 	
  p= new JPanel() {
 		protected void paintComponent(Graphics g) {
@@ -88,10 +79,7 @@ public Inventory(){
 			}
 			if(variables.gameLvl==3||(variables.gameLvl<-1&&variables.gameLvl>-6)){
 			    if(blood)	g.drawImage(variables.napravlenie,0,0,150,100,null);
-			    if(Office.t_1) g.drawImage(variables.napravlenie,0,0,75,100,null);
-				if(Office.t_2) g.drawImage(variables.napravlenie,80,0,75,100,null);
-				if(Office.t_3) g.drawImage(variables.napravlenie,160,0,75,100,null);
-				if(Office.t_4) g.drawImage(variables.napravlenie,240,0,75,100,null);
+
 
 
 				if(Fruit.f_1) g.drawImage(variables.napravlenie,0,  0,60,60,null);

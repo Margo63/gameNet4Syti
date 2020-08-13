@@ -35,6 +35,7 @@ public class Lvl3_Frame {
             }
             };
 
+
         yes = new MainBut();
         yes.MenuButt(17,"Войти в здание",    10,    10,    open_panel);
         no= new MainBut();

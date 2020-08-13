@@ -41,10 +41,10 @@ public class Doctor {
     }*/
 
     public void coll(int type){
-        if(Panel.player.x >= x/*-50*/ &&
-                Panel.player.x <= x+image.getWidth(null)/*+50*/ &&
-                Panel.player.y+Panel.player.pers.getHeight(null)/2>=y/*-50*/ &&
-                Panel.player.y+Panel.player.pers.getHeight(null)/2<=y+image.getHeight(null)/*+50*/
+        if(game3.Panel.player.x+game3.Panel.player.directionX*3+game3.Panel.player.pers.getWidth(null)-20>=x &&
+                game3.Panel.player.x+game3.Panel.player.directionX*3-20<=x+image.getWidth(null) &&
+                game3.Panel.player.y+game3.Panel.player.directionY*3<y+image.getHeight(null)-20 &&
+                game3.Panel.player.y+game3.Panel.player.directionY*3+game3.Panel.player.pers.getHeight(null)>=y-20
         ){
             collisTrue2=true;
             switch(type){

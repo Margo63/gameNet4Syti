@@ -15,7 +15,7 @@ Container(int x, int y, Image img,int type){
 	 this.x = x;
 	 this.y = y;
 	 this.img = img;
-	 this.type= type;//1-пластик, 2-бумага, 3-стекло, 4-органический, 5-металл, 0-обычный
+	 this.type= type;//1-пластик, 2-бумага, 3-стекло, 4-органический, 5-металл, 0-нельзя перерабатывать
 }
 public void trash_cont() {
 	 if(Panel.player.x-Panel.player.directionX*5+Panel.player.pers.getWidth(null)>=x &&

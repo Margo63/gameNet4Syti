@@ -1,5 +1,6 @@
 package game;
 
+import game3.Office;
 import main.variables;
 
 import javax.swing.*;
@@ -20,7 +21,19 @@ public static JPanel p_setting;
                 super.paintComponent(g);
                 switch(variables.gameLvl){
                     case 1: g.drawImage(variables.blood_ask,0,0,null); break;
-                    case 3: break;
+                    case 3:  if(Office.t_1) g.drawImage(variables.napravlenie,0,0,75,100,null);
+                             if(Office.t_2) g.drawImage(variables.napravlenie,80,0,75,100,null);
+                             if(Office.t_3) g.drawImage(variables.napravlenie,160,0,75,100,null);
+                             if(Office.t_4) g.drawImage(variables.napravlenie,240,0,75,100,null);
+
+                        break;
+                }
+
+                if(variables.gameLvl>-7&&variables.gameLvl<-1){
+                    if(Office.t_1) g.drawImage(variables.napravlenie,0,0,75,100,null);
+                    if(Office.t_2) g.drawImage(variables.napravlenie,80,0,75,100,null);
+                    if(Office.t_3) g.drawImage(variables.napravlenie,160,0,75,100,null);
+                    if(Office.t_4) g.drawImage(variables.napravlenie,240,0,75,100,null);
                 }
             }
         };

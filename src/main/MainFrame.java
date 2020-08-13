@@ -29,7 +29,8 @@ public class MainFrame{
 	public static MainBut but2;
 
 	public static JFrame frame;
-	
+	public static int lighty=variables.height-variables.height/3-variables.height/6-variables.light.getHeight(null);
+	public static int lightx=300;
 	public MainFrame(){
 		createFrame(); 
 		
@@ -135,7 +136,7 @@ public class MainFrame{
 		g.drawImage(Instance.cap.img, Instance.cap.x, Instance.cap.y, null);
 		g.drawImage(Instance.plastic_bag.img, Instance.plastic_bag.x, Instance.plastic_bag.y, null);
 		
-		g.drawImage(Instance.transition.im, Instance.transition.x, Instance.transition.y,variables.tr.getWidth(null),variables.height/3, null);
+		g.drawImage(Instance.transition.im, Instance.transition.x, Instance.transition.y, null);
 
 		
 		g.drawImage(Instance.cont_pap.img, Instance.cont_pap.x, Instance.cont_pap.y, null);
@@ -149,8 +150,10 @@ public class MainFrame{
 		g.drawImage(Instance.car2.img,Instance.car2.x,Instance.car2.y, null);
 		
 		g.drawImage(Light.light, Light.x,Light.y,  null);
-		//g.drawImage(variables.fon1,0,0,variables.width,variables.height,null);
-		//g.drawImage(variables.girl,0,400,/*54,150,*/null);
+
+
+		g.drawImage(variables.light, lightx,lighty,  null);
+
 		g.drawImage(Panel.player.pers, Panel.player.x, Panel.player.y,  null);
 		
 	   if(Point.pl)   g.drawImage(variables.plus, Point.plus_x, Point.plus_y,  null);

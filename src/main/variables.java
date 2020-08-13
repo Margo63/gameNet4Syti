@@ -65,14 +65,16 @@ public class variables {
 	public static Image container= new ImageIcon("image/1/trash/container.png").getImage();
 	public static Image plastic_bag= new ImageIcon("image/1/trash/plastic_bag.png").getImage();
 
+	public static Image light= new ImageIcon("image/5.png").getImage();
+
 	//контейнер
-	public static Image cont= new ImageIcon("image/1/buk.jpg").getImage();
+	public static Image cont= new ImageIcon("image/1/cont_ev.png").getImage();
 	public static Image cont_pap= new ImageIcon("image/1/cont_pap.png").getImage();
 	public static Image cont_pl= new ImageIcon("image/1/cont_pl.png").getImage();
 	public static Image cont_gl= new ImageIcon("image/1/cont_gl.png").getImage();
 	public static Image cont_met= new ImageIcon("image/1/cont_m.png").getImage();
 	public static Image cont_org= new ImageIcon("image/1/cont_b.png").getImage();
-	public static Image cont_sim= new ImageIcon("image/1/1.png").getImage();
+	public static Image cont_sim= new ImageIcon("image/1/cont_no.png").getImage();
 
 	//машинки и переход
 	public static Image tr= new ImageIcon("image/1/transition.png").getImage();
@@ -117,6 +119,10 @@ public class variables {
 	//КЦВ
 	public static Image of_room = new ImageIcon("image/s1200.jpg").getImage();
 	public static Image stand = new ImageIcon("image/hospital.jpg").getImage();
+	public static Image task1 = new ImageIcon("image/game3/task/task1.png").getImage();
+	public static Image task2 = new ImageIcon("image/game3/task/task2.png").getImage();
+	public static Image task3 = new ImageIcon("image/game3/task/task3.png").getImage();
+	public static Image task4 = new ImageIcon("image/game3/task/task4.png").getImage();
 	//магазин
 	public static Image shop_room = new ImageIcon("image/q.jpg").getImage();
 

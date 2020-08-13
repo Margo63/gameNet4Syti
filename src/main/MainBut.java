@@ -283,19 +283,19 @@ public class MainBut extends JButton {
 
 
                           switch(House.w_h){
-							  case 0: System.out.println("просто дом"); /*if(Office.t_2||Office.t_3||Office.t_4)*/
+							  case 0: System.out.println("просто дом"); if(Office.t_2||Office.t_3||Office.t_4)
 
 								  variables.gameLvl=-6;
 								  Button.but.setVisible(false);
 								  variables.MainPanel.repaint();
 
 								  break;
-							  case 1: System.out.println("Вошел в больницу"); // if(Office.t_1)
+							  case 1: System.out.println("Вошел в больницу");  if(Office.t_1)
 
 
 							  	new Hospitale_Room(); break;
 							  case 2: System.out.println("Вошел в КЦВ");       new Office(); break;
-							  case 3: System.out.println("Вошел в магазин");  // if(Office.t_2||Office.t_3)
+							  case 3: System.out.println("Вошел в магазин");   if(Office.t_2||Office.t_3)
 								   new Shop();break;
 						  }
 						Lvl3_Frame.open_frame.dispose();
@@ -351,8 +351,18 @@ public class MainBut extends JButton {
 						Flat.f_ask.dispose();
 
 						switch(Flat.type_frame){
-							case 1:	Fruit.f_4=false;   Vegetables.v_5=false;Bread.b_3=false;Milk.mi_1=false;Grocery.g_2=false;Meat.me_1=false; break;
-							case 2: Fruit.f_3=false;  Vegetables.v_1=false;   Bread.b_1=false;  Milk.mi_4=false;  Grocery.g_7=false;  Meat.me_3=false;  Candy.c_3=false; break;
+							case 1:	Fruit.f_4=false;   Vegetables.v_5=false;Bread.b_3=false;Milk.mi_1=false;Grocery.g_2=false;Meat.me_1=false;
+								Container.point++;
+								Point.pl=true;
+								new Point();
+								Office.t_2=false;
+							break;
+							case 2: Fruit.f_3=false;  Vegetables.v_1=false;   Bread.b_1=false;  Milk.mi_4=false;  Grocery.g_7=false;  Meat.me_3=false;  Candy.c_3=false;
+								Container.point++;
+								Point.pl=true;
+								new Point();
+								Office.t_3=false;
+							break;
 						}
 
 

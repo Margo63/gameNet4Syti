@@ -19,6 +19,7 @@ import game1.Panel;
 import game1.Point;
 import game2.Dialogue;
 import game3.Hospitale_Room;
+import main.MainFrame;
 import main.variables;
 
 
@@ -203,6 +204,8 @@ public class Player {
 		Instance.container.move_trash();
 		Instance.cardboard.move_trash();
 
+		MainFrame.lightx-=Panel.player.directionX/3;
+		MainFrame.lighty-=Panel.player.directionY/3;
 	  	
 }
 	 void moveHouse() {

@@ -38,12 +38,12 @@ public class Meat {
 
         ///////////////////////////////////////////////////////
         b1 = new MainBut();
-        b1.MenuButt(-25, "кура",10 ,10 , p);
+        if(!me_1)b1.MenuButt(-25, "кура",10 ,10 , p);
         b1.setSize(60,60);
         b1.setOpaque(false);
         b1.setContentAreaFilled(false);
         b1.setBorderPainted(false);
-        if(!me_1)b1.img=variables.plastic;
+        b1.img=variables.plastic;
 
         b1.w=variables.plastic.getWidth(null);
         b1.h=variables.plastic.getHeight(null);

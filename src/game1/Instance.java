@@ -47,7 +47,7 @@ public class Instance {
 	int s=variables.height-variables.street.getHeight(null)-variables.gray_street.getHeight(null);
 	int gs=variables.height-variables.gray_street.getHeight(null);
 	int gs2=variables.height-variables.street.getHeight(null)-2*variables.gray_street.getHeight(null)+300;
-	int tr=variables.height-variables.street.getHeight(null)-variables.gray_street.getHeight(null);
+	int tr=variables.height-variables.street.getHeight(null)-variables.gray_street.getHeight(null)+300;
 
 //	int s=variables.height-variables.height/3-variables.height/12;
 //	int gs=variables.height-variables.height/12;
@@ -138,6 +138,7 @@ public class Instance {
 		cont_met = new Container(400,600,variables.cont_met,5);
 		cont_org = new Container(500,600,variables.cont_org,4);
 		cont_sim = new Container(300,600,variables.cont_sim,0);
+
 
 		
 		//cont_pl = new Trash(110,600,variables.cont_pl,1);
