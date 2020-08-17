@@ -43,7 +43,7 @@ public class Trash {
 				Panel.player.y+Panel.player.directionY*5<y+img.getHeight(null) &&
 				Panel.player.y+Panel.player.directionY*5+Panel.player.pers.getHeight(null)>=y
 			 ) {
-		 
+
 		 
 		 switch(type) {
 		     case 0: point_no++;   break;
@@ -57,19 +57,19 @@ public class Trash {
 		 }
 
 		 switch(number){
-			 case 1:   num1=true;  break;
-			 case 2:   num2=true;  break;
-			 case 3:   num3=true;  break;
-			 case 4:   num4=true;  break;
-			 case 5:   num5=true;  break;
-			 case 6:   num6=true;  break;
-			 case 7:   num7=true;  break;
-			 case 8:   num8=true;  break;
-			 case 9:   num9=true;  break;
-			 case 10:  num10=true; break;
-			 case 11:  num11=true; break;
-			 case 12:  num12=true; break;
-			 case 13:  num13=true; break;
+			 case 1:   num1=true; img = new ImageIcon("").getImage();  break;
+			 case 2:   num2=true; img = new ImageIcon("").getImage(); break;
+			 case 3:   num3=true; img = new ImageIcon("").getImage(); break;
+			 case 4:   num4=true;  img = new ImageIcon("").getImage();break;
+			 case 5:   num5=true;  img = new ImageIcon("").getImage();break;
+			 case 6:   num6=true;  img = new ImageIcon("").getImage();break;
+			 case 7:   num7=true;  img = new ImageIcon("").getImage();break;
+			 case 8:   num8=true;  img = new ImageIcon("").getImage();break;
+			 case 9:   num9=true;  img = new ImageIcon("").getImage();break;
+			 case 10:  num10=true; img = new ImageIcon("").getImage();break;
+			 case 11:  num11=true; img = new ImageIcon("").getImage();break;
+			 case 12:  num12=true; img = new ImageIcon("").getImage();break;
+			 case 13:  num13=true; img = new ImageIcon("").getImage(); break;
 		 }
 		  Inventory.p.repaint();
 	x=-1000;

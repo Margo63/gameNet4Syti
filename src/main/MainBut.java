@@ -1,8 +1,7 @@
 package main;
 
-import java.awt.Graphics;
+import java.awt.*;
 
-import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,8 +12,12 @@ import game.Settings;
 import game.lvl;
 import game1.*;
 
+import game1.Container;
 import game1.Panel;
+import game1.Point;
 import game3.*;
+
+import game4.Choice;
 import make_out.Fmini3;
 import quest.*;
 import selection.selectionGame;;
@@ -36,7 +39,23 @@ public class MainBut extends JButton {
 		this.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				switch(cl){
-					case 1:  new selectionGame();  break;
+					case 1:  //System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA Choice.trueButChoice " + Choice.trueButChoice);
+						if(Choice.trueButChoice){
+						//	System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+							Choice.trueButChoice = false;
+							Choice.q_b0.setVisible(false);
+							Choice.q_b1.setVisible(false);
+							Choice.q_b2.setVisible(false);
+							Choice.q_b3.setVisible(false);
+							Choice.q_b4.setVisible(false);
+							Choice.q_b5.setVisible(false);
+							Choice.q_b6.setVisible(false);
+							Choice.q_b7.setVisible(false);
+							Choice.q_b8.setVisible(false);
+							Choice.q_b9.setVisible(false);
+						}
+						new selectionGame();
+							 break;
 					case 2:  new Interface.infoFrame(); break;
 					case 3:  System.exit(0); break;
 					case 4:  Interface.infoFrame.frameI.dispose(); break;
@@ -71,7 +90,8 @@ public class MainBut extends JButton {
 
 					      break;
 
-					case 9: if(Container.cont2 && Trash.point_pap>0&&Trash.num1) { Container.point++;
+					case 9: if(Container.cont2 && Trash.point_pap>0 && Trash.num1) {
+						    Container.point++;
 					        Point.pl=true;
 					        new Point();
 					    	Trash.point_pap--;
@@ -79,8 +99,13 @@ public class MainBut extends JButton {
 					    	Quest.b.setVisible(false);
 					        }
 
+
 						    //Quest.f_quest.dispose();
 						    Quest.p_quest.repaint();
+
+					       if(Container.cont2 && Trash.point_pap<=0){
+
+						   }
 						    break;
 
 					case 10: if(Container.cont1 && Trash.point_pl>0&&Trash.num2) { Container.point++;
@@ -207,6 +232,7 @@ public class MainBut extends JButton {
 							Trash.point_met--;
 							Trash.num11=false;
 							Quest.b10.setVisible(false);
+
 						}
 
 						// Quest.f_quest.dispose();
@@ -233,6 +259,7 @@ public class MainBut extends JButton {
 							Trash.point_pap--;
 							Trash.num13=false;
 							Quest.b12.setVisible(false);
+							Quest.b12.img=variables.null_image;
 						}
 
 						// Quest.f_quest.dispose();
@@ -243,28 +270,39 @@ public class MainBut extends JButton {
 						Container.point++;
 						Point.pl=true;
 				        new Point();
-				        Car.b1.setVisible(false);
-				        Car.b2.setVisible(false);
-				        Car.b3.setVisible(false);
+
+
+				       // Car.b1.setVisible(false);
+				      //  Car.b2.setVisible(false);
+				       // Car.b3.setVisible(false);
+
+						Car.p.remove(Car.b1);
+						Car.p.remove(Car.b2);
+						Car.p.remove(Car.b3);
+
 				        variables.car_panel=variables.mol;
+
 				        //Car.f.dispose();
 				        Car.p.repaint();
 						break;
 
 					case 15:
-						Car.b1.setVisible(false);
-				        Car.b2.setVisible(false);
-				        Car.b3.setVisible(false);
+						Car.f.remove(Car.b1);
+						Car.f.remove(Car.b2);
+						Car.f.remove(Car.b3);
 				        variables.car_panel=variables.ok;
+
                         //Car.f.dispose();
 				        Car.p.repaint();
 						break;
 
 					case 16:
-						Car.b1.setVisible(false);
-				        Car.b2.setVisible(false);
-				        Car.b3.setVisible(false);
+						Car.f.remove(Car.b1);
+						Car.f.remove(Car.b2);
+						Car.f.remove(Car.b3);
 				        variables.car_panel=variables.net;
+
+
                         //Car.f.dispose();
 				        Car.p.repaint();
 						break;
@@ -316,6 +354,9 @@ public class MainBut extends JButton {
                             Point.pl=true;
                             new Point();
                             Office.t_1=false;
+                            Office.x1=0;
+                            Office.p_office.repaint();
+							Office.task_1.repaint();
 
                         }
                         if(Hospitale_Room.type==3) variables.gameLvl=-3;
@@ -326,43 +367,53 @@ public class MainBut extends JButton {
 						//System.out.println("close");
                         break;
 
-					case 29:
+				/*	case 29:
 						Office.t_1=true;
-						Office.task_1.setVisible(false);
+						Office.task_1.img=variables.fon1;
+
 						Office.p_office.repaint();
                          break;
 					case 30:
 						Office.t_2=true;
-						Office.task_2.setVisible(false);
+						Office.task_2.img=variables.fon1;
+						variables.task1=variables.fon1;
 						Office.p_office.repaint();
 						break;
 					case 31:
 						Office.t_3=true;
-						Office.task_3.setVisible(false);
+						Office.task_3.img=variables.fon1;
 						Office.p_office.repaint();
 						break;
 					case 32:
 						Office.t_4=true;
-						Office.task_4.setVisible(false);
+						Office.task_4.img=variables.fon1;
 						Office.p_office.repaint();
 						break;
-
+*/
 					case 33:
 						Flat.f_ask.dispose();
+						Flat.f_dog.dispose();
 
 						switch(Flat.type_frame){
-							case 1:	Fruit.f_4=false;   Vegetables.v_5=false;Bread.b_3=false;Milk.mi_1=false;Grocery.g_2=false;Meat.me_1=false;
+							case 1:
+
+								Fruit.f_4=false;   Vegetables.v_5=false;Bread.b_3=false;Milk.mi_1=false;Grocery.g_2=false;Meat.me_1=false;
 								Container.point++;
 								Point.pl=true;
 								new Point();
 								Office.t_2=false;
+
 							break;
-							case 2: Fruit.f_3=false;  Vegetables.v_1=false;   Bread.b_1=false;  Milk.mi_4=false;  Grocery.g_7=false;  Meat.me_3=false;  Candy.c_3=false;
+							case 2:
+
+								Fruit.f_3=false;  Vegetables.v_1=false;   Bread.b_1=false;  Milk.mi_4=false;  Grocery.g_7=false;  Meat.me_3=false;  Candy.c_3=false;
 								Container.point++;
 								Point.pl=true;
 								new Point();
 								Office.t_3=false;
+
 							break;
+
 						}
 
 
@@ -556,36 +607,6 @@ public class MainBut extends JButton {
                         break;
 
 
-					case 101:
-						Container.point--;
-						break;
-					case 102:
-						Container.point--;;
-						break;
-					case 103:
-						Container.point--;
-						break;
-					case 104:
-						Container.point--;
-						break;
-					case 105:
-						Container.point--;
-						break;
-					case 106:
-						Container.point--;
-						break;
-					case 107:
-						Container.point--;
-						break;
-					case 108:
-						Container.point--;
-						break;
-					case 109:
-						Container.point--;
-						break;
-					case 110:
-						Container.point--;
-						break;
 
 
 				}

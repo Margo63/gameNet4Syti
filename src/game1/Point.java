@@ -9,7 +9,10 @@ import main.variables;
 
 public class Point {
 public static Timer tt;
+
 public static boolean pl;
+public static boolean min;
+
 public static int plus_x=100,plus_y=300;
 
 

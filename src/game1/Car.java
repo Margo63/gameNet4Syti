@@ -10,6 +10,7 @@ import javax.swing.*;
 import game.Button;
 import main.MainBut;
 import main.variables;
+import player.Player;
 
 public class Car {
 public static MainBut b1;	
@@ -21,11 +22,12 @@ int h;
 int kol=0;
 public int x,y,type;
 public Image img;
+public  boolean e_car=false;
 
 
-    public Car(Image im,int x,int y,int type_car){
-
-    	this.img=im;
+    public Car(Image im,int x,int y,int type_car,boolean e_car){
+       this.e_car=e_car;
+       this.img=im;
        this.x=x;
        this.y=y;
        this.type=type_car;    //1-машина с бензином,  2-машина с собакой
@@ -35,21 +37,32 @@ public Image img;
 					Panel.player.x-Panel.player.directionX*5<=x+img.getWidth(null) &&
 					Panel.player.y+Panel.player.directionY*5<y+img.getHeight(null) &&
 					Panel.player.y+Panel.player.directionY*5+Panel.player.pers.getHeight(null)>=y) {
-			 
-			 switch(type) {
-			 case 1:
-			h=1;
-			 frame();
-			
-				 break;
-				 
-			 case 2:
-				 h=2;
-				 frame();
-				 break;
+
+
+                 e_car=true;
+
+				 switch (type) {
+					 case 1:
+
+						 h = 1;
+						if(Player.ee){
+							frame();
+						}
+
+						 break;
+
+					 case 2:
+						 h = 2;
+						 if(Player.ee){
+						 	frame();
+						 }
+						 break;
+				 }
 			 }
-			 
-			 
+		 else {
+		 	e_car=false;
+
+
 		 }
 	
 }
@@ -59,6 +72,9 @@ public Image img;
 	}
 	
 	public void frame() {
+
+    	Player.ee=false;
+
 		variables.car_panel=variables.null_image;
 		if(kol<1){
 			f= new JFrame();
@@ -81,28 +97,34 @@ public Image img;
 			b1 = new MainBut();
 		    b1.MenuButt(14,"Сообщить владельцу",10 ,50 , p);
 		    b1.setSize(f.getWidth()-20,50);
+		    b1.img=variables.task1;
 		
 			b2 = new MainBut();
 		    b2.MenuButt(15,"Оставить как есть",10 ,110 , p);
 		    b2.setSize(f.getWidth()-20,50);
+		    b2.img= variables.task2;
 		    
 		    b3 = new MainBut();
 		    b3.MenuButt(16,"Убрать самому",10 ,170 , p);
 		    b3.setSize(f.getWidth()-20,50);
+		    b3.img=variables.task3;
 		}
 		
 		if (h==2) {
 			b1 = new MainBut();
 		    b1.MenuButt(14,"Позвонить владельцу",10 ,50 , p);
 		    b1.setSize(f.getWidth()-20,50);
-		    
+			b1.img=variables.task1;
+
 			b2 = new MainBut();
 		    b2.MenuButt(16,"Попробовать самому открыть машину",10 ,110 , p);
 		    b2.setSize(f.getWidth()-20,50);
-		    
+			b2.img=variables.task2;
+
 		    b3 = new MainBut();
 		    b3.MenuButt(15,"Оставить как есть",10 ,170 , p);
 		    b3.setSize(f.getWidth()-20,50);
+			b3.img=variables.task3;
 		}
 		
 		f.add(p);

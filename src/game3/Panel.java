@@ -34,6 +34,7 @@ public class Panel {
 	public static Flat flat1;
 	public static Flat flat2;
 	public static Flat flat3;
+	public static Flat flat4;
 
 	int s=variables.height-variables.height/3-variables.height/12;
 	int gs=variables.height-variables.height/12;
@@ -86,10 +87,10 @@ void but() {
 	MainFrame.frame.setFocusable(true);
 }
 void house(){
-	hospital = new House(1,1,variables.hospital,1);
-	shop = new House(600,house_shop,variables.shop,3);
-	office = new House(300,1,variables.office,2);
-	gray = new House(1000,house_gray,variables.gray,0);
+	hospital = new House(1,1,variables.hospital,1,false);
+	shop = new House(600,house_shop,variables.shop,3,false);
+	office = new House(300,1,variables.office,2,false);
+	gray = new House(1000,house_gray,variables.gray,0,false);
 
 	street = new Street3(variables.street,0,s,2);
 	gray_street = new Street3(variables.gray_street,0,gs,2);
@@ -137,6 +138,7 @@ void flat(){
 	flat1= new Flat(700,100,variables.door,1);
 	flat2 = new Flat(400,100,variables.door,2);
 	flat3 = new Flat(900,100,variables.door,3);
+	flat4 = new Flat(1000,100,variables.door,4);
 
 
 }

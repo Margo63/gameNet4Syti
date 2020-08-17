@@ -15,8 +15,8 @@ public class Flat {
     public Image image;
     public int type;
     public MainBut but_ask;
-    public static  JFrame f_ask;
-    public static JPanel p_ask;
+    public static  JFrame f_ask,f_dog;
+    public static JPanel p_ask,p_dog;
     public  boolean collisTrue2=false;
     public static int kol=0;
 
@@ -86,6 +86,7 @@ public class Flat {
                 switch(type_frame){
                     case 1:  g.drawImage(variables.blood_ask,0,0,null); break;//отдать продукты
                     case 2:  g.drawImage(variables.blood_ask,0,0,null); break;
+                    case 3:  g.drawImage(variables.blood_ask,0,0,null); break;
                 }
 
 
@@ -100,5 +101,41 @@ public class Flat {
 
 
         f_ask.add(p_ask);
+    }
+
+    public void frame_dog(){
+        if(kol<1){
+            kol++;
+            f_dog = new JFrame();
+            f_dog.setUndecorated(true);
+            f_dog.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
+
+        }
+        f_dog.setVisible(true);
+        p_dog = new JPanel(){
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+
+
+
+                // g.drawImage(variables.blood_ask,0,0,null);//отдать продукты
+                switch(type_frame){
+                    case 1:  g.drawImage(variables.blood_ask,0,0,null); break;//отдать продукты
+                    case 2:  g.drawImage(variables.blood_ask,0,0,null); break;
+                    case 3:  g.drawImage(variables.blood_ask,0,0,null); break;
+                }
+
+
+
+
+            }
+        };
+        p_dog.setLayout(null);
+        but_ask = new MainBut();
+        but_ask.MenuButt(33,"OK",100,200,p_dog);
+
+
+
+        f_dog.add(p_dog);
     }
 }

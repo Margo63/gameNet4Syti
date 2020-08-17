@@ -3,6 +3,7 @@ package quest;
 import game3.Office;
 import main.MainBut;
 import main.variables;
+import player.Player;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,7 +15,7 @@ public class Lvl3_Frame {
     public static MainBut no;
     public static int kol_open=0;
     public Lvl3_Frame(){
-
+        Player.ee=false;
         if(kol_open<1){
             kol_open++;
             open_frame = new JFrame();

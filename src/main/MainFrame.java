@@ -10,11 +10,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import game1.Instance;
-import game1.Light;
-import game1.Panel;
-import game1.Point;
-import game1.Trash;
+import game1.*;
 
 import player.Player;
 import quest.Quest;
@@ -153,10 +149,17 @@ public class MainFrame{
 
 
 		g.drawImage(variables.light, lightx,lighty,  null);
+		//System.out.println("AAAAAAAAAAAAAAAAAAAAAaa: " + variables.e);
+		if(variables.e){
+		//	System.out.println("IIIIIIIIIIIIIIIIIIIAAAAAAAAAAA: " + variables.e);
+			g.drawImage(variables.fon, Panel.player.x, Panel.player.y-15,30,30,  null);
+		}
+
 
 		g.drawImage(Panel.player.pers, Panel.player.x, Panel.player.y,  null);
 		
 	   if(Point.pl)   g.drawImage(variables.plus, Point.plus_x, Point.plus_y,  null);
+	   if(Point.min)   g.drawImage(variables.plus, 100, 100,  null);
 		
 	}
 	
@@ -185,30 +188,42 @@ public class MainFrame{
       g.drawImage(game3.Panel.office.image, game3.Panel.office.x, game3.Panel.office.y, null);
       g.drawImage(game3.Panel.gray.image, game3.Panel.gray.x, game3.Panel.gray.y, null);
 
+		if(variables.e){
 
+			g.drawImage(variables.fon, game3.Panel.player.x, game3.Panel.player.y-15,30,30,  null);
+		}
       g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
    }
 	
     void paintHospitale(Graphics g){
+
       g.drawImage(variables.hos_room,0,0,variables.width,variables.height,null);
       g.drawImage(game3.Panel.doctor.image, game3.Panel.doctor.x,game3.Panel.doctor.y,null);
       g.drawImage(game3.Panel.door.image, game3.Panel.door.x,game3.Panel.door.y,null);
       g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
+
 	}
 
 	void paintBlood(Graphics g){
+
 	  g.drawImage(variables.hos_room2,0,0,variables.width,variables.height,null);
 	  g.drawImage(game3.Panel.doc_blood.image, game3.Panel.doc_blood.x,game3.Panel.doc_blood.y,null);
+
 		if(Point.pl)   g.drawImage(variables.plus, Point.plus_x, Point.plus_y,  null);
+
 	  g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
+
 	}
 
 	void paintOffice(Graphics g){
+
 		g.drawImage(variables.of_room,0,0,variables.width,variables.height,null);
 		g.drawImage(game3.Panel.stand.im,game3.Panel.stand.x,game3.Panel.stand.y,null);
 		g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
+
 	}
 	void paintShop(Graphics g){
+
 		g.drawImage(variables.shop_room,0,0,variables.width,variables.height,null);
 
 		g.drawImage(game3.Panel.milk.im,game3.Panel.milk.x,game3.Panel.milk.y,null);
@@ -220,9 +235,11 @@ public class MainFrame{
 		g.drawImage(game3.Panel.grocery.im,game3.Panel.grocery.x,game3.Panel.grocery.y,null);
 
 		g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
+
 	}
 
 	void paintFlat(Graphics g){
+
 		g.drawImage(variables.flat_room,0,0,variables.width,variables.height,null);
 
 		g.drawImage(game3.Panel.flat1.image, game3.Panel.flat1.x,game3.Panel.flat1.y,null);
@@ -230,11 +247,11 @@ public class MainFrame{
 		g.drawImage(game3.Panel.flat3.image, game3.Panel.flat3.x,game3.Panel.flat3.y,null);
 
 		g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
+
 	}
 
 	void painGame4(Graphics g)
 	{
-
 		g.drawImage(variables.fon1,0,0,variables.width,variables.height,  null);
 	}
 }

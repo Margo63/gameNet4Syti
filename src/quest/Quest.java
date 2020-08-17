@@ -36,15 +36,17 @@ public class Quest {
 	public  static int  kol;
  public  Quest(){
 
-	//if(kol<1) {
-		//kol++;
-		f_quest = new JFrame();
 
-		f_quest.setUndecorated(true);
-		f_quest.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
-	//}
-
-		 p_quest = new JPanel() {
+	 f_quest = new JFrame();
+	 kol++;
+	 f_quest.setUndecorated(true);
+	 f_quest.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
+	 if(kol>0) {
+kol=0;
+f_quest.dispose();
+variables.MainPanel.repaint();
+	 }
+	 p_quest = new JPanel() {
 			 protected void paintComponent(Graphics g) {
 					super.paintComponent(g);
 				 g.drawImage(variables.white_fon,  0, 0, variables.width,variables.height,   null);

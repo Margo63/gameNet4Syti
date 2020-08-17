@@ -83,7 +83,7 @@ public class Panel {
 		selectionGame.but9.setVisible(false);
 
 		Button.button();
-
+        Button.but_setting();
 	
 		variables.MainPanel.repaint();
 		variables.MainPanel.setLayout(null);

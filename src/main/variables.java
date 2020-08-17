@@ -39,6 +39,15 @@ public class variables {
 	public static Image num9= new ImageIcon("image/point/num9.png").getImage();
 	public static Image num =new ImageIcon("image/point/num0.png").getImage();
 	public static Image plus = new ImageIcon("image/1/plus.png").getImage();
+
+	public static Image info1 = new ImageIcon("image/info1.png").getImage();
+	public static Image info2 = new ImageIcon("image/info2.png").getImage();
+	public static Image info3 = new ImageIcon("image/info3_1.png").getImage();
+	public static Image info4 = new ImageIcon("image/info4.png").getImage();
+	public static Image ttask1 = new ImageIcon("image/task1.png").getImage();
+	public static Image ttask2 = new ImageIcon("image/task2.png").getImage();
+	public static Image ttask3 = new ImageIcon("image/task3.png").getImage();
+	public static Image ttask4 = new ImageIcon("image/task4.png").getImage();
 	
 	
 	//lvl1
@@ -160,7 +169,7 @@ public class variables {
 			
 	//уровень
 	public static int gameLvl = 0;
-	
+	public static boolean e=false;
 	
 	
 	//персонаж

@@ -102,8 +102,8 @@ public class Instance {
 		
 		transition = new Street(variables.tr,880,tr,1);
 
-		car1 = new Car(variables.car_gasoline,450,c2,1);
-		car2 = new Car(variables.car,800,c,2);
+		car1 = new Car(variables.car_gasoline,450,c2,1,false);
+		car2 = new Car(variables.car,800,c,2,false);
 
 
 

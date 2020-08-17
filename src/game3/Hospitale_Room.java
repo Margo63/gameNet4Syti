@@ -4,6 +4,7 @@ import game.Button;
 import game1.Inventory;
 import main.MainBut;
 import main.variables;
+import player.Player;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,6 +24,8 @@ public class Hospitale_Room  {
          but();
          variables.gameLvl=-2;
          variables.MainPanel.repaint();
+         Panel.player.x = 0;
+         Panel.player.y = 400;
      }
      public static void blood(){
 

@@ -36,7 +36,7 @@ public class Candy {
 
         ///////////////////////////////////////////////////////
         b1 = new MainBut();
-        b1.MenuButt(-28, "конфеты1",10 ,10 , p);
+        b1.MenuButt(-28, "тортик",10 ,10 , p);
         b1.setSize(60,60);
         b1.setOpaque(false);
         b1.setContentAreaFilled(false);
@@ -47,7 +47,7 @@ public class Candy {
         b1.h=variables.plastic.getHeight(null);
         ////////////////////////////////////////////////////
         b2 = new MainBut();
-        b2.MenuButt(-29, "конфеты2", 70, 10, p);
+        b2.MenuButt(-29, "пироженые", 70, 10, p);
         b2.setSize(60,60);
         b2.setOpaque(false);
         b2.setContentAreaFilled(false);

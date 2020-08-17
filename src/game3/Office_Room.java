@@ -20,7 +20,7 @@ public void coll(){
             game3.Panel.player.y+ game3.Panel.player.directionY*5+ game3.Panel.player.pers.getHeight(null)>=y){
 
         collisTrue2=true;
- Office.of_frame();
+        Office.of_frame();
 
     }
     else{

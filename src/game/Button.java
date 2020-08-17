@@ -1,5 +1,6 @@
 package game;
 
+import game4.Choice;
 import main.MainBut;
 import main.MainFrame;
 import main.variables;
@@ -43,6 +44,8 @@ public class Button {
 
         but.setFocusable(false);
         MainFrame.frame.setFocusable(true);
+
+
     }
     public static void but_setting(){
         but_set = new MainBut();

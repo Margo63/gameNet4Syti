@@ -37,13 +37,15 @@ public class selectionGame {
 		button();
 
 
+
 		variables.MainPanel.repaint();
 		
 		MainFrame.frame.setFocusable(true);
 		variables.MainPanel.setFocusable(true);
-		
-	
+
+
 		butFalse();
+
 	}
 	void panel() {
 
@@ -67,6 +69,7 @@ public class selectionGame {
 		but6.img=variables.m;
 		but6.w=variables.width/4-10;
 		but6.h=variables.height/2;
+
 		but6.setOpaque(false);
 		but6.setContentAreaFilled(false);
 		but6.setBorderPainted(false);
@@ -106,16 +109,17 @@ public class selectionGame {
 		catch(NullPointerException nullPointerException) {
 		}
 
-			Choice.q_b0.setVisible(false);
-			Choice.q_b1.setVisible(false);
-			Choice.q_b2.setVisible(false);
-			Choice.q_b3.setVisible(false);
-			Choice.q_b4.setVisible(false);
-			Choice.q_b5.setVisible(false);
-			Choice.q_b6.setVisible(false);
-			Choice.q_b7.setVisible(false);
-			Choice.q_b8.setVisible(false);
-			Choice.q_b9.setVisible(false);
+		Choice.q_b0.setVisible(false);
+		Choice.q_b1.setVisible(false);
+		Choice.q_b2.setVisible(false);
+		Choice.q_b3.setVisible(false);
+		Choice.q_b4.setVisible(false);
+		Choice.q_b5.setVisible(false);
+		Choice.q_b6.setVisible(false);
+		Choice.q_b7.setVisible(false);
+		Choice.q_b8.setVisible(false);
+		Choice.q_b9.setVisible(false);
+
 	}
 
 }

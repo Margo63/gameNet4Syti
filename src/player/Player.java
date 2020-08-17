@@ -10,15 +10,10 @@ import java.awt.event.KeyEvent;
 
 import javax.swing.Timer;
 
-import game1.Container;
-import game1.Home;
-import game1.Instance;
-import game1.Inventory;
-import game1.Light;
-import game1.Panel;
-import game1.Point;
+import game1.*;
 import game2.Dialogue;
 import game3.Hospitale_Room;
+import game3.Office;
 import main.MainFrame;
 import main.variables;
 
@@ -37,7 +32,7 @@ public class Player {
 	public int directionX = 5;
 	public int directionY = 0;
 	public int y;
-
+    public static boolean ee=false;
 	int key = 0;
 
 	
@@ -92,14 +87,33 @@ public class Player {
 					new Inventory();
 					Inventory.f.setVisible(true);
 
-
-						
 				}
 
-				if(e.getKeyCode()==KeyEvent.VK_P) {
 
-					//Inventory.f.dispose();
 
+
+
+				if(e.getKeyCode()==KeyEvent.VK_E) {
+
+                   // System.out.println(variables.e);
+					//Instance.car1.e_car=true;
+
+
+					if(variables.e){
+						ee=true;
+					}
+					else{
+						ee=false;
+					}
+
+
+
+				}
+				if(e.getKeyCode()==KeyEvent.VK_SPACE){
+
+					Office.x2=0;        Office.t_2=false; Office.p_office.repaint(); Office.task_2.repaint();
+					Office.x3=0;        Office.t_3=false; Office.p_office.repaint(); Office.task_3.repaint();
+					Office.x4=0;        Office.t_4=false; Office.p_office.repaint(); Office.task_4.repaint();
 
 				}
 				
@@ -265,8 +279,7 @@ public class Player {
 			collisTrue = Instance.blue.collisTrue || Instance.orange.collisTrue ||Instance.gray.collisTrue
 
 				|| Instance.cont_pap.collisTrue||Instance.cont_pl.collisTrue||Instance.cont_gl.collisTrue
-				|| Instance.cont_met.collisTrue||Instance.cont_org.collisTrue||Instance.cont_sim.collisTrue
-			;
+				|| Instance.cont_met.collisTrue||Instance.cont_org.collisTrue||Instance.cont_sim.collisTrue;
 			
 			
 			
@@ -376,13 +389,20 @@ public class Player {
 		  public void actionPerformed(ActionEvent e) {
 			  if (variables.gameLvl == 1) {
 				  Instance.gray.collision();
+
+				  variables.e=Instance.car1.e_car||Instance.car2.e_car;
 			  }
 			  if(variables.gameLvl==3){
 				  game3.Panel.gray.coll();
+
+				  variables.e= game3.Panel.shop.e_house||game3.Panel.hospital.e_house
+						  ||game3.Panel.office.e_house||game3.Panel.gray.e_house;
+				  System.out.println(variables.e);
 			  }
 			
 			 
 			  if (i<array.length-1 && !collisTrue&&variables.gameLvl==1) {
+
 				  pers = array[i];
 						x+=directionX;
 						y+=directionY;
@@ -391,6 +411,7 @@ public class Player {
 
 
 			  if (i<array.length-1 && !collisTrue2 &&(variables.gameLvl==3||(variables.gameLvl>-8 && variables.gameLvl<-1))) {
+
 				  pers = array[i];
 				  x+=directionX;
 				  y+=directionY;
