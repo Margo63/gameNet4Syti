@@ -110,11 +110,9 @@ public class MainFrame{
 		g.drawImage(Instance.gray_street.im, Instance.gray_street.x, Instance.gray_street.y, null);
 		g.drawImage(Instance.gray_street2.im, Instance.gray_street2.x, Instance.gray_street2.y,  null);
 		g.drawImage(Instance.street.im,      Instance.street.x, Instance.street.y,    null);
-		
-//		g.drawImage(Instance.green.img, Instance.green.x, Instance.green.y, null);
+
 		g.drawImage(Instance.blue.img, Instance.blue.x, Instance.blue.y, null);
 		g.drawImage(Instance.gray.img, Instance.gray.x, Instance.gray.y, null);
-//		g.drawImage(Instance.red.img, Instance.red.x, Instance.red.y, null);
 		g.drawImage(Instance.orange.img, Instance.orange.x, Instance.orange.y, null);
 		
 		g.drawImage(Instance.paper.img, Instance.paper.x, Instance.paper.y, null);
@@ -145,21 +143,24 @@ public class MainFrame{
 		g.drawImage(Instance.car1.img,Instance.car1.x,Instance.car1.y, null);
 		g.drawImage(Instance.car2.img,Instance.car2.x,Instance.car2.y, null);
 		
-		g.drawImage(Light.light, Light.x,Light.y,  null);
+		g.drawImage(Light.light, Light.x,   Light.y,  null);
 
 
-		g.drawImage(variables.light, lightx,lighty,  null);
-		//System.out.println("AAAAAAAAAAAAAAAAAAAAAaa: " + variables.e);
+		g.drawImage(variables.light, lightx, lighty,  null);
+
+
 		if(variables.e){
-		//	System.out.println("IIIIIIIIIIIIIIIIIIIAAAAAAAAAAA: " + variables.e);
+
 			g.drawImage(variables.fon, Panel.player.x, Panel.player.y-15,30,30,  null);
+
 		}
 
 
 		g.drawImage(Panel.player.pers, Panel.player.x, Panel.player.y,  null);
+
 		
 	   if(Point.pl)   g.drawImage(variables.plus, Point.plus_x, Point.plus_y,  null);
-	   if(Point.min)   g.drawImage(variables.plus, 100, 100,  null);
+	   if(Minus.min)   g.drawImage(variables.minus, Minus.minus_x, Minus.minus_y,  null);
 		
 	}
 	

@@ -22,7 +22,6 @@ public class Trash {
 	
 	public int x, y,type,number;
 	public static int point_pl=0,point_pap=0,point_gl=0,point_met=0,point_org=0,point_no=0; //кол-во собраного мусора
-	//public static int point_card=0,point_not=0,point_cont=0,point_cd=0;
 	public Image img;
 	public static boolean num1=false,num2=false,num3=false,num4=false,num5=false,num6=false,num7=false,num8=false,num9=false,num10=false,num11=false,num12=false,num13=false;
 	public boolean collTrue = false;

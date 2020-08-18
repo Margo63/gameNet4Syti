@@ -27,12 +27,12 @@ public void trash_cont() {
 		 
 		 
 		 switch(type) {
-		 	case 0: cont0=true;   cont1=false;  cont2=false;  cont3=false;  cont4=false;  cont5=false;   break;
-		    case 1: cont0=false;  cont1=true;   cont2=false;  cont3=false;  cont4=false;  cont5=false;   break;
-		    case 2: cont0=false;  cont1=false;  cont2=true;   cont3=false;  cont4=false;  cont5=false;   break;
-		    case 3: cont0=false;  cont1=false;  cont2=false;  cont3=true;   cont4=false;  cont5=false;   break;
-		    case 4: cont0=false;  cont1=false;  cont2=false;  cont3=false;  cont4=true;   cont5=false;   break;
-		    case 5: cont0=false;  cont1=false;  cont2=false;  cont3=false;  cont4=false;  cont5=true;    break;
+		 	case 0: cont0=true;   cont1=false;  cont2=false;  cont3=false;  cont4=false;  cont5=false; Quest.container=0;  break;
+		    case 1: cont0=false;  cont1=true;   cont2=false;  cont3=false;  cont4=false;  cont5=false; Quest.container=1;  break;
+		    case 2: cont0=false;  cont1=false;  cont2=true;   cont3=false;  cont4=false;  cont5=false; Quest.container=2; break;
+		    case 3: cont0=false;  cont1=false;  cont2=false;  cont3=true;   cont4=false;  cont5=false; Quest.container=3;  break;
+		    case 4: cont0=false;  cont1=false;  cont2=false;  cont3=false;  cont4=true;   cont5=false; Quest.container=4;  break;
+		    case 5: cont0=false;  cont1=false;  cont2=false;  cont3=false;  cont4=false;  cont5=true;  Quest.container=5;  break;
 			 
 		 }
 		 

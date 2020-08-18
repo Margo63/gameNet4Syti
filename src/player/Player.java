@@ -111,9 +111,10 @@ public class Player {
 				}
 				if(e.getKeyCode()==KeyEvent.VK_SPACE){
 
-					Office.x2=0;        Office.t_2=false; Office.p_office.repaint(); Office.task_2.repaint();
-					Office.x3=0;        Office.t_3=false; Office.p_office.repaint(); Office.task_3.repaint();
-					Office.x4=0;        Office.t_4=false; Office.p_office.repaint(); Office.task_4.repaint();
+					Office.x1=0;        Office.t_1=false;  Office.p_office.repaint(); Office.task_1.repaint();
+					Office.x2=0;        Office.t_2=false;  Office.p_office.repaint(); Office.task_2.repaint();
+					Office.x3=0;        Office.t_3=false;  Office.p_office.repaint(); Office.task_3.repaint();
+					Office.x4=0;        Office.t_4=false;  Office.p_office.repaint(); Office.task_4.repaint();
 
 				}
 				
@@ -397,7 +398,7 @@ public class Player {
 
 				  variables.e= game3.Panel.shop.e_house||game3.Panel.hospital.e_house
 						  ||game3.Panel.office.e_house||game3.Panel.gray.e_house;
-				  System.out.println(variables.e);
+
 			  }
 			
 			 

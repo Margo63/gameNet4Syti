@@ -54,6 +54,12 @@ public class MainBut extends JButton {
 							Choice.q_b8.setVisible(false);
 							Choice.q_b9.setVisible(false);
 						}
+						if (Office.check){
+							Office.t_4=false;
+							Office.t_3=false;
+							Office.t_2=false;
+							Office.t_1=false;
+						}
 						new selectionGame();
 							 break;
 					case 2:  new Interface.infoFrame(); break;
@@ -90,7 +96,7 @@ public class MainBut extends JButton {
 
 					      break;
 
-					case 9: if(Container.cont2 && Trash.point_pap>0 && Trash.num1) {
+					/*case 9: if(Container.cont2 && Trash.point_pap>0 && Trash.num1) {
 						    Container.point++;
 					        Point.pl=true;
 					        new Point();
@@ -264,7 +270,7 @@ public class MainBut extends JButton {
 
 						// Quest.f_quest.dispose();
 						Quest.p_quest.repaint();
-						break;
+						break;*/
 
 					case 14:
 						Container.point++;
@@ -273,7 +279,7 @@ public class MainBut extends JButton {
 
 
 				       // Car.b1.setVisible(false);
-				      //  Car.b2.setVisible(false);
+				       // Car.b2.setVisible(false);
 				       // Car.b3.setVisible(false);
 
 						Car.p.remove(Car.b1);
@@ -282,7 +288,7 @@ public class MainBut extends JButton {
 
 				        variables.car_panel=variables.mol;
 
-				        //Car.f.dispose();
+
 				        Car.p.repaint();
 						break;
 
@@ -353,18 +359,17 @@ public class MainBut extends JButton {
                             Container.point++;
                             Point.pl=true;
                             new Point();
-                            Office.t_1=false;
-                            Office.x1=0;
-                            Office.p_office.repaint();
-							Office.task_1.repaint();
+                          // / Office.t_1=false;
+                          //  Office.x1=0;
+                          //  Office.p_office.repaint();
+						//	Office.task_1.repaint();
 
                         }
                         if(Hospitale_Room.type==3) variables.gameLvl=-3;
 
                         Hospitale_Room.f_blood.dispose();
-						//Hospitale_Room.f_blood.setVisible(false);
 
-						//System.out.println("close");
+
                         break;
 
 				/*	case 29:

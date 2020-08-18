@@ -26,7 +26,7 @@ public class Panel {
 
 		new variables();
 		variables();
-		obj();
+		//obj();
 		but();
 		Button.button();
 		Button.but_setting();
@@ -80,29 +80,35 @@ public class Panel {
 	
 
 	
-	void obj() {
-		
-		
-		
-	/*	red=new collision(variables.red);
-		red.x=350;
-		red.y=-320;
-	
-		green=new collision(variables.green);
-		green.x=720;
-		green.y=70;
-		
-		blue=new collision(variables.blue);
-		blue.x=650;
-		blue.y=-420;
-		
-		orange=new collision(variables.orange);
-		orange.x=7;
-		orange.y=-95;
-		
-		gray=new collision(variables.gray);
-		gray.x=970;
-		gray.y=270;*/
+	void obj(int cont ,int type,int num,JButton b) {
+		b= new JButton(){
+			protected void paintComponent(Graphics g){
+				super.paintComponent(g);
+				switch (num){
+					case 1:  break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					case 6: break;
+					case 7: break;
+					case 8: break;
+					case 9: break;
+					case 10: break;
+					case 11: break;
+					case 12: break;
+					case 13: break;
+				}
+			}
+		};
+		if(cont==type){
+			switch(num){
+				case 1: b.setVisible(false); break;
+			}
+		}
+		else{
+
+		}
 		
 	}
 	public static void but() {

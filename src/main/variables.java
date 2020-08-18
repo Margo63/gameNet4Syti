@@ -23,20 +23,11 @@ public class variables {
 
 	public static Image close= new ImageIcon("image/close.png").getImage();
 	public static Image white_fon= new ImageIcon("image/white_fon.png").getImage();
+	public static Image minus= new ImageIcon("image/1/minus.png").getImage();
 	
-	public static Boolean checkLvl=true;
+
 	
 	//point
-	public static Image num0= new ImageIcon("image/point/num0.png").getImage();
-	public static Image num1= new ImageIcon("image/point/num1.png").getImage();
-	public static Image num2= new ImageIcon("image/point/num2.png").getImage();
-	public static Image num3= new ImageIcon("image/point/num3.png").getImage();
-	public static Image num4= new ImageIcon("image/point/num4.png").getImage();
-	public static Image num5= new ImageIcon("image/point/num5.png").getImage();
-	public static Image num6= new ImageIcon("image/point/num6.png").getImage();
-	public static Image num7= new ImageIcon("image/point/num7.png").getImage();
-	public static Image num8= new ImageIcon("image/point/num8.png").getImage();
-	public static Image num9= new ImageIcon("image/point/num9.png").getImage();
 	public static Image num =new ImageIcon("image/point/num0.png").getImage();
 	public static Image plus = new ImageIcon("image/1/plus.png").getImage();
 
@@ -54,11 +45,11 @@ public class variables {
 	public static Image street = new ImageIcon("image/road.png").getImage();
 
 	public static Image gray_street = new ImageIcon("image/gray street.png").getImage();
-	public static Image red = new ImageIcon("image/red.png").getImage();
-	public static Image green = new ImageIcon("image/green.png").getImage();
-	public static Image blue = new ImageIcon("image/house/house3.png").getImage();
-	public static Image gray = new ImageIcon("image/house/house2.png").getImage();
-	public static Image orange = new ImageIcon("image/house/house1.png").getImage();
+	public static Image red = new ImageIcon(        "image/red.png").getImage();
+	public static Image green = new ImageIcon(      "image/green.png").getImage();
+	public static Image blue = new ImageIcon(       "image/house/house3.png").getImage();
+	public static Image gray = new ImageIcon(       "image/house/house2.png").getImage();
+	public static Image orange = new ImageIcon(     "image/house/house1.png").getImage();
 	
 	//мусор
 	public static Image m_2= new ImageIcon("image/1/trash/paper.png").getImage();
