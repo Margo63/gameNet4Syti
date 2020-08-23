@@ -35,6 +35,8 @@ public class Panel {
 	public static Flat flat2;
 	public static Flat flat3;
 	public static Flat flat4;
+	public static Flat flat5;
+	public static Flat flat6;
 
 	int s=variables.height-variables.height/3-variables.height/12;
 	int gs=variables.height-variables.height/12;
@@ -135,10 +137,12 @@ void office(){
 }
 
 void flat(){
-	flat1= new Flat(700,100,variables.door,1);
-	flat2 = new Flat(400,100,variables.door,2);
-	flat3 = new Flat(900,100,variables.door,3);
-	flat4 = new Flat(1000,100,variables.door,4);
+	flat1= new Flat(900,100,variables.door,1);
+	flat2 = new Flat(700,100,variables.door,2);
+	flat3 = new Flat(550,100,variables.door,3);
+	flat4 = new Flat(400,100,variables.door,4);
+	flat5 = new Flat(250,100,variables.door,5);
+	flat6 = new Flat(100,100,variables.door,5);
 
 
 }

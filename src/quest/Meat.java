@@ -42,7 +42,7 @@ public class Meat {
             b1 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    me1= new ImageIcon("image/game3/task/task1.png").getImage();
+                    me1= new ImageIcon("image/game3/task/task1.png").getImage();//кура
                     if(!me_1){
                         g.drawImage(me1,0,0,null);
                     }
@@ -78,7 +78,7 @@ public class Meat {
             b2 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    me2= new ImageIcon("image/game3/task/task1.png").getImage();
+                    me2= new ImageIcon("image/game3/task/task1.png").getImage();//сосиски
                     if(!me_2){
                         g.drawImage(me2,0,0,null);
                     }
@@ -112,7 +112,7 @@ public class Meat {
             b3 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    me3= new ImageIcon("image/game3/task/task1.png").getImage();
+                    me3= new ImageIcon("image/game3/task/task1.png").getImage();//колбасы
                     if(!me_3){
                         g.drawImage(me3,0,0,null);
                     }

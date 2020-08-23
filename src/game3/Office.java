@@ -22,7 +22,7 @@ public class Office {
    public static JButton task_2;
    public static JButton task_3;
    public static JButton task_4;
-   public static boolean t_1=false,t_2=true,t_3=false,t_4=false;
+   public static boolean t_1=false,t_2=true,t_3=true,t_4=true;
    public static int x1=0,x2=0,x3=0,x4=0;
    public static int kol=0;
    public static boolean check;
@@ -107,7 +107,7 @@ public static void of_frame(){
             task_2.setOpaque(false);
             task_2.setContentAreaFilled(false);
             task_2.setBorderPainted(false);
-            task_2.setVisible(true);
+            if(!t_2) task_2.setVisible(true);
             task_2.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -138,7 +138,7 @@ public static void of_frame(){
             task_3.setOpaque(false);
             task_3.setContentAreaFilled(false);
             task_3.setBorderPainted(false);
-            task_3.setVisible(true);
+            if(!t_3)task_3.setVisible(true);
             task_3.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -169,7 +169,7 @@ public static void of_frame(){
         task_4.setOpaque(false);
         task_4.setContentAreaFilled(false);
         task_4.setBorderPainted(false);
-        task_4.setVisible(true);
+        if(!t_4)task_4.setVisible(true);
         task_4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -48,7 +48,7 @@ public class Vegetables {
             b1 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    v1= new ImageIcon("image/game3/task/task1.png").getImage();
+                    v1= new ImageIcon("image/game3/task/task1.png").getImage();//помидоры
                     if(!v_1){
                         g.drawImage(v1,0,0,null);
                     }
@@ -84,7 +84,7 @@ public class Vegetables {
             b2 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    v2= new ImageIcon("image/game3/task/task1.png").getImage();
+                    v2= new ImageIcon("image/game3/task/task1.png").getImage();//огурцы
                     if(!v_2){
                         g.drawImage(v2,0,0,null);
                     }
@@ -118,7 +118,7 @@ public class Vegetables {
             b3 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    v3= new ImageIcon("image/game3/task/task1.png").getImage();
+                    v3= new ImageIcon("image/game3/task/task1.png").getImage();//морковь
                     if(!v_3){
                         g.drawImage(v3,0,0,null);
                     }
@@ -152,7 +152,7 @@ public class Vegetables {
             b4 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    v4= new ImageIcon("image/q.jpg").getImage();
+                    v4= new ImageIcon("image/q.jpg").getImage();//капуста
                     if(!v_4){
                         g.drawImage(v4,0,0,null);
                     }
@@ -186,7 +186,7 @@ public class Vegetables {
             b5 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    v5= new ImageIcon("image/q.jpg").getImage();
+                    v5= new ImageIcon("image/q.jpg").getImage();//картошка
                     if(!v_5){
                         g.drawImage(v5,0,0,null);
                     }

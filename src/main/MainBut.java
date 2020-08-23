@@ -39,9 +39,9 @@ public class MainBut extends JButton {
 		this.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				switch(cl){
-					case 1:  //System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA Choice.trueButChoice " + Choice.trueButChoice);
+					case 1:
 						if(Choice.trueButChoice){
-						//	System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+
 							Choice.trueButChoice = false;
 							Choice.q_b0.setVisible(false);
 							Choice.q_b1.setVisible(false);
@@ -55,10 +55,11 @@ public class MainBut extends JButton {
 							Choice.q_b9.setVisible(false);
 						}
 						if (Office.check){
-							Office.t_4=false;
-							Office.t_3=false;
-							Office.t_2=false;
-							Office.t_1=false;
+						//	Office.t_4=false;
+						//	Office.t_3=false;
+						//	Office.t_2=false;
+						//	Office.t_1=false;
+
 						}
 						new selectionGame();
 							 break;
@@ -278,9 +279,9 @@ public class MainBut extends JButton {
 				        new Point();
 
 
-				       // Car.b1.setVisible(false);
-				       // Car.b2.setVisible(false);
-				       // Car.b3.setVisible(false);
+				        Car.b1.setVisible(false);
+				        Car.b2.setVisible(false);
+				        Car.b3.setVisible(false);
 
 						Car.p.remove(Car.b1);
 						Car.p.remove(Car.b2);
@@ -296,6 +297,9 @@ public class MainBut extends JButton {
 						Car.f.remove(Car.b1);
 						Car.f.remove(Car.b2);
 						Car.f.remove(Car.b3);
+						Car.b1.setVisible(false);
+						Car.b2.setVisible(false);
+						Car.b3.setVisible(false);
 				        variables.car_panel=variables.ok;
 
                         //Car.f.dispose();
@@ -306,6 +310,9 @@ public class MainBut extends JButton {
 						Car.f.remove(Car.b1);
 						Car.f.remove(Car.b2);
 						Car.f.remove(Car.b3);
+						Car.b1.setVisible(false);
+						Car.b2.setVisible(false);
+						Car.b3.setVisible(false);
 				        variables.car_panel=variables.net;
 
 
@@ -359,10 +366,10 @@ public class MainBut extends JButton {
                             Container.point++;
                             Point.pl=true;
                             new Point();
-                          // / Office.t_1=false;
-                          //  Office.x1=0;
-                          //  Office.p_office.repaint();
-						//	Office.task_1.repaint();
+                            Office.t_1=false;
+                            Office.x1=0;
+                            Office.p_office.repaint();
+							Office.task_1.repaint();
 
                         }
                         if(Hospitale_Room.type==3) variables.gameLvl=-3;
@@ -406,7 +413,7 @@ public class MainBut extends JButton {
 								Container.point++;
 								Point.pl=true;
 								new Point();
-								Office.t_2=false;
+								Office.x2=0;        Office.t_2=false;  Office.p_office.repaint(); Office.task_2.repaint();
 
 							break;
 							case 2:
@@ -415,7 +422,7 @@ public class MainBut extends JButton {
 								Container.point++;
 								Point.pl=true;
 								new Point();
-								Office.t_3=false;
+								Office.x3=0;        Office.t_3=false;  Office.p_office.repaint(); Office.task_3.repaint();
 
 							break;
 
@@ -427,7 +434,7 @@ public class MainBut extends JButton {
 
 
 
-					case -1:
+/*					case -1:
 						Fruit.f_1=true;
 						Fruit.b1.setVisible(false);
 						Fruit.p.repaint();
@@ -606,7 +613,7 @@ public class MainBut extends JButton {
 						Candy.b3.setVisible(false);
 						Candy.p.repaint();
 						break;
-
+*/
 					case 28:
 						new Settings();
                         break;

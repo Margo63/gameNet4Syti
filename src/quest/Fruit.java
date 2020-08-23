@@ -41,7 +41,7 @@ public class Fruit {
           b1 = new JButton(){
               protected void paintComponent(Graphics g){
                   super.paintComponent(g);
-                  f1= new ImageIcon("image/game3/task/task1.png").getImage();
+                  f1= new ImageIcon("image/game3/task/task1.png").getImage();//бананы
                   if(!f_1){
                       g.drawImage(f1,0,0,null);
                   }
@@ -77,7 +77,7 @@ public class Fruit {
           b2 = new JButton(){
               protected void paintComponent(Graphics g){
                   super.paintComponent(g);
-                  f2= new ImageIcon("image/game3/task/task1.png").getImage();
+                  f2= new ImageIcon("image/game3/task/task1.png").getImage();//яблоки
                   if(!f_2){
                       g.drawImage(f2,0,0,null);
                   }
@@ -111,7 +111,7 @@ public class Fruit {
           b3 = new JButton(){
               protected void paintComponent(Graphics g){
                   super.paintComponent(g);
-                  f3= new ImageIcon("image/game3/task/task1.png").getImage();
+                  f3= new ImageIcon("image/game3/task/task1.png").getImage();//виноград
                   if(!f_3){
                       g.drawImage(f3,0,0,null);
                   }
@@ -145,7 +145,7 @@ public class Fruit {
           b4 = new JButton(){
               protected void paintComponent(Graphics g){
                   super.paintComponent(g);
-                  f4= new ImageIcon("image/q.jpg").getImage();
+                  f4= new ImageIcon("image/q.jpg").getImage();//груша
                   if(!f_4){
                       g.drawImage(f4,0,0,null);
                   }
@@ -179,7 +179,7 @@ public class Fruit {
           b5 = new JButton(){
               protected void paintComponent(Graphics g){
                   super.paintComponent(g);
-                  f5= new ImageIcon("image/q.jpg").getImage();
+                  f5= new ImageIcon("image/q.jpg").getImage();//арбуз
                   if(!f_5){
                       g.drawImage(f5,0,0,null);
                   }

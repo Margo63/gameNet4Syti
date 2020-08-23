@@ -102,6 +102,7 @@ public class variables {
 	public static Image hospital = new ImageIcon("image/hospital.png").getImage();
 	public static Image office = new ImageIcon("image/office.jpg").getImage();
 	public static Image shop = new ImageIcon("image/house/shop.png").getImage();
+
 	//больница
 	public static Image hos_room = new ImageIcon("image/hj.jpg").getImage();
 	public static Image hos_room2 = new ImageIcon("image/game3/s1200.jpg").getImage();
@@ -161,6 +162,7 @@ public class variables {
 	//уровень
 	public static int gameLvl = 0;
 	public static boolean e=false;
+	public static boolean dog1=false,dog2=false;
 	
 	
 	//персонаж

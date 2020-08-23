@@ -117,20 +117,20 @@ public class Instance {
 	void trash() {
 		
 		
-		paper = new Trash(600,400,variables.m_2,2,      1);
-		plastic = new Trash(400,500,variables.plastic,1,2);
-		met = new Trash(100,510,variables.met,5,        3);
-		org = new Trash(600,500,variables.org,4,        4);
-		glass = new Trash(323,444,variables.glass,3,    5);
+	    if(!Trash.num1)	    paper = new Trash(600,400,variables.m_2,2,      1);
+		if(!Trash.num2)	    plastic = new Trash(400,500,variables.plastic,1,2);
+		if(!Trash.num3)	    met = new Trash(100,510,variables.met,5,        3);
+		if(!Trash.num4)	    org = new Trash(600,500,variables.org,4,        4);
+		if(!Trash.num5)	    glass = new Trash(323,444,variables.glass,3,    5);
 
-		apple = new Trash(700,444,variables.apple,4,    6);
-		cd = new Trash(500,444,variables.cd,0,          7);
-		container = new Trash(600,600,variables.container,0,8);
-		plastic_bag = new Trash(800,444,variables.plastic_bag,0,9);
-		cardboard = new Trash(666,444,variables.cardboard,2,    10);
-		cap = new Trash(289,400,variables.cap,5,        11);
-		chips = new Trash(323,500,variables.chips,0,    12);
-		paper_2 = new Trash(300,380,variables.m_2,2,    13);
+		if(!Trash.num6)	    apple = new Trash(700,444,variables.apple,4,    6);
+		if(!Trash.num7)	    cd = new Trash(500,444,variables.cd,0,          7);
+		if(!Trash.num8)	    container = new Trash(600,600,variables.container,0,8);
+		if(!Trash.num9)	    plastic_bag = new Trash(800,444,variables.plastic_bag,0,9);
+		if(!Trash.num10) 	cardboard = new Trash(666,444,variables.cardboard,2,    10);
+		if(!Trash.num11)	cap = new Trash(289,400,variables.cap,5,        11);
+		if(!Trash.num12)	chips = new Trash(323,500,variables.chips,0,    12);
+		if(!Trash.num13)	paper_2 = new Trash(300,380,variables.m_2,2,    13);
 		
 		cont_pap = new Container(0,600,variables.cont_pap,2);
 		cont_pl = new Container(900,600,variables.cont_pl,1);

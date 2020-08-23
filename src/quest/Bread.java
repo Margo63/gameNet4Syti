@@ -41,7 +41,7 @@ public class Bread {
             b1 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    br1= new ImageIcon("image/game3/task/task1.png").getImage();
+                    br1= new ImageIcon("image/game3/task/task1.png").getImage();//хлеб
                     if(!b_1){
                         g.drawImage(br1,0,0,null);
                     }
@@ -77,7 +77,7 @@ public class Bread {
             b2 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    br2= new ImageIcon("image/game3/task/task1.png").getImage();
+                    br2= new ImageIcon("image/game3/task/task1.png").getImage();//батон
                     if(!b_2){
                         g.drawImage(br2,0,0,null);
                     }
@@ -111,7 +111,7 @@ public class Bread {
             b3 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    br3= new ImageIcon("image/game3/task/task1.png").getImage();
+                    br3= new ImageIcon("image/game3/task/task1.png").getImage();//багет
                     if(!b_3){
                         g.drawImage(br3,0,0,null);
                     }

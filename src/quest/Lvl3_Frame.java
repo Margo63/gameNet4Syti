@@ -9,15 +9,13 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Lvl3_Frame {
-    public static JFrame open_frame;
+    public static JFrame open_frame=null;
     public static JPanel open_panel ;
     public static MainBut yes;
     public static MainBut no;
-    public static int kol_open=0;
     public Lvl3_Frame(){
         Player.ee=false;
-        if(kol_open<1){
-            kol_open++;
+        if(open_frame==null){
             open_frame = new JFrame();
             open_frame.setUndecorated(true);
             open_frame.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);

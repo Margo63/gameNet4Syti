@@ -39,7 +39,7 @@ public class Candy {
             b1 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    c1= new ImageIcon("image/game3/task/task1.png").getImage();
+                    c1= new ImageIcon("image/game3/task/task1.png").getImage();//тортик
                     if(!c_1){
                         g.drawImage(c1,0,0,null);
                     }
@@ -75,7 +75,7 @@ public class Candy {
             b2 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    c2= new ImageIcon("image/game3/task/task1.png").getImage();
+                    c2= new ImageIcon("image/game3/task/task1.png").getImage();//пирожные
                     if(!c_2){
                         g.drawImage(c2,0,0,null);
                     }
@@ -109,7 +109,7 @@ public class Candy {
             b3 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    c3= new ImageIcon("image/game3/task/task1.png").getImage();
+                    c3= new ImageIcon("image/game3/task/task1.png").getImage();//конфеты
                     if(!c_3){
                         g.drawImage(c3,0,0,null);
                     }

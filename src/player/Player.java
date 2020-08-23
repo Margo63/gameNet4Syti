@@ -29,7 +29,7 @@ public class Player {
 	public Image[] arrayD;
 
 	public int x;
-	public int directionX = 5;
+	public int directionX = 10;
 	public int directionY = 0;
 	public int y;
     public static boolean ee=false;
@@ -43,7 +43,7 @@ public class Player {
 				
 				//прописываем движение вперед
 				if (e.getKeyCode() == KeyEvent.VK_D && variables.x+variables.player.getWidth(null)<variables.width &&variables.x>0 /*&& pass*/) {
-					directionX = 5;
+					directionX = 10;
 					directionY = 0;
 					array = arrayR;
 					if (time != null && time.isRunning()) return;
@@ -53,7 +53,7 @@ public class Player {
 						
 				}
 				if (e.getKeyCode()== KeyEvent.VK_A && variables.x-variables.player.getWidth(null)/10 >0 /*&& pass*/) {
-					directionX = -5;
+					directionX = -10;
 					directionY = 0;
 					array = arrayL;
 					if (time != null && time.isRunning()) return;
@@ -61,14 +61,14 @@ public class Player {
 				}
 				if (e.getKeyCode()==KeyEvent.VK_W && variables.y>0 /*&& pass*/) {
 					directionX = 0;
-					directionY = -5;
+					directionY = -10;
 					array = arrayU;
 					if (time != null && time.isRunning()) return;
 					timeAnim(); 
 				}
 				if (e.getKeyCode()==KeyEvent.VK_S && variables.y<variables.height-variables.player.getHeight(null)/*&& pass*/) {
 					directionX = 0;
-					directionY = 5;
+					directionY = 10;
 					array = arrayD;
 					if (time != null && time.isRunning()) return;
 					timeAnim(); 
@@ -109,14 +109,7 @@ public class Player {
 
 
 				}
-				if(e.getKeyCode()==KeyEvent.VK_SPACE){
 
-					Office.x1=0;        Office.t_1=false;  Office.p_office.repaint(); Office.task_1.repaint();
-					Office.x2=0;        Office.t_2=false;  Office.p_office.repaint(); Office.task_2.repaint();
-					Office.x3=0;        Office.t_3=false;  Office.p_office.repaint(); Office.task_3.repaint();
-					Office.x4=0;        Office.t_4=false;  Office.p_office.repaint(); Office.task_4.repaint();
-
-				}
 				
 				if(e.getKeyCode()==KeyEvent.VK_E) {
 					if (Dialogue.dialogTrue) {
@@ -334,8 +327,11 @@ public class Player {
 			game3.Panel.flat1.coll();
 			game3.Panel.flat2.coll();
 			game3.Panel.flat3.coll();
+			game3.Panel.flat4.coll();
+			game3.Panel.flat5.coll();
+			game3.Panel.flat6.coll();
 
-			collisTrue2=game3.Panel.flat1.collisTrue2||game3.Panel.flat2.collisTrue2||game3.Panel.flat3.collisTrue2;
+			collisTrue2=game3.Panel.flat1.collisTrue2||game3.Panel.flat2.collisTrue2||game3.Panel.flat3.collisTrue2|| game3.Panel.flat4.collisTrue2||game3.Panel.flat5.collisTrue2|| game3.Panel.flat6.collisTrue2;
 		}
 
 		

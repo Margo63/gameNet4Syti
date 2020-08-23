@@ -44,7 +44,7 @@ public class Grocery {
             b1 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    g1= new ImageIcon("image/game3/task/task1.png").getImage();
+                    g1= new ImageIcon("image/game3/task/task1.png").getImage();//греча
                     if(!g_1){
                         g.drawImage(g1,0,0,null);
                     }
@@ -80,7 +80,7 @@ public class Grocery {
             b2 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    g2= new ImageIcon("image/game3/task/task1.png").getImage();
+                    g2= new ImageIcon("image/game3/task/task1.png").getImage();//рис
                     if(!g_2){
                         g.drawImage(g2,0,0,null);
                     }
@@ -114,7 +114,7 @@ public class Grocery {
             b3 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    g3= new ImageIcon("image/game3/task/task1.png").getImage();
+                    g3= new ImageIcon("image/game3/task/task1.png").getImage();//овсянка
                     if(!g_3){
                         g.drawImage(g3,0,0,null);
                     }
@@ -148,7 +148,7 @@ public class Grocery {
             b4 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    g4= new ImageIcon("image/q.jpg").getImage();
+                    g4= new ImageIcon("image/q.jpg").getImage();//макароны
                     if(!g_4){
                         g.drawImage(g4,0,0,null);
                     }
@@ -182,7 +182,7 @@ public class Grocery {
             b5 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    g5= new ImageIcon("image/q.jpg").getImage();
+                    g5= new ImageIcon("image/q.jpg").getImage();//чай
                     if(!g_5){
                         g.drawImage(g5,0,0,null);
                     }
@@ -215,7 +215,7 @@ public class Grocery {
             b6 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    g6= new ImageIcon("image/q.jpg").getImage();
+                    g6= new ImageIcon("image/q.jpg").getImage();//сахар
                     if(!g_6){
                         g.drawImage(g6,0,0,null);
                     }
@@ -249,7 +249,7 @@ public class Grocery {
             b7 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    g7= new ImageIcon("image/q.jpg").getImage();
+                    g7= new ImageIcon("image/q.jpg").getImage();//кофе
                     if(!g_7){
                         g.drawImage(g7,0,0,null);
                     }

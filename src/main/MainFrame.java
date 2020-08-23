@@ -246,6 +246,9 @@ public class MainFrame{
 		g.drawImage(game3.Panel.flat1.image, game3.Panel.flat1.x,game3.Panel.flat1.y,null);
 		g.drawImage(game3.Panel.flat2.image, game3.Panel.flat2.x,game3.Panel.flat2.y,null);
 		g.drawImage(game3.Panel.flat3.image, game3.Panel.flat3.x,game3.Panel.flat3.y,null);
+        g.drawImage(game3.Panel.flat4.image, game3.Panel.flat4.x,game3.Panel.flat4.y,null);
+		g.drawImage(game3.Panel.flat5.image, game3.Panel.flat5.x,game3.Panel.flat5.y,null);
+		g.drawImage(game3.Panel.flat6.image, game3.Panel.flat6.x,game3.Panel.flat6.y,null);
 
 		g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
 

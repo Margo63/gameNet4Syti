@@ -77,7 +77,7 @@ public Inventory(){
 			if(variables.gameLvl==2) {
 				g.drawImage(variables.bird, 0, 50, null);
 			}
-			if(variables.gameLvl==3||(variables.gameLvl<-1&&variables.gameLvl>-6)){
+			if(variables.gameLvl==3||(variables.gameLvl<-1&&variables.gameLvl>-7)){
 			    if(blood)	g.drawImage(variables.napravlenie,0,0,150,100,null);
 
 

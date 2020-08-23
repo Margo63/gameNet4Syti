@@ -231,19 +231,19 @@ public class Quest {
 	     //////////////////////////////////////////////
 */
 //1-пластик, 2-бумага, 3-стекло, 4-органический, 5-металл, 0-нельзя перерабатывать
-	 obj(container,2,1,bb1,variables.m_2);
-	 obj(container,1,2,bb2,variables.plastic);
-	 obj(container,5,3,bb3,variables.met);
-	 obj(container,4,4,bb4,variables.org);
-	 obj(container,3,5,bb5,variables.glass);
-	 obj(container,4,6,bb6,variables.apple);
-	 obj(container,0,7,bb7,variables.cd);
-	 obj(container,0,8,bb8,variables.container);
-	 obj(container,0,9,bb9,variables.plastic_bag);
-	 obj(container,2,10,bb10,variables.cardboard);
-	 obj(container,5,11,bb11,variables.cap);
-	 obj(container,0,12,bb12,variables.chips);
-	 obj(container,2,13,bb13,variables.m_2);
+	 obj(container,2,1,bb1/*,variables.m_2*/);
+	 obj(container,1,2,bb2/*,variables.plastic*/);
+	 obj(container,5,3,bb3/*,variables.met*/);
+	 obj(container,4,4,bb4/*,variables.org*/);
+	 obj(container,3,5,bb5/*,variables.glass*/);
+	 obj(container,4,6,bb6/*,variables.apple*/);
+	 obj(container,0,7,bb7/*,variables.cd*/);
+	 obj(container,0,8,bb8/*,variables.container*/);
+	 obj(container,0,9,bb9/*,variables.plastic_bag*/);
+	 obj(container,2,10,bb10/*,variables.cardboard*/);
+	 obj(container,5,11,bb11/*,variables.cap*/);
+	 obj(container,0,12,bb12/*,variables.chips*/);
+	 obj(container,2,13,bb13/*,variables.m_2*/);
 
 
 
@@ -255,7 +255,7 @@ public class Quest {
 
 
 
-	public void obj(int cont , int type, int num, JButton bb,Image img) {
+	public void obj(int cont , int type, int num, JButton bb/*,Image img*/) {
 
 
 		bb = new JButton(){
@@ -263,19 +263,19 @@ public class Quest {
 				super.paintComponent(g);
 
 				switch (num){
-					case 1:  if(Trash.num1){g.drawImage(img,0,0,variables.m_2.getWidth(null),variables.m_2.getHeight(null),null);}  break;
-					case 2:  if(Trash.num2){g.drawImage(img,0,0,variables.plastic.getWidth(null),variables.plastic.getHeight(null),null);} break;
-					case 3:  if(Trash.num3){g.drawImage(img,0,0,variables.met.getWidth(null),variables.met.getHeight(null),null);}break;
-					case 4:  if(Trash.num4){g.drawImage(img,0,0,variables.org.getWidth(null),variables.org.getHeight(null),null);} break;
-					case 5:  if(Trash.num5){g.drawImage(img,0,0,variables.glass.getWidth(null),variables.glass.getHeight(null),null);} break;
-					case 6:  if(Trash.num6){g.drawImage(img,0,0,variables.apple.getWidth(null),variables.apple.getHeight(null),null);} break;
-					case 7:  if(Trash.num7){g.drawImage(img,0,0,variables.cd.getWidth(null),variables.cd.getHeight(null),null);} break;
-					case 8:  if(Trash.num8){g.drawImage(img,0,0,variables.container.getWidth(null),variables.container.getHeight(null),null);} break;
-					case 9:  if(Trash.num9){g.drawImage(img,0,0,variables.plastic_bag.getWidth(null),variables.plastic_bag.getHeight(null),null);} break;
-					case 10: if(Trash.num10){g.drawImage(img,0,0,variables.cardboard.getWidth(null),variables.cardboard.getHeight(null),null);} break;
-					case 11: if(Trash.num11){g.drawImage(img,0,0,variables.cap.getWidth(null),variables.cap.getHeight(null),null);} break;
-					case 12: if(Trash.num12){g.drawImage(img,0,0,variables.chips.getWidth(null),variables.chips.getHeight(null),null);} break;
-					case 13: if(Trash.num13){g.drawImage(img,0,0,variables.m_2.getWidth(null),variables.m_2.getHeight(null),null);} break;
+					case 1:  if(Trash.num1){g.drawImage(variables.m_2,0,0,variables.m_2.getWidth(null),variables.m_2.getHeight(null),null);}  break;
+					case 2:  if(Trash.num2){g.drawImage(variables.plastic,0,0,variables.plastic.getWidth(null),variables.plastic.getHeight(null),null);} break;
+					case 3:  if(Trash.num3){g.drawImage(variables.met,0,0,variables.met.getWidth(null),variables.met.getHeight(null),null);}break;
+					case 4:  if(Trash.num4){g.drawImage(variables.org,0,0,variables.org.getWidth(null),variables.org.getHeight(null),null);} break;
+					case 5:  if(Trash.num5){g.drawImage(variables.glass,0,0,variables.glass.getWidth(null),variables.glass.getHeight(null),null);} break;
+					case 6:  if(Trash.num6){g.drawImage(variables.apple,0,0,variables.apple.getWidth(null),variables.apple.getHeight(null),null);} break;
+					case 7:  if(Trash.num7){g.drawImage(variables.cd,0,0,variables.cd.getWidth(null),variables.cd.getHeight(null),null);} break;
+					case 8:  if(Trash.num8){g.drawImage(variables.container,0,0,variables.container.getWidth(null),variables.container.getHeight(null),null);} break;
+					case 9:  if(Trash.num9){g.drawImage(variables.plastic_bag,0,0,variables.plastic_bag.getWidth(null),variables.plastic_bag.getHeight(null),null);} break;
+					case 10: if(Trash.num10){g.drawImage(variables.cardboard,0,0,variables.cardboard.getWidth(null),variables.cardboard.getHeight(null),null);} break;
+					case 11: if(Trash.num11){g.drawImage(variables.cap,0,0,variables.cap.getWidth(null),variables.cap.getHeight(null),null);} break;
+					case 12: if(Trash.num12){g.drawImage(variables.chips,0,0,variables.chips.getWidth(null),variables.chips.getHeight(null),null);} break;
+					case 13: if(Trash.num13){g.drawImage(variables.m_2,0,0,variables.m_2.getWidth(null),variables.m_2.getHeight(null),null);} break;
 				}
 			}
 		};
@@ -311,7 +311,9 @@ public class Quest {
 					Container.point++;
 
 					if(num==1){
+						System.out.println(Instance.apple.x);
 						Trash.num1=false;
+
 					}
 					if(num==2){
 						Trash.num2=false;

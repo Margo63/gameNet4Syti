@@ -70,8 +70,10 @@ public class Trash {
 			 case 12:  num12=true; img = new ImageIcon("").getImage();break;
 			 case 13:  num13=true; img = new ImageIcon("").getImage(); break;
 		 }
+		 x=1000000000;
+		 y=1000000000;
 		  Inventory.p.repaint();
-	x=-1000;
+
 		 
 		
 	 }

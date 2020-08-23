@@ -43,7 +43,7 @@ public class Milk {
             b1 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    mi1= new ImageIcon("image/game3/task/task1.png").getImage();
+                    mi1= new ImageIcon("image/game3/task/task1.png").getImage();//сметана
                     if(!mi_1){
                         g.drawImage(mi1,0,0,null);
                     }
@@ -79,7 +79,7 @@ public class Milk {
             b2 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    mi2= new ImageIcon("image/game3/task/task1.png").getImage();
+                    mi2= new ImageIcon("image/game3/task/task1.png").getImage();//йогурт
                     if(!mi_2){
                         g.drawImage(mi2,0,0,null);
                     }
@@ -113,7 +113,7 @@ public class Milk {
             b3 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    mi3= new ImageIcon("image/game3/task/task1.png").getImage();
+                    mi3= new ImageIcon("image/game3/task/task1.png").getImage();//молоко
                     if(!mi_3){
                         g.drawImage(mi3,0,0,null);
                     }
@@ -147,7 +147,7 @@ public class Milk {
             b4 = new JButton(){
                 protected void paintComponent(Graphics g){
                     super.paintComponent(g);
-                    mi4= new ImageIcon("image/q.jpg").getImage();
+                    mi4= new ImageIcon("image/q.jpg").getImage();//творог
                     if(!mi_4){
                         g.drawImage(mi4,0,0,null);
                     }
