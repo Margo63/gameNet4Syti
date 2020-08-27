@@ -26,8 +26,8 @@ public class Home {
 
 	}
 	public void move() {
-		x-=Panel.player.directionX/3;
-		y-=Panel.player.directionY/3;
+		x-=Panel.player.directionX;
+		y-=Panel.player.directionY;
 	}
 
 }

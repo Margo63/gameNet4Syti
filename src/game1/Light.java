@@ -17,9 +17,10 @@ public class Light {
 	public static  Timer time_light;
 	int i;
 	int n=1200;
-	public static int x=100, y=variables.height-variables.height/3-variables.height/12-light.getHeight(null);;
+	public static int x=650, y=variables.height-variables.height/3-variables.height/12-light.getHeight(null);;
 	
 	Light() {
+
 		
 		for(int i=0;i<4;i++) {
 			lights[i] = new ImageIcon("image/1/s"+i+".png").getImage();
@@ -37,19 +38,30 @@ public class Light {
 				  if(i<4) {
 					  light=lights[i];
 					  i++;
-					 
+					// System.out.println(i);
+					 // System.out.println(Street.street);
 					  
-					  if((i==3||i==4) && Street.street) {
+					  if((i==3||i==4) && variables.street_boolean) {
+
 						  new Point();
 						//  variables.MainPanel.repaint();
-						  Point.pl=true;
 
+
+						  Point.pl=true;
 						 Container.point++;
 						  Street.street=false;
 						 
 						
 						
 						 n=30;
+					  }
+					  else{
+					  	if(variables.street_boolean) {
+					  		//System.out.println("dfhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
+							new Minus();
+							Container.point--;
+							Minus.min = true;
+						}
 					  }
 				  }
 				

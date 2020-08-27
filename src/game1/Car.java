@@ -10,23 +10,25 @@ import javax.swing.*;
 import game.Button;
 import game3.Office;
 import main.MainBut;
+import main.Time_Police;
 import main.variables;
 import player.Player;
 
 public class Car {
-public static MainBut b1;	
-public static MainBut b2;
-public static MainBut b3;
-public static Image im1,im2,im3;
-JButton button1,button2,button3;
-public static JPanel p;
-public static JFrame f=null;
+
+public static ImageIcon image;
+public static Image im1,im2,im3,iim1,iim2,iim3;
+JButton button1,button2,button3,bbutton1,bbutton2,bbutton3;
+public static JPanel p,p2;
+public static JFrame f=null,f2=null;
 int h;
-int kol=0;
+
 public int x,y,type;
 public Image img;
 public int x1=0,x2=0,x3=0;
 public boolean but1=false,but2=false,but3=false;
+public int xx1=0,xx2=0,xx3=0;
+public boolean bbut1=false,bbut2=false,bbut3=false;
 public  boolean e_car=false;
 
 
@@ -49,7 +51,6 @@ public  boolean e_car=false;
 				 switch (type) {
 					 case 1:
 
-						 h = 1;
 						if(Player.ee){
 							frame();
 						}
@@ -57,9 +58,8 @@ public  boolean e_car=false;
 						 break;
 
 					 case 2:
-						 h = 2;
 						 if(Player.ee){
-						 	frame();
+						 	frame_2();
 						 }
 						 break;
 				 }
@@ -72,8 +72,8 @@ public  boolean e_car=false;
 	
 }
 	public void car_move() {
-		x-=Panel.player.directionX/3;
-		y-=Panel.player.directionY/3;
+		x-=Panel.player.directionX;
+		y-=Panel.player.directionY;
 	}
 	
 	public void frame() {
@@ -98,158 +98,333 @@ public  boolean e_car=false;
         	}
         };
 		p.setLayout(null);
-		if(h==1) {
-/*
-
-           if(!but1){
-			   button1 = new JButton(){
-				   protected void paintComponent(Graphics g){
-					   im1=new ImageIcon("image/game3/task/task1.png").getImage();
-					   g.drawImage(im1,0,0,null);
-
-				   }
-			   };
 
 
 
-			   button1.setBounds(x1, 0, variables.task1.getWidth(null), variables.task1.getHeight(null));
-			   button1.setOpaque(false);
-			   button1.setContentAreaFilled(false);
-			   button1.setBorderPainted(false);
-			   button1.setVisible(true);
-			   button1.addActionListener(new ActionListener() {
-				   @Override
-				   public void actionPerformed(ActionEvent e) {
-					   //x2=1000;
-					   button1.setVisible(false);
-					   button2.setVisible(false);
-					   button3.setVisible(false);
-					   im1=variables.null_image;
-					   im2=variables.null_image;
-					   im3=variables.null_image;
-					   x1=1000;
-					   x2=1000;
-					   x3=1000;
-					   but1=true;
-					   variables.car_panel=variables.mol;
-					   //variables.task2=variables.null_image;
-				   }
-			   });
-			   p.add(button1);
-
-		   }
-             if(!but2) {
-				 button2 = new JButton() {
-					 protected void paintComponent(Graphics g) {
-						 im2 = new ImageIcon("image/game3/task/task2.png").getImage();
-						 g.drawImage(im2, 0, 0, null);
-
-					 }
-				 };
 
 
-				 button2.setBounds(x2, 60, variables.task1.getWidth(null), variables.task1.getHeight(null));
-				 button2.setOpaque(false);
-				 button2.setContentAreaFilled(false);
-				 button2.setBorderPainted(false);
-				 button2.setVisible(true);
-				 button2.addActionListener(new ActionListener() {
-					 @Override
-					 public void actionPerformed(ActionEvent e) {
-						 //x2=1000;
-						 button1.setVisible(false);
-						 button2.setVisible(false);
-						 button3.setVisible(false);
-						 im1 = variables.null_image;
-						 im2 = variables.null_image;
-						 im3 = variables.null_image;
-						 x1 = 1000;
-						 x2 = 1000;
-						 x3 = 1000;
-						 but2 = true;
-						 variables.car_panel = variables.ok;
 
-					 }
-				 });
-				 p.add(button2);
-			 }
-             if(!but3) {
-				 button3 = new JButton() {
-					 protected void paintComponent(Graphics g) {
-						 im3 = new ImageIcon("image/game3/task/task3.png").getImage();
-						 g.drawImage(im3, 0, 0, null);
+			if (!but1){
 
-					 }
-				 };
+				button1 = new JButton(){
+					protected void paintComponent(Graphics g){
+						super.paintComponent(g);
+						im1= new ImageIcon("image/1/c3.png").getImage();//багет
+						if(!but1){
+							g.drawImage(im1,0,0,null);
+						}
+
+						//g.drawImage(new ImageIcon("image/game3/task/task1.png").getImage(),0,0,null);
+					}
+				};
+
+				button1.setBounds(x1, 0, 300, 50);
+
+				button1.setOpaque(false);
+				button1.setContentAreaFilled(false);
+				button1.setBorderPainted(false);
+
+				button1.setVisible(true);
+
+				button1.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						x1=1000;
+						button1.setVisible(false);
+						but1=true;
+						im1=variables.null_image;
 
 
-				 button3.setBounds(x2, 120, variables.task1.getWidth(null), variables.task1.getHeight(null));
-				 button3.setOpaque(false);
-				 button3.setContentAreaFilled(false);
-				 button3.setBorderPainted(false);
-				 button3.setVisible(true);
-				 button3.addActionListener(new ActionListener() {
-					 @Override
-					 public void actionPerformed(ActionEvent e) {
-						 //x2=1000;
-						 button1.setVisible(false);
-						 button2.setVisible(false);
-						 button3.setVisible(false);
-						 im1 = variables.null_image;
-						 im2 = variables.null_image;
-						 im3 = variables.null_image;
-						 x1 = 1000;
-						 x2 = 1000;
-						 x3 = 1000;
-						 but3 = true;
-						 variables.car_panel = variables.net;
-
-					 }
-				 });
-				 p.add(button3);
-			 }
-*/
-
-			b1 = new MainBut();
-		    b1.MenuButt(14,"Сообщить владельцу",10 ,50 , p);
-		    b1.setSize(f.getWidth()-20,50);
-		    b1.img=variables.task1;
-
-			b2 = new MainBut();
-		    b2.MenuButt(15,"Оставить как есть",10 ,110 , p);
-		    b2.setSize(f.getWidth()-20,50);
-		    b2.img= variables.task2;
-
-		    b3 = new MainBut();
-		    b3.MenuButt(16,"Убрать самому",10 ,170 , p);
-		    b3.setSize(f.getWidth()-20,50);
-		    b3.img=variables.task3;
+						x2=1000;
+						button2.setVisible(false);
+						but2=true;
+						im2=variables.null_image;
 
 
-		}
-		
-		if (h==2) {
+						x3=1000;
+						button3.setVisible(false);
+						but3=true;
+						im3=variables.null_image;
 
-			b1 = new MainBut();
-		    b1.MenuButt(14,"Позвонить владельцу",10 ,50 , p);
-		    b1.setSize(f.getWidth()-20,50);
-			b1.img=variables.task1;
+						variables.car_panel=variables.mol;
 
-			b2 = new MainBut();
-		    b2.MenuButt(16,"Попробовать самому открыть машину",10 ,110 , p);
-		    b2.setSize(f.getWidth()-20,50);
-			b2.img=variables.task2;
+						p.repaint();
+					}
+				});
+				p.add(button1);
+			}
+			if (!but2){
 
-		    b3 = new MainBut();
-		    b3.MenuButt(15,"Оставить как есть",10 ,170 , p);
-		    b3.setSize(f.getWidth()-20,50);
-			b3.img=variables.task3;
+				button2 = new JButton(){
+					protected void paintComponent(Graphics g){
+						super.paintComponent(g);
+						im2= new ImageIcon("image/1/c2.png").getImage();//багет
+						if(!but2){
+							g.drawImage(im2,0,0,null);
+						}
+
+						//g.drawImage(new ImageIcon("image/game3/task/task1.png").getImage(),0,0,null);
+					}
+				};
+
+				button2.setBounds(x2, 60, 300, 50);
+
+				button2.setOpaque(false);
+				button2.setContentAreaFilled(false);
+				button2.setBorderPainted(false);
+
+				button2.setVisible(true);
+
+				button2.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
 
 
-		}
+						x1=1000;
+						button1.setVisible(false);
+						but1=true;
+						im1=variables.null_image;
+						x2=1000;
+						button2.setVisible(false);
+						but2=true;
+						im2=variables.null_image;
+						x3=1000;
+						button3.setVisible(false);
+						but3=true;
+						im3=variables.null_image;
+
+						variables.car_panel=variables.ok;
+						p.repaint();
+					}
+				});
+				p.add(button2);
+			}
+
+           if (!but3){
+
+            button3 = new JButton(){
+                protected void paintComponent(Graphics g){
+                    super.paintComponent(g);
+                    im3= new ImageIcon("image/1/c1.png").getImage();//багет
+                    if(!but3){
+                     g.drawImage(im3,0,0,null);
+                    }
+
+					//g.drawImage(new ImageIcon("image/game3/task/task1.png").getImage(),0,0,null);
+                }
+            };
+
+           button3.setBounds(x3, 120, 300, 50);
+
+            button3.setOpaque(false);
+			button3.setContentAreaFilled(false);
+			button3.setBorderPainted(false);
+
+            button3.setVisible(true);
+
+				button3.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+					x1=1000;
+					button1.setVisible(false);
+					but1=true;
+					im1=variables.null_image;
+					x2=1000;
+					button2.setVisible(false);
+					but2=true;
+					im2=variables.null_image;
+					x3=1000;
+					button3.setVisible(false);
+					but3=true;
+					im3=variables.null_image;
+
+					variables.car_panel=variables.net;
+					p.repaint();
+                }
+            });
+            p.add(button3);
+    }
+
+
 		
 		f.add(p);
 		Button.but_close(p,f);
+	}
+	public void frame_2() {
+
+		Player.ee=false;
+
+		variables.car_panel=variables.null_image;
+		if(f2==null){
+			f2= new JFrame();
+			f2.setUndecorated(true);
+			f2.setBounds(variables.width/2-variables.width/6,variables.height/2-variables.height/6,variables.width/3,variables.height/3);
+
+		}
+
+		f2.setVisible(true);
+		p2 =new JPanel() {
+			protected void paintComponent(Graphics g) {
+				super.paintComponent(g);
+				g.drawImage(variables.white_fon,  0,0, variables.width,variables.height,   null);
+				g.drawImage(variables.car_panel, 0,0,variables.width/3,variables.height/3, null);
+
+			}
+		};
+		p2.setLayout(null);
+
+		//if(h==1) {
+
+
+
+
+			if (!bbut1){
+
+				bbutton1 = new JButton(){
+					protected void paintComponent(Graphics g){
+						super.paintComponent(g);
+						iim1= new ImageIcon("image/1/cc1.png").getImage();//багет
+						if(!bbut1){
+							g.drawImage(iim1,0,0,null);
+						}
+
+						//g.drawImage(new ImageIcon("image/game3/task/task1.png").getImage(),0,0,null);
+					}
+				};
+
+				bbutton1.setBounds(xx1, 0, 350, 50);
+
+				bbutton1.setOpaque(false);
+				bbutton1.setContentAreaFilled(false);
+				bbutton1.setBorderPainted(false);
+
+				bbutton1.setVisible(true);
+
+				bbutton1.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						xx1=1000;
+						bbutton1.setVisible(false);
+						bbut1=true;
+						iim1=variables.null_image;
+						xx2=1000;
+						bbutton2.setVisible(false);
+						bbut2=true;
+						iim2=variables.null_image;
+						xx3=1000;
+						bbutton3.setVisible(false);
+						bbut3=true;
+						iim3=variables.null_image;
+
+						variables.car_panel=variables.mol;
+
+						p2.repaint();
+					}
+				});
+				p2.add(bbutton1);
+			}
+			if (!bbut2){
+
+				bbutton2 = new JButton(){
+					protected void paintComponent(Graphics g){
+						super.paintComponent(g);
+						iim2= new ImageIcon("image/1/cc2.png").getImage();//багет
+						if(!bbut2){
+							g.drawImage(iim2,0,0,null);
+						}
+
+						//g.drawImage(new ImageIcon("image/game3/task/task1.png").getImage(),0,0,null);
+					}
+				};
+
+				bbutton2.setBounds(xx2, 60, 350, 100);
+
+				bbutton2.setOpaque(false);
+				bbutton2.setContentAreaFilled(false);
+				bbutton2.setBorderPainted(false);
+
+				bbutton2.setVisible(true);
+
+				bbutton2.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+                        time.stop();
+						Instance.car2.img=variables.carr;
+
+						xx1=1000;
+						bbutton1.setVisible(false);
+						bbut1=true;
+						iim1=variables.null_image;
+						xx2=1000;
+						bbutton2.setVisible(false);
+						bbut2=true;
+						iim2=variables.null_image;
+						xx3=1000;
+						bbutton3.setVisible(false);
+						bbut3=true;
+						iim3=variables.null_image;
+
+
+
+
+						variables.car_panel=variables.police;
+
+						new Time_Police();
+						p2.repaint();
+						variables.MainPanel.repaint();
+					}
+				});
+				p2.add(bbutton2);
+			}
+
+			if (!bbut3){
+
+				bbutton3 = new JButton(){
+					protected void paintComponent(Graphics g){
+						super.paintComponent(g);
+						iim3= new ImageIcon("image/1/c2.png").getImage();//багет
+						if(!bbut3){
+							g.drawImage(iim3,0,0,null);
+						}
+
+						//g.drawImage(new ImageIcon("image/game3/task/task1.png").getImage(),0,0,null);
+					}
+				};
+
+				bbutton3.setBounds(xx3, 180, 350, 50);
+
+				bbutton3.setOpaque(false);
+				bbutton3.setContentAreaFilled(false);
+				bbutton3.setBorderPainted(false);
+
+				bbutton3.setVisible(true);
+
+				bbutton3.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						xx1=1000;
+						bbutton1.setVisible(false);
+						bbut1=true;
+						iim1=variables.null_image;
+						xx2=1000;
+						bbutton2.setVisible(false);
+						bbut2=true;
+						iim2=variables.null_image;
+						xx3=1000;
+						bbutton3.setVisible(false);
+						bbut3=true;
+						iim3=variables.null_image;
+
+						variables.car_panel=variables.ok;
+						p2.repaint();
+					}
+				});
+				p2.add(bbutton3);
+			}
+
+
+		f2.add(p2);
+		Button.but_close(p2,f2);
 	}
 
 

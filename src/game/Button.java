@@ -66,6 +66,9 @@ public class Button {
             }
         };
         but_cl.setBounds( f.getWidth()-50,0,50,50);
+        but_cl.setBorderPainted(false);
+        but_cl.setOpaque(false);
+        but_cl.setContentAreaFilled(false);
         but_cl.addActionListener(new ActionListener() {
 
             @Override

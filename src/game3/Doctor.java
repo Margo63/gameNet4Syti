@@ -31,14 +31,6 @@ public class Doctor {
         });
         time.start();
     }
-  /* public void coll_doc(){
-        if(game3.Panel.player.x+ game3.Panel.player.directionX*3+ game3.Panel.player.pers.getWidth(null)-20>=x &&
-                game3.Panel.player.x+ game3.Panel.player.directionX*3-20<=x+image.getWidth(null) &&
-                game3.Panel.player.y+ game3.Panel.player.directionY*3<y+image.getHeight(null)-20 &&
-                game3.Panel.player.y+ game3.Panel.player.directionY*3+ game1.Panel.player.pers.getHeight(null)>=y-20){
-            System.out.println("aaaa");
-        }
-    }*/
 
     public void coll(int type){
         if(game3.Panel.player.x+game3.Panel.player.directionX*3+game3.Panel.player.pers.getWidth(null)-20>=x &&

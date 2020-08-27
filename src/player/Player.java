@@ -43,21 +43,27 @@ public class Player {
 				
 				//прописываем движение вперед
 				if (e.getKeyCode() == KeyEvent.VK_D && variables.x+variables.player.getWidth(null)<variables.width &&variables.x>0 /*&& pass*/) {
-					directionX = 10;
-					directionY = 0;
-					array = arrayR;
-					if (time != null && time.isRunning()) return;
-					
-						timeAnim(); 
-					
+
+                     if((variables.gameLvl==1&&Instance.gray.x+Instance.gray.img.getWidth(null)>x-pers.getWidth(null))||variables.gameLvl!=1) {
+
+	                     directionX = 10;
+	                     directionY = 0;
+	                     array = arrayR;
+	                     if (time != null && time.isRunning()) return;
+
+	                     timeAnim();
+                       }
 						
 				}
 				if (e.getKeyCode()== KeyEvent.VK_A && variables.x-variables.player.getWidth(null)/10 >0 /*&& pass*/) {
-					directionX = -10;
-					directionY = 0;
-					array = arrayL;
-					if (time != null && time.isRunning()) return;
-					timeAnim(); 
+					if((variables.gameLvl==1&&x-pers.getWidth(null)>=Instance.gray_street.x)||variables.gameLvl!=1) {
+
+						directionX = -10;
+						directionY = 0;
+						array = arrayL;
+						if (time != null && time.isRunning()) return;
+						timeAnim();
+					}
 				}
 				if (e.getKeyCode()==KeyEvent.VK_W && variables.y>0 /*&& pass*/) {
 					directionX = 0;
@@ -67,11 +73,19 @@ public class Player {
 					timeAnim(); 
 				}
 				if (e.getKeyCode()==KeyEvent.VK_S && variables.y<variables.height-variables.player.getHeight(null)/*&& pass*/) {
-					directionX = 0;
-					directionY = 10;
-					array = arrayD;
-					if (time != null && time.isRunning()) return;
-					timeAnim(); 
+					if((variables.gameLvl==1 && y+pers.getHeight(null)<Instance.gray_street.y+Instance.gray_street.im.getHeight(null))||(variables.gameLvl!=1)){
+						directionX = 0;
+						directionY = 10;
+						array = arrayD;
+						if (time != null && time.isRunning()) return;
+						timeAnim();
+					}
+
+//					directionX = 0;
+//					directionY = 10;
+//					array = arrayD;
+//					if (time != null && time.isRunning()) return;
+//					timeAnim();
 					}
 				
 				
@@ -94,10 +108,6 @@ public class Player {
 
 
 				if(e.getKeyCode()==KeyEvent.VK_E) {
-
-                   // System.out.println(variables.e);
-					//Instance.car1.e_car=true;
-
 
 					if(variables.e){
 						ee=true;
@@ -167,34 +177,35 @@ public class Player {
 	}
 	
 	void moveHome(){
-		  //	Instance.green.move();
-			//Instance.red.move();
-			Instance.blue.move();
-			Instance.orange.move();
-			Instance.gray.move();
-			
-			Instance.street.move_st();
-			Instance.gray_street.move_st();
-			Instance.gray_street2.move_st();
-			Instance.transition.move_st();
-			
-			Instance.cont_pap.move_cont();
-			Instance.cont_pl.move_cont();
-			Instance.cont_gl.move_cont();
-			Instance.cont_met.move_cont();
-			Instance.cont_org.move_cont();
-			Instance.cont_sim.move_cont();
-			
-			Instance.car1.car_move();
-			Instance.car2.car_move();
-			
-			Light.x-=Panel.player.directionX/3;
-			Light.y-=Panel.player.directionY/3;
-			
-			//variables.sx-=Panel.player.directionX/3;
-			//variables.sy-=Panel.player.directionY/3;
-			//variables.gsx-=Panel.player.directionX/3;
-			//variables.gsy-=Panel.player.directionY/3;
+ //
+		  Instance.blue.move();
+		  Instance.orange.move();
+		  Instance.gray.move();
+
+	      Instance.green.move();
+		  Instance.red.move();
+
+		  Instance.street.move_st();
+		  Instance.street2.move_st();
+		  Instance.gray_street.move_st();
+		  Instance.gray_street2.move_st();
+
+		  Instance.transition.move_st();
+
+		  Instance.cont_pap.move_cont();
+		  Instance.cont_pl.move_cont();
+		  Instance.cont_gl.move_cont();
+		  Instance.cont_met.move_cont();
+		  Instance.cont_org.move_cont();
+		  Instance.cont_sim.move_cont();
+
+		  Instance.car1.car_move();
+		  Instance.car2.car_move();
+
+		  Light.x -= Panel.player.directionX;
+		  Light.y -= Panel.player.directionY;
+
+	//  }
 	}
 	void moveTrash(){
 	  	Instance.paper.move_trash();
@@ -217,15 +228,16 @@ public class Player {
 	  	
 }
 	 void moveHouse() {
-		 game3.Panel.gray.move();
-		 game3.Panel.shop.move();
-		 game3.Panel.hospital.move();
-		 game3.Panel.office.move();
+
+			game3.Panel.gray.move();
+			game3.Panel.shop.move();
+			game3.Panel.hospital.move();
+			game3.Panel.office.move();
 
 
-		 game3.Panel.street.move_st();
-		 game3.Panel.gray_street.move_st();
-		 game3.Panel.gray_street2.move_st();
+			game3.Panel.street.move_st();
+			game3.Panel.gray_street.move_st();
+			game3.Panel.gray_street2.move_st();
 
 	}
 	
@@ -235,13 +247,13 @@ public class Player {
 	//Boolean collTrue = false;
 	void collision(){ //проверяем столкновение
 		if (variables.gameLvl == 1) {
-			
-			//Instance.green.collision();
-			//Instance.red.collision();
+
 			Instance.blue.collision();
 			Instance.orange.collision();
 			Instance.gray.collision();
-			
+			Instance.green.collision();
+			Instance.red.collision();
+
 			Instance.paper.trash_coll();
 			Instance.paper_2.trash_coll();
 			Instance.plastic.trash_coll();
@@ -267,18 +279,18 @@ public class Player {
 			Instance.cont_sim.trash_cont();
 			
 			Instance.transition.st_col();
+			Instance.street.st_col();
+			Instance.street2.st_col();
+			Instance.gray_street.st_col();
+			Instance.gray_street2.st_col();
 			Instance.car1.car_coll();
 			Instance.car2.car_coll();
 
-			collisTrue = Instance.blue.collisTrue || Instance.orange.collisTrue ||Instance.gray.collisTrue
+			collisTrue = Instance.blue.collisTrue || Instance.orange.collisTrue ||Instance.gray.collisTrue;
 
-				|| Instance.cont_pap.collisTrue||Instance.cont_pl.collisTrue||Instance.cont_gl.collisTrue
-				|| Instance.cont_met.collisTrue||Instance.cont_org.collisTrue||Instance.cont_sim.collisTrue;
-			
-			
-			
-			
-		
+			//	|| Instance.cont_pap.collisTrue||Instance.cont_pl.collisTrue||Instance.cont_gl.collisTrue
+			//	|| Instance.cont_met.collisTrue||Instance.cont_org.collisTrue||Instance.cont_sim.collisTrue;
+
 		}
 
 		if(variables.gameLvl == 3){
@@ -387,7 +399,10 @@ public class Player {
 			  if (variables.gameLvl == 1) {
 				  Instance.gray.collision();
 
-				  variables.e=Instance.car1.e_car||Instance.car2.e_car;
+				  variables.e=Instance.car1.e_car||Instance.car2.e_car||Instance.cont_sim.e_cont||Instance.cont_gl.e_cont||Instance.cont_met.e_cont
+						  ||Instance.cont_org.e_cont||Instance.cont_pap.e_cont||Instance.cont_pl.e_cont;
+
+
 			  }
 			  if(variables.gameLvl==3){
 				  game3.Panel.gray.coll();
@@ -401,8 +416,8 @@ public class Player {
 			  if (i<array.length-1 && !collisTrue&&variables.gameLvl==1) {
 
 				  pers = array[i];
-						x+=directionX;
-						y+=directionY;
+						x+=directionX/3;
+						y+=directionY/3;
 					i++;
 			  }
 
@@ -419,9 +434,12 @@ public class Player {
 			  if (i>=array.length-1) {
 
 				  if(variables.gameLvl == 1) {
-					  moveHome();
-					  moveTrash();
-
+					  if(Instance.gray_street.y+Instance.gray_street.im.getHeight(null)-directionY>=variables.height
+					     && Instance.gray_street.x<=0+directionX
+					     && Instance.gray.x-directionX>variables.height) {
+						  moveHome();
+						  moveTrash();
+					  }
 				  }
 				  if(variables.gameLvl==3){
 				  	moveHouse();

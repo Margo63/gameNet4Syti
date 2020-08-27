@@ -63,7 +63,7 @@ public class MainBut extends JButton {
 						}
 						new selectionGame();
 							 break;
-					case 2:  new Interface.infoFrame(); break;
+					case 2:  new Interface.Information(); break;
 					case 3:  System.exit(0); break;
 					case 4:  Interface.infoFrame.frameI.dispose(); break;
 					case 5:   new Interface.infoFrame(); break;
@@ -279,13 +279,13 @@ public class MainBut extends JButton {
 				        new Point();
 
 
-				        Car.b1.setVisible(false);
-				        Car.b2.setVisible(false);
-				        Car.b3.setVisible(false);
-
-						Car.p.remove(Car.b1);
-						Car.p.remove(Car.b2);
-						Car.p.remove(Car.b3);
+//				        Car.b1.setVisible(false);
+//				        Car.b2.setVisible(false);
+//				        Car.b3.setVisible(false);
+//
+//						Car.p.remove(Car.b1);
+//						Car.p.remove(Car.b2);
+//						Car.p.remove(Car.b3);
 
 				        variables.car_panel=variables.mol;
 
@@ -294,12 +294,12 @@ public class MainBut extends JButton {
 						break;
 
 					case 15:
-						Car.f.remove(Car.b1);
-						Car.f.remove(Car.b2);
-						Car.f.remove(Car.b3);
-						Car.b1.setVisible(false);
-						Car.b2.setVisible(false);
-						Car.b3.setVisible(false);
+//						Car.f.remove(Car.b1);
+//						Car.f.remove(Car.b2);
+//						Car.f.remove(Car.b3);
+//						Car.b1.setVisible(false);
+//						Car.b2.setVisible(false);
+//						Car.b3.setVisible(false);
 				        variables.car_panel=variables.ok;
 
                         //Car.f.dispose();
@@ -307,12 +307,12 @@ public class MainBut extends JButton {
 						break;
 
 					case 16:
-						Car.f.remove(Car.b1);
-						Car.f.remove(Car.b2);
-						Car.f.remove(Car.b3);
-						Car.b1.setVisible(false);
-						Car.b2.setVisible(false);
-						Car.b3.setVisible(false);
+//						Car.f.remove(Car.b1);
+//						Car.f.remove(Car.b2);
+//						Car.f.remove(Car.b3);
+//						Car.b1.setVisible(false);
+//						Car.b2.setVisible(false);
+//						Car.b3.setVisible(false);
 				        variables.car_panel=variables.net;
 
 

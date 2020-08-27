@@ -40,7 +40,7 @@ public class Panel {
 		player.array = variables.playerAnim;
 		player.pers = variables.player;
 		player.x = 0;
-		player.y = 500;
+		player.y = Instance.gray_street2.y;
 		player.arrayD = variables.playerAnimmDown;
 		player.arrayR = variables.playerAnimmRight;
 		player.arrayL = variables.playerAnimmLeft;

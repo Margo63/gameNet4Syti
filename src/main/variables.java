@@ -24,7 +24,13 @@ public class variables {
 	public static Image close= new ImageIcon("image/close.png").getImage();
 	public static Image white_fon= new ImageIcon("image/white_fon.png").getImage();
 	public static Image minus= new ImageIcon("image/1/minus.png").getImage();
-	
+	public static Image close_game = new ImageIcon("image/close_game.png").getImage();
+	public static Image go= new ImageIcon("image/go.png").getImage();
+	public static Image information= new ImageIcon("image/information.png").getImage();
+
+	public static Image war= new ImageIcon("image/information.png").getImage();
+	public static boolean warning=false;
+	public static boolean street_boolean=false;
 
 	
 	//point
@@ -42,7 +48,9 @@ public class variables {
 	
 	
 	//lvl1
-	public static Image street = new ImageIcon("image/road.png").getImage();
+	public static Image street = new ImageIcon("image/roadd.png").getImage();
+	public static Image carr = new ImageIcon("image/1/Text/car2.png").getImage();
+	public static Image police = new ImageIcon("image/1/Text/police.png").getImage();
 
 	public static Image gray_street = new ImageIcon("image/gray street.png").getImage();
 	public static Image red = new ImageIcon(        "image/red.png").getImage();
@@ -193,6 +201,10 @@ public class variables {
 		for (int i=0;i<6;i++){
 			//playerAnimmRight[i]= new ImageIcon("image/girl/r"+i+".png").getImage();
 			//playerAnimmLeft[i]= new ImageIcon("image/girl/l"+i+".png").getImage();
+		}
+		for (int i=0;i<5;i++){
+		//	playerAnimmRight[i]= new ImageIcon("image/boy/B_R"+i+".png").getImage();
+		//	playerAnimmLeft[i]= new ImageIcon("image/boy/B_L"+i+".png").getImage();
 		}
 		
 		

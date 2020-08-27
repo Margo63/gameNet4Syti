@@ -2,6 +2,7 @@ package game1;
 
 import java.awt.Image;
 
+import player.Player;
 import quest.Quest;
 
 public class Container {
@@ -10,8 +11,10 @@ public class Container {
 	public static int point;
 	public static boolean cont1=false,cont2=false,cont3=false,cont4=false,cont5=false,cont0=false;
 	public boolean collisTrue = false;
+	public boolean e_cont=false;
 	
-Container(int x, int y, Image img,int type){
+Container(int x, int y, Image img,int type,boolean e_cont){
+	 this.e_cont=e_cont;
 	 this.x = x;
 	 this.y = y;
 	 this.img = img;
@@ -24,7 +27,7 @@ public void trash_cont() {
 				Panel.player.y+Panel.player.directionY*5+Panel.player.pers.getHeight(null)>=y) {
 		 //System.out.println(Container.a);
 		 
-		 
+
 		 
 		 switch(type) {
 		 	case 0: cont0=true;   cont1=false;  cont2=false;  cont3=false;  cont4=false;  cont5=false; Quest.container=0;  break;
@@ -35,13 +38,17 @@ public void trash_cont() {
 		    case 5: cont0=false;  cont1=false;  cont2=false;  cont3=false;  cont4=false;  cont5=true;  Quest.container=5;  break;
 			 
 		 }
-		 
-		 new Quest();
-		 Quest.f_quest.setVisible(true);
+		 e_cont=true;
+		 if(Player.ee) {
+			 new Quest();
+			 Quest.f_quest.setVisible(true);
+			 Player.ee=false;
+		 }
 		 collisTrue=true;
 	 }
 	 else{
 	 	//Quest.f_quest.setVisible(false);
+		 e_cont=false;
 		 collisTrue=false;
 	 }
 	 
@@ -49,8 +56,8 @@ public void trash_cont() {
 }
 public void move_cont() {
 	 
-	x-=Panel.player.directionX/3;
-	y-=Panel.player.directionY/3;
+	x-=Panel.player.directionX;
+	y-=Panel.player.directionY;
 }
 }
 	
