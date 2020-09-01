@@ -17,7 +17,7 @@ public class Light {
 	public static  Timer time_light;
 	int i;
 	int n=1200;
-	public static int x=650, y=variables.height-variables.height/3-variables.height/12-light.getHeight(null);;
+	public static int x=650, y=variables.height-variables.height/3-variables.height/12-light.getHeight(null)+70;;
 	
 	Light() {
 
@@ -33,7 +33,7 @@ public class Light {
 	  public void traffic_lights() {
 		  
 			
-		  time_light = new Timer (1800,new ActionListener() {
+		  time_light = new Timer (3000,new ActionListener() {
 			  public void actionPerformed (ActionEvent e) {
 				  if(i<4) {
 					  light=lights[i];

@@ -55,7 +55,7 @@ public boolean collisTrue2=false;
 		 
 	 }
 	public void move() {
-		x-=game3.Panel.player.directionX/3;
-		y-=game3.Panel.player.directionY/3;
+		x-=game3.Panel.player.directionX;
+		y-=game3.Panel.player.directionY;
 	}
 }

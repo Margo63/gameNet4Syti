@@ -23,6 +23,8 @@ public class MainFrame{
 	public static MainBut but;
 	public static MainBut but1;
 	public static MainBut but2;
+	int lenth =variables.gray.getWidth(null)+variables.orange.getWidth(null)+variables.blue.getWidth(null)+variables.car_gasoline.getWidth(null)+variables.car.getWidth(null)+30;
+	int lenth3 =variables.gray.getWidth(null)+variables.shop.getWidth(null)+variables.hospital.getWidth(null)+variables.office.getWidth(null)+30;
 
 	public static JFrame frame;
 	public static int lighty=variables.height-variables.height/3-variables.height/6-variables.light.getHeight(null);
@@ -121,7 +123,7 @@ public class MainFrame{
 		frame.add(variables.MainPanel); 
 		frame.setVisible(true); 
 	}
-	
+
 	
 	void painGame1(Graphics g) {
 
@@ -129,8 +131,8 @@ public class MainFrame{
 		g.drawImage(Instance.green.img, Instance.green.x, Instance.green.y, null);
 		g.drawImage(Instance.red.img, Instance.red.x, Instance.red.y, null);
 
-		g.drawImage(Instance.gray_street.im, Instance.gray_street.x, Instance.gray_street.y, null);
-		g.drawImage(Instance.gray_street2.im, Instance.gray_street2.x, Instance.gray_street2.y,  null);
+		g.drawImage(Instance.gray_street.im, Instance.gray_street.x, Instance.gray_street.y, lenth,variables.gray_street2.getHeight(null),null);
+		g.drawImage(Instance.gray_street2.im, Instance.gray_street2.x, Instance.gray_street2.y, lenth,variables.gray_street2.getHeight(null), null);
 		g.drawImage(Instance.street.im,      Instance.street.x, Instance.street.y,    null);
 		g.drawImage(Instance.street2.im,      Instance.street2.x, Instance.street2.y,    null);
 
@@ -170,9 +172,7 @@ public class MainFrame{
 
 
 		if(variables.e){
-
 			g.drawImage(variables.fon, Panel.player.x, Panel.player.y-15,30,30,  null);
-
 		}
 
 		g.drawImage(Panel.player.pers, Panel.player.x, Panel.player.y,  null);
@@ -208,11 +208,12 @@ public class MainFrame{
     }
 	
     void painGame3(Graphics g) {
-      g.drawImage(game3.Panel.street.im,       game3.Panel.street.x,       game3.Panel.street.y,  variables.street.getWidth(null),variables.height/3,      null);
-      g.drawImage(game3.Panel.gray_street.im,  game3.Panel.gray_street.x,  game3.Panel.gray_street.y, variables.gray_street.getWidth(null),variables.height/12,  null);
-      g.drawImage(game3.Panel.gray_street2.im, game3.Panel.gray_street2.x, game3.Panel.gray_street2.y, variables.gray_street.getWidth(null),variables.height/12,  null);
+      g.drawImage(game3.Panel.gray_street.im,  game3.Panel.gray_street.x,  game3.Panel.gray_street.y, lenth3,variables.gray_street.getHeight(null),null);
+      g.drawImage(game3.Panel.gray_street2.im, game3.Panel.gray_street2.x, game3.Panel.gray_street2.y, lenth3,variables.gray_street.getHeight(null), null);
+	  g.drawImage(game3.Panel.street.im,       game3.Panel.street.x,       game3.Panel.street.y,    lenth3,variables.street.getHeight(null),   null);
 
-      g.drawImage(game3.Panel.hospital.image, game3.Panel.hospital.x, game3.Panel.hospital.y, null);
+
+	  g.drawImage(game3.Panel.hospital.image, game3.Panel.hospital.x, game3.Panel.hospital.y, null);
       g.drawImage(game3.Panel.shop.image, game3.Panel.shop.x, game3.Panel.shop.y, null);
       g.drawImage(game3.Panel.office.image, game3.Panel.office.x, game3.Panel.office.y, null);
       g.drawImage(game3.Panel.gray.image, game3.Panel.gray.x, game3.Panel.gray.y, null);
@@ -221,7 +222,13 @@ public class MainFrame{
 
 			g.drawImage(variables.fon, game3.Panel.player.x, game3.Panel.player.y-15,30,30,  null);
 		}
-      g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
+		if(Minus.min) {
+			g.drawImage(variables.minus, Minus.minus_x, Minus.minus_y,  null);
+		}
+		if(variables.warning){
+			g.drawImage(variables.war, game3.Panel.player.x, game3.Panel.player.y-15,  null);
+		}
+      g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y, null);
    }
 	
     void paintHospitale(Graphics g){
@@ -230,6 +237,9 @@ public class MainFrame{
       g.drawImage(game3.Panel.doctor.image, game3.Panel.doctor.x,game3.Panel.doctor.y,null);
       g.drawImage(game3.Panel.door.image, game3.Panel.door.x,game3.Panel.door.y,null);
       g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
+		if(variables.e){
+			g.drawImage(variables.fon, game3.Panel.player.x, game3.Panel.player.y-15,30,30,  null);
+		}
 
 	}
 
@@ -239,6 +249,10 @@ public class MainFrame{
 	  g.drawImage(game3.Panel.doc_blood.image, game3.Panel.doc_blood.x,game3.Panel.doc_blood.y,null);
 
 		if(Point.pl)   g.drawImage(variables.plus, Point.plus_x, Point.plus_y,  null);
+
+		if(variables.e){
+			g.drawImage(variables.fon, game3.Panel.player.x, game3.Panel.player.y-15,30,30,  null);
+		}
 
 	  g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
 
@@ -250,6 +264,9 @@ public class MainFrame{
 		g.drawImage(game3.Panel.stand.im,game3.Panel.stand.x,game3.Panel.stand.y,null);
 		g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
 
+		if(variables.e){
+			g.drawImage(variables.fon, game3.Panel.player.x, game3.Panel.player.y-15,30,30,  null);
+		}
 	}
 	void paintShop(Graphics g){
 
@@ -263,7 +280,13 @@ public class MainFrame{
 		g.drawImage(game3.Panel.egg.im,game3.Panel.egg.x,game3.Panel.egg.y,null);
 		g.drawImage(game3.Panel.grocery.im,game3.Panel.grocery.x,game3.Panel.grocery.y,null);
 
+		if(variables.e){
+
+			g.drawImage(variables.fon, game3.Panel.player.x, game3.Panel.player.y-15,30,30,  null);
+		}
+
 		g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
+
 
 	}
 
@@ -277,7 +300,9 @@ public class MainFrame{
         g.drawImage(game3.Panel.flat4.image, game3.Panel.flat4.x,game3.Panel.flat4.y,null);
 		g.drawImage(game3.Panel.flat5.image, game3.Panel.flat5.x,game3.Panel.flat5.y,null);
 		g.drawImage(game3.Panel.flat6.image, game3.Panel.flat6.x,game3.Panel.flat6.y,null);
-
+		if(variables.e){
+			g.drawImage(variables.fon, game3.Panel.player.x, game3.Panel.player.y-15,30,30,  null);
+		}
 		g.drawImage(game3.Panel.player.pers, game3.Panel.player.x, game3.Panel.player.y,  null);
 
 	}

@@ -42,6 +42,7 @@ public class Button {
         variables.MainPanel.add(but);
         variables.MainPanel.repaint();
 
+
         but.setFocusable(false);
         MainFrame.frame.setFocusable(true);
 
@@ -65,7 +66,7 @@ public class Button {
 
             }
         };
-        but_cl.setBounds( f.getWidth()-50,0,50,50);
+        but_cl.setBounds( f.getWidth()-55,5,50,50);
         but_cl.setBorderPainted(false);
         but_cl.setOpaque(false);
         but_cl.setContentAreaFilled(false);

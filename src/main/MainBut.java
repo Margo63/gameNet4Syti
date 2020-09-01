@@ -40,6 +40,7 @@ public class MainBut extends JButton {
 			public void actionPerformed(ActionEvent e) {
 				switch(cl){
 					case 1:
+
 						if(Choice.trueButChoice){
 
 							Choice.trueButChoice = false;
@@ -68,8 +69,13 @@ public class MainBut extends JButton {
 					case 4:  Interface.infoFrame.frameI.dispose(); break;
 					case 5:   new Interface.infoFrame(); break;
 
-					case 6:   new Panel(); variables.gameLvl=1; variables.MainPanel.repaint();
-					          new MainTimer();
+					case 6:
+						if(variables.first) {
+							new Panel();
+							variables.gameLvl = 1;
+							variables.MainPanel.repaint();
+							new MainTimer();
+						}
 					          break;
 
 					case 7:   System.out.println("В игру!");
@@ -273,52 +279,52 @@ public class MainBut extends JButton {
 						Quest.p_quest.repaint();
 						break;*/
 
-					case 14:
-						Container.point++;
-						Point.pl=true;
-				        new Point();
-
-
-//				        Car.b1.setVisible(false);
-//				        Car.b2.setVisible(false);
-//				        Car.b3.setVisible(false);
+//					case 14:
+//						Container.point++;
+//						Point.pl=true;
+//				        new Point();
 //
-//						Car.p.remove(Car.b1);
-//						Car.p.remove(Car.b2);
-//						Car.p.remove(Car.b3);
-
-				        variables.car_panel=variables.mol;
-
-
-				        Car.p.repaint();
-						break;
-
-					case 15:
-//						Car.f.remove(Car.b1);
-//						Car.f.remove(Car.b2);
-//						Car.f.remove(Car.b3);
-//						Car.b1.setVisible(false);
-//						Car.b2.setVisible(false);
-//						Car.b3.setVisible(false);
-				        variables.car_panel=variables.ok;
-
-                        //Car.f.dispose();
-				        Car.p.repaint();
-						break;
-
-					case 16:
-//						Car.f.remove(Car.b1);
-//						Car.f.remove(Car.b2);
-//						Car.f.remove(Car.b3);
-//						Car.b1.setVisible(false);
-//						Car.b2.setVisible(false);
-//						Car.b3.setVisible(false);
-				        variables.car_panel=variables.net;
-
-
-                        //Car.f.dispose();
-				        Car.p.repaint();
-						break;
+//
+////				        Car.b1.setVisible(false);
+////				        Car.b2.setVisible(false);
+////				        Car.b3.setVisible(false);
+////
+////						Car.p.remove(Car.b1);
+////						Car.p.remove(Car.b2);
+////						Car.p.remove(Car.b3);
+//
+//				        variables.car_panel=variables.mol;
+//
+//
+//				        Car.p.repaint();
+//						break;
+//
+//					case 15:
+////						Car.f.remove(Car.b1);
+////						Car.f.remove(Car.b2);
+////						Car.f.remove(Car.b3);
+////						Car.b1.setVisible(false);
+////						Car.b2.setVisible(false);
+////						Car.b3.setVisible(false);
+//				        variables.car_panel=variables.ok;
+//
+//                        //Car.f.dispose();
+//				        Car.p.repaint();
+//						break;
+//
+//					case 16:
+////						Car.f.remove(Car.b1);
+////						Car.f.remove(Car.b2);
+////						Car.f.remove(Car.b3);
+////						Car.b1.setVisible(false);
+////						Car.b2.setVisible(false);
+////						Car.b3.setVisible(false);
+//				        variables.car_panel=variables.net;
+//
+//
+//                        //Car.f.dispose();
+//				        Car.p.repaint();
+//						break;
 
 					case 17:
 

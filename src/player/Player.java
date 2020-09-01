@@ -42,44 +42,75 @@ public class Player {
 			public void keyPressed (KeyEvent e) {
 				
 				//прописываем движение вперед
-				if (e.getKeyCode() == KeyEvent.VK_D && variables.x+variables.player.getWidth(null)<variables.width &&variables.x>0 /*&& pass*/) {
+				if (e.getKeyCode() == KeyEvent.VK_D /*&& variables.x+variables.player.getWidth(null)<variables.width &&variables.x>0 /*&& pass*/) {
+//                    switch (variables.gameLvl){
+//                        case 1: movieD();
+//                            break;
+//                        case 3: movieD();
+//                            break;
+//                    }
+//
+//                     case 1:  if((Instance.gray.x+Instance.gray.img.getWidth(null)>x+pers.getWidth(null))
+//                     ) {
+ //                        movieD();
+//
+//                     }
+//                     break;
+//                        case 3:
+//                            if ((variables.gameLvl == 3 && game3.Panel.gray.x + game3.Panel.gray.image.getWidth(null) > x + pers.getWidth(null))) {
+//                                movieD();
+//                            }
+//                            break;
+//                    }
 
-                     if((variables.gameLvl==1&&Instance.gray.x+Instance.gray.img.getWidth(null)>x-pers.getWidth(null))||variables.gameLvl!=1) {
+                    movieD();
 
-	                     directionX = 10;
-	                     directionY = 0;
-	                     array = arrayR;
-	                     if (time != null && time.isRunning()) return;
 
-	                     timeAnim();
-                       }
 						
 				}
 				if (e.getKeyCode()== KeyEvent.VK_A && variables.x-variables.player.getWidth(null)/10 >0 /*&& pass*/) {
-					if((variables.gameLvl==1&&x-pers.getWidth(null)>=Instance.gray_street.x)||variables.gameLvl!=1) {
+//				    switch(variables.gameLvl){
+//                        case 1:
+//                           // if((variables.gameLvl==1&&x>=Instance.gray_street.x)) {
+//
+//                            movieA();
+//                   //     }
+//                        case 3:
+//                          //  if((variables.gameLvl==3&&x>= game3.Panel.gray_street.x)
+//                    //        ){
+//                                movieA();
+//                     //       }
+//                            break;
+//
+//                    }
+                    movieA();
 
-						directionX = -10;
-						directionY = 0;
-						array = arrayL;
-						if (time != null && time.isRunning()) return;
-						timeAnim();
-					}
 				}
 				if (e.getKeyCode()==KeyEvent.VK_W && variables.y>0 /*&& pass*/) {
-					directionX = 0;
-					directionY = -10;
-					array = arrayU;
-					if (time != null && time.isRunning()) return;
-					timeAnim(); 
+					movieW();
+
 				}
 				if (e.getKeyCode()==KeyEvent.VK_S && variables.y<variables.height-variables.player.getHeight(null)/*&& pass*/) {
-					if((variables.gameLvl==1 && y+pers.getHeight(null)<Instance.gray_street.y+Instance.gray_street.im.getHeight(null))||(variables.gameLvl!=1)){
-						directionX = 0;
-						directionY = 10;
-						array = arrayD;
-						if (time != null && time.isRunning()) return;
-						timeAnim();
-					}
+//                    switch (variables.gameLvl){
+//                        case 1:
+//                         //   if((variables.gameLvl==1 && y+pers.getHeight(null)<Instance.gray_street.y+Instance.gray_street.im.getHeight(null))
+//
+//                       //     ){
+//
+//                                movieS();
+//                        //    }
+//                            break;
+//                        case 3:
+//                            //if((variables.gameLvl==3&&y+pers.getHeight(null)< game3.Panel.gray_street.y+ game3.Panel.gray_street.im.getHeight(null))){
+//                                movieS();
+//                           // }
+//                            break;
+//                        }
+                    movieS();
+
+
+
+
 
 //					directionX = 0;
 //					directionY = 10;
@@ -171,11 +202,41 @@ public class Player {
 			}
 		
 		});
-		
-		
+
 
 	}
-	
+
+	void movieD(){
+		directionX = 10;
+		directionY = 0;
+		array = arrayR;
+		if (time != null && time.isRunning()) return;
+		timeAnim();
+	}
+
+	void movieS(){
+		directionX = 0;
+		directionY = 10;
+		array = arrayD;
+		if (time != null && time.isRunning()) return;
+		timeAnim();
+
+	}
+	void movieW(){
+		directionX = 0;
+		directionY = -10;
+		array = arrayU;
+		if (time != null && time.isRunning()) return;
+		timeAnim();
+	}
+     void movieA(){
+	    directionX = -10;
+     	directionY = 0;
+	    array = arrayL;
+	    if (time != null && time.isRunning()) return;
+	    timeAnim();
+     }
+
 	void moveHome(){
  //
 		  Instance.blue.move();
@@ -235,10 +296,34 @@ public class Player {
 			game3.Panel.office.move();
 
 
-			game3.Panel.street.move_st();
-			game3.Panel.gray_street.move_st();
-			game3.Panel.gray_street2.move_st();
-
+		 game3.Panel.street.move_st();
+		 game3.Panel.gray_street.move_st();
+		 game3.Panel.gray_street2.move_st();
+	}
+	void moveDoc(){
+		game3.Panel.doc_blood.move();
+		game3.Panel.doctor.move();
+		game3.Panel.door.move();
+	}
+	void moveShop(){
+		game3.Panel.meat.move();
+		game3.Panel.milk.move();
+		game3.Panel.vegetables.move();
+		game3.Panel.fruit.move();
+		game3.Panel.grocery.move();
+		game3.Panel.bread.move();
+		game3.Panel.egg.move();
+	}
+	void moveOffice(){
+		game3.Panel.stand.move();
+	}
+	void moveFlat(){
+		game3.Panel.flat1.move();
+		game3.Panel.flat2.move();
+		game3.Panel.flat3.move();
+		game3.Panel.flat4.move();
+		game3.Panel.flat5.move();
+		game3.Panel.flat6.move();
 	}
 	
 	
@@ -298,6 +383,10 @@ public class Player {
 			game3.Panel.office.coll();
 			game3.Panel.shop.coll();
 			game3.Panel.gray.coll();
+			game3.Panel.street.st_col();
+			game3.Panel.gray_street.st_col();
+			game3.Panel.gray_street2.st_col();
+
 
 
 
@@ -349,6 +438,8 @@ public class Player {
 		
 
 	}
+
+
 	public Dialogue dialog;
 	boolean dialog1True = false;
 	boolean dialog0True = false; //дополнительное условие, чтобы диалог не показывался
@@ -390,12 +481,14 @@ public class Player {
 		}
 	}
 	
-	 Timer time;
+	 public Timer time;
 	 int i=0;
 	public void timeAnim() {
 	  time= new Timer(100, new ActionListener() {
 		  @Override
 		  public void actionPerformed(ActionEvent e) {
+		  	System.out.println(variables.width/4);
+			  System.out.println(variables.height/3);
 			  if (variables.gameLvl == 1) {
 				  Instance.gray.collision();
 
@@ -404,6 +497,7 @@ public class Player {
 
 
 			  }
+
 			  if(variables.gameLvl==3){
 				  game3.Panel.gray.coll();
 
@@ -411,23 +505,53 @@ public class Player {
 						  ||game3.Panel.office.e_house||game3.Panel.gray.e_house;
 
 			  }
+			  if(variables.gameLvl==-5){
+			  	variables.e=game3.Panel.egg.shop_e|| game3.Panel.grocery.shop_e|| game3.Panel.milk.shop_e|| game3.Panel.meat.shop_e|| game3.Panel.vegetables.shop_e
+						|| game3.Panel.fruit.shop_e|| game3.Panel.bread.shop_e;
+			  }
+			  if(variables.gameLvl==-4){
+			  	variables.e= game3.Panel.stand.e_office;
+			  }
+			  if(variables.gameLvl==-2){
+				  variables.e= game3.Panel.door.e_doc|| game3.Panel.doctor.e_doc;
+			  }
+			  if(variables.gameLvl==-3){
+				  variables.e=  game3.Panel.doc_blood.e_doc;
+			  }
+			  if(variables.gameLvl==-6){
+				  variables.e = game3.Panel.flat1.e_flat||game3.Panel.flat2.e_flat||game3.Panel.flat3.e_flat||game3.Panel.flat4.e_flat
+						      ||game3.Panel.flat5.e_flat||game3.Panel.flat6.e_flat;
+			  }
 			
 			 
 			  if (i<array.length-1 && !collisTrue&&variables.gameLvl==1) {
+                  if((Instance.gray.x+Instance.gray.img.getWidth(null)>x+pers.getWidth(null)+directionX) &&
+                    (directionX+x>=Instance.gray_street.x)&&
+                     (y+directionY +pers.getHeight(null)<Instance.gray_street.y+Instance.gray_street.im.getHeight(null))
 
-				  pers = array[i];
-						x+=directionX/3;
-						y+=directionY/3;
-					i++;
+                     ) {
+                      pers = array[i];
+                      x+=directionX/3;
+                      y+=directionY/3;
+                      i++;
+
+                     }
+
 			  }
 
 
 			  if (i<array.length-1 && !collisTrue2 &&(variables.gameLvl==3||(variables.gameLvl>-8 && variables.gameLvl<-1))) {
 
-				  pers = array[i];
-				  x+=directionX;
-				  y+=directionY;
-				  i++;
+			      if((y+directionY+pers.getHeight(null)< game3.Panel.gray_street.y+ game3.Panel.gray_street.im.getHeight(null))
+                  &&(directionX+x>= game3.Panel.gray_street.x)
+                  &&(game3.Panel.gray.x + game3.Panel.gray.image.getWidth(null) > x+directionX + pers.getWidth(null))){
+                      pers = array[i];
+                      x+=directionX/3;
+                      y+=directionY/3;
+                      i++;
+                  }
+
+
 			  }
 
 
@@ -442,8 +566,27 @@ public class Player {
 					  }
 				  }
 				  if(variables.gameLvl==3){
-				  	moveHouse();
+				  	if(game3.Panel.gray_street.y+ game3.Panel.gray_street.im.getHeight(null)-directionY>=variables.height
+					   && game3.Panel.gray_street.x<=0+directionX
+					   && game3.Panel.gray.x-directionX>variables.height) {
+						moveHouse();
+					}
 				  }
+				  if(variables.gameLvl==-2||variables.gameLvl==-3){
+				  	moveDoc();
+				  }
+				  if(variables.gameLvl==-4){
+				  	moveOffice();
+				  }
+				  if(variables.gameLvl==-5){
+				  	moveShop();
+
+				  }
+				  if(variables.gameLvl==-6){
+				  	moveFlat();
+				  }
+
+
 					i = 0;
 					pers = array[0];
 					time.stop();

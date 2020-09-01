@@ -1,6 +1,7 @@
 package game3;
 
 import main.variables;
+import player.Player;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,6 +10,7 @@ import java.awt.event.ActionListener;
 
 public class Doctor {
     public Image image;
+    public boolean e_doc=false;
     public int x,y;
     Image [] images = new Image [5];
     Timer time;
@@ -39,14 +41,29 @@ public class Doctor {
                 game3.Panel.player.y+game3.Panel.player.directionY*3+game3.Panel.player.pers.getHeight(null)>=y-20
         ){
             collisTrue2=true;
-            switch(type){
-                case 1:   Hospitale_Room.type=1;  Hospitale_Room.blood();  break;
-                case 2:   Hospitale_Room.type=2;  Hospitale_Room.blood();  break;
-                case 3:   Hospitale_Room.type=3;  Hospitale_Room.blood();  break;
-                case 4:    break;
+            e_doc=true;
+            if(Player.ee) {
+                Player.ee=false;
+
+                switch (type) {
+                    case 1:
+                        Hospitale_Room.type = 1;
+                        Hospitale_Room.blood();
+                        break;
+                    case 2:
+                        Hospitale_Room.type = 2;
+                        Hospitale_Room.blood();
+                        break;
+                    case 3:
+                        Hospitale_Room.type = 3;
+                        Hospitale_Room.blood();
+                        break;
+                    case 4:
+                        break;
+                }
             }
 
-            System.out.println("доктор");
+
             //Hospitale_Room.f_blood.setVisible(true);
             //Hospitale_Room.f_blood.setFocusable(false);
 
@@ -54,7 +71,7 @@ public class Doctor {
 
         }
         else{
-
+            e_doc=false;
             collisTrue2=false;
 
 
@@ -67,5 +84,9 @@ public class Doctor {
             Hospitale_Room.type=3;
             Hospitale_Room.blood();
         }*/
+    }
+    public void move() {
+        x-=game3.Panel.player.directionX;
+        y-=game3.Panel.player.directionY;
     }
 }

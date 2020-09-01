@@ -38,19 +38,22 @@ public class Panel {
 	public static Flat flat5;
 	public static Flat flat6;
 
-	int s=variables.height-variables.height/3-variables.height/12;
-	int gs=variables.height-variables.height/12;
-	int gs2 = variables.height-variables.height/3-variables.height/6;
-	int house_gray=variables.height-variables.height/3-variables.height/6-variables.gray.getHeight(null);
-	int house_shop=variables.height-variables.height/3-variables.height/6-variables.shop.getHeight(null);
-	
-public Panel() {
+	int s=variables.height-variables.street.getHeight(null)-variables.gray_street.getHeight(null)+70;
+	int gs=variables.height-variables.gray_street.getHeight(null) +70;
+	int gs2=variables.height-variables.street.getHeight(null)-2*variables.gray_street.getHeight(null) +70;
+
+	int house_gray=variables.height-variables.street.getHeight(null)-2*variables.gray_street.getHeight(null)-variables.gray.getHeight(null) +70;;
+	int house_shop=variables.height-variables.street.getHeight(null)-2*variables.gray_street.getHeight(null)-variables.shop.getHeight(null) +70;;
+	int house_hospitale=variables.height-variables.street.getHeight(null)-2*variables.gray_street.getHeight(null)-variables.hospital.getHeight(null) +70;;
+	int house_office=variables.height-variables.street.getHeight(null)-2*variables.gray_street.getHeight(null)-variables.office.getHeight(null) +70;;
+
+	public Panel() {
 		
 		player =new player.Player();
 		player.array = variables.playerAnim;
 		player.pers = variables.player;
 		player.x = 0;
-		player.y = 400;
+		player.y = gs2;
 		player.arrayD = variables.playerAnimmDown;
 		player.arrayR = variables.playerAnimmRight;
 		player.arrayL = variables.playerAnimmLeft;
@@ -89,14 +92,14 @@ void but() {
 	MainFrame.frame.setFocusable(true);
 }
 void house(){
-	hospital = new House(1,1,variables.hospital,1,false);
-	shop = new House(600,house_shop,variables.shop,3,false);
-	office = new House(300,1,variables.office,2,false);
-	gray = new House(1000,house_gray,variables.gray,0,false);
+	hospital =  new House(-10,house_hospitale,variables.hospital,1,false);
+	office   =  new House(variables.hospital.getWidth(null),house_office,variables.office,2,false);
+	shop     =  new House(variables.hospital.getWidth(null)+variables.office.getWidth(null),house_shop,variables.shop,3,false);
+	gray     =  new House(variables.hospital.getWidth(null)+variables.office.getWidth(null)+variables.shop.getWidth(null),house_gray,variables.gray,0,false);
 
-	street = new Street3(variables.street,0,s,2);
-	gray_street = new Street3(variables.gray_street,0,gs,2);
-	gray_street2 = new Street3(variables.gray_street,0,gs2,2);
+	street =       new Street3       (variables.street,     -10,s,3);
+	gray_street =  new Street3       (variables.gray_street,-10,gs,2);
+	gray_street2 = new Street3       (variables.gray_street,-10,gs2,2);
 
 
 }
@@ -133,28 +136,28 @@ void door(){
 
 void office(){
 	stand = new Office_Room();
-	stand.Stand(500,400,variables.stand);
+	stand.Stand(500,400,variables.stand,false);
 }
 
 void flat(){
-	flat1= new Flat(900,100,variables.door,1);
-	flat2 = new Flat(700,100,variables.door,2);
-	flat3 = new Flat(550,100,variables.door,3);
-	flat4 = new Flat(400,100,variables.door,4);
-	flat5 = new Flat(250,100,variables.door,5);
-	flat6 = new Flat(100,100,variables.door,5);
+	flat1 = new Flat(900,100,variables.door,1,false);
+	flat2 = new Flat(700,100,variables.door,2,false);
+	flat3 = new Flat(550,100,variables.door,3,false);
+	flat4 = new Flat(400,100,variables.door,4,false);
+	flat5 = new Flat(250,100,variables.door,5,false);
+	flat6 = new Flat(100,100,variables.door,5,false);
 
 
 }
 
  void department(){
-	grocery= new Shop_Room(0,0,variables.grocery_stand,1);
-	milk= new Shop_Room(250,0,variables.milk_stand,2);
-	bread= new Shop_Room(500,0,variables.bread_stand,3);
-	meat= new Shop_Room(750,0,variables.meat_stand,4);
-	egg= new Shop_Room(0,600,variables.egg_stand,5);
-	vegetables= new Shop_Room(250,600,variables.vegetables_stand,6);
-	fruit= new Shop_Room(500,600,variables.fruit_stand,7);
+	grocery= new Shop_Room(0,0,variables.grocery_stand,1,false);
+	milk= new Shop_Room(250,0,variables.milk_stand,2,false);
+	bread= new Shop_Room(500,0,variables.bread_stand,3,false);
+	meat= new Shop_Room(750,0,variables.meat_stand,4,false);
+	egg= new Shop_Room(0,600,variables.egg_stand,5,false);
+	vegetables= new Shop_Room(250,600,variables.vegetables_stand,6,false);
+	fruit= new Shop_Room(500,600,variables.fruit_stand,7,false);
  }
 
 }

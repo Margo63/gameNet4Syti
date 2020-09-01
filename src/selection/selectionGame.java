@@ -29,6 +29,12 @@ public class selectionGame {
 	
 	
 	public selectionGame(){
+		if (variables.gameLvl == 1){
+			Panel.player.time.stop();
+		}
+		if (variables.gameLvl == 3){
+			game3.Panel.player.time.stop();
+		}
 		variables.gameLvl = -1;
 		new main.variables();
 		variables.fon=variables.fon1;
@@ -66,9 +72,9 @@ public class selectionGame {
 	//	JButton b = new JButton(variables.m);
 		
 		but6.MenuButt(6,"Мини Игра 1", x, variables.height-variables.height*2/3, variables.MainPanel);
-		but6.img=variables.m;
-		but6.w=variables.width/4-10;
-		but6.h=variables.height/2;
+		but6.img=variables.icon1;
+		but6.w=300;
+		but6.h=400;
 
 		but6.setOpaque(false);
 		but6.setContentAreaFilled(false);
@@ -78,12 +84,33 @@ public class selectionGame {
 		
 		but7 = new MainBut();
 		but7.MenuButt(7,"Мини игра 2", x_1,  variables.height-variables.height*2/3, variables.MainPanel);
+		but7.img=variables.icon2;
+		but7.w=300;
+		but7.h=400;
+
+		but7.setOpaque(false);
+		but7.setContentAreaFilled(false);
+		but7.setBorderPainted(false);
 		
 		but8 = new MainBut();
 		but8.MenuButt(8,"Мини игра 3", x_2,  variables.height-variables.height*2/3, variables.MainPanel);
+		but8.img=variables.icon3;
+		but8.w=300;
+		but8.h=400;
+
+		but8.setOpaque(false);
+		but8.setContentAreaFilled(false);
+		but8.setBorderPainted(false);
 		
 		but9 = new MainBut();
 		but9.MenuButt(100,"Мини игра 4", x_3,  variables.height-variables.height*2/3, variables.MainPanel);
+		but9.img=variables.icon4;
+		but9.w=300;
+		but9.h=400;
+
+		but9.setOpaque(false);
+		but9.setContentAreaFilled(false);
+		but9.setBorderPainted(false);
 		
 	
 	
@@ -109,7 +136,13 @@ public class selectionGame {
 		catch(NullPointerException nullPointerException) {
 		}
 
-		Choice.q_b0.setVisible(false);
+		try {
+			Choice.q_b0.setVisible(false);
+		}
+		catch (NullPointerException nullPointerException){
+
+		}
+
 		Choice.q_b1.setVisible(false);
 		Choice.q_b2.setVisible(false);
 		Choice.q_b3.setVisible(false);

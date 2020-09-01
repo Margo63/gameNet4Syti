@@ -47,6 +47,11 @@ public Inventory(){
 		protected void paintComponent(Graphics g) {
 			super.paintComponent(g);
 			g.drawImage(variables.white_fon,  0, 0, variables.width,variables.height,   null);
+			g.drawImage(variables.line2,  f.getWidth()-2, 0, 2,variables.height,   null);
+			g.drawImage(variables.line2,  0, 0, 2,variables.height,   null);
+			g.drawImage(variables.line1,  0, 0, variables.width,2,   null);
+			g.drawImage(variables.line1,  0, f.getHeight()-2, variables.width,2,   null);
+
 			if(variables.gameLvl==1) {
 			    if(Trash.num1)	g.drawImage(variables.m_2,     0, 0, null);
 				if(Trash.num2)  g.drawImage(variables.plastic, 0,    variables.m_2.getHeight(null), null);

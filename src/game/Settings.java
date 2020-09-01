@@ -19,6 +19,7 @@ public static JPanel p_setting;
         p_setting = new JPanel() {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
+                g.drawImage(variables.white_fon,0,0,f_setting.getWidth(),f_setting.getHeight(),null);
                 switch(variables.gameLvl){
                     case 1: g.drawImage(variables.info1,0,0,variables.width/3,variables.height/3,null); break;
                     case 2: g.drawImage(variables.info2,0,0,variables.width/3,variables.height/3,null); break;

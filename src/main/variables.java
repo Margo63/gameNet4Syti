@@ -13,8 +13,19 @@ import all.collision;
 
 
 public class variables {
+	public static boolean first=true;
+
+	public static Image line1= new ImageIcon("image/line1.png").getImage();
+	public static Image line2= new ImageIcon("image/line2.png").getImage();
+	public static Image icon1= new ImageIcon("image/lvl1.png").getImage();
+	public static Image icon2= new ImageIcon("image/lvl2.png").getImage();
+	public static Image icon3= new ImageIcon("image/lvl3.png").getImage();
+	public static Image icon4= new ImageIcon("image/lvl4.png").getImage();
+	public static Image bord= new ImageIcon("image/bord.png").getImage();
+	public static Image bord2= new ImageIcon("image/bord2.png").getImage();
+
 	public static Image fon = new ImageIcon("image/fon_menu.jpg").getImage();//фон, который рисуем
-	public static Image fonMenu = new ImageIcon("image/fon_menu.jpg").getImage(); //фон меню
+	public static Image fonMenu = new ImageIcon("image/BG_fon_menu.jpg").getImage(); //фон меню
 	public static Image fon1 = new ImageIcon("image/background.png").getImage(); //фон уровня
 	public static Image heart = new ImageIcon("image/life_2.png").getImage();
 	public static Image m = new ImageIcon("image/icon1.png").getImage();
@@ -52,7 +63,8 @@ public class variables {
 	public static Image carr = new ImageIcon("image/1/Text/car2.png").getImage();
 	public static Image police = new ImageIcon("image/1/Text/police.png").getImage();
 
-	public static Image gray_street = new ImageIcon("image/gray street.png").getImage();
+	public static Image gray_street = new ImageIcon("image/border1.png").getImage();
+	public static Image gray_street2 = new ImageIcon("image/border2.png").getImage();
 	public static Image red = new ImageIcon(        "image/red.png").getImage();
 	public static Image green = new ImageIcon(      "image/green.png").getImage();
 	public static Image blue = new ImageIcon(       "image/house/house3.png").getImage();
@@ -85,7 +97,7 @@ public class variables {
 	public static Image cont_sim= new ImageIcon("image/1/cont_no.png").getImage();
 
 	//машинки и переход
-	public static Image tr= new ImageIcon("image/1/transition.png").getImage();
+	public static Image tr= new ImageIcon("image/crosswalk.png").getImage();
 	public static Image car= new ImageIcon("image/1/car+dog_0.png").getImage();
 	public static Image car_gasoline = new ImageIcon("image/1/car.png").getImage();
 

@@ -1,9 +1,13 @@
 package game1;
 
-import java.awt.Image;
+import java.awt.*;
 
+import game.Button;
+import main.variables;
 import player.Player;
 import quest.Quest;
+
+import javax.swing.*;
 
 public class Container {
 	public Image img;
@@ -12,6 +16,8 @@ public class Container {
 	public static boolean cont1=false,cont2=false,cont3=false,cont4=false,cont5=false,cont0=false;
 	public boolean collisTrue = false;
 	public boolean e_cont=false;
+	public JFrame frame=null;
+	public JPanel panel;
 	
 Container(int x, int y, Image img,int type,boolean e_cont){
 	 this.e_cont=e_cont;
@@ -43,6 +49,9 @@ public void trash_cont() {
 			 new Quest();
 			 Quest.f_quest.setVisible(true);
 			 Player.ee=false;
+			 if(type==0){
+			 	frame();
+			 }
 		 }
 		 collisTrue=true;
 	 }
@@ -58,6 +67,31 @@ public void move_cont() {
 	 
 	x-=Panel.player.directionX;
 	y-=Panel.player.directionY;
+}
+void frame(){
+	if(frame==null){
+		frame = new JFrame();
+		frame.setUndecorated(true);
+		frame.setBounds(variables.width/2+variables.width/6+40,variables.height/2-variables.height/6,variables.width/4,variables.height/3);
+
+	}
+	frame.setVisible(true);
+	panel = new JPanel() {
+		protected void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			g.drawImage(variables.white_fon,  0, 0, variables.width,variables.height,   null);
+			g.drawImage(variables.line2,  frame.getWidth()-2, 0, 2,variables.height,   null);
+			g.drawImage(variables.line2,  0, 0, 2,variables.height,   null);
+			g.drawImage(variables.line1,  0, 0, variables.width,2,   null);
+			g.drawImage(variables.line1,  0, frame.getHeight()-2, variables.width,2,   null);
+			//g.drawImage(variables.bord2,  0, 0, variables.width/4,variables.height/3,   null);
+
+		}
+	};
+	panel.setLayout(null);
+	frame.add(panel);
+	Button.but_close(panel,frame);
+
 }
 }
 	

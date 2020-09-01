@@ -51,6 +51,10 @@ public class Quest {
 			 protected void paintComponent(Graphics g) {
 					super.paintComponent(g);
 				 g.drawImage(variables.white_fon,  0, 0, variables.width,variables.height,   null);
+				 g.drawImage(variables.line2,  f_quest.getWidth()-2, 0, 2,variables.height,   null);
+				 g.drawImage(variables.line2,  0, 0, 2,variables.height,   null);
+				 g.drawImage(variables.line1,  0, 0, variables.width,2,   null);
+				 g.drawImage(variables.line1,  0, f_quest.getHeight()-2, variables.width,2,   null);
 
 				}
 		 };

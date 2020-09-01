@@ -25,9 +25,9 @@ int h;
 
 public int x,y,type;
 public Image img;
-public int x1=0,x2=0,x3=0;
+public int x1=5,x2=5,x3=5;
 public boolean but1=false,but2=false,but3=false;
-public int xx1=0,xx2=0,xx3=0;
+public int xx1=5,xx2=5,xx3=5;
 public boolean bbut1=false,bbut2=false,bbut3=false;
 public  boolean e_car=false;
 
@@ -94,6 +94,10 @@ public  boolean e_car=false;
 				super.paintComponent(g);
 				g.drawImage(variables.white_fon,  0,0, variables.width,variables.height,   null);
 				 g.drawImage(variables.car_panel, 0,0,variables.width/3,variables.height/3, null);
+				g.drawImage(variables.line2,  f.getWidth()-2, 0, 2,variables.height,   null);
+				g.drawImage(variables.line2,  0, 0, 2,variables.height,   null);
+				g.drawImage(variables.line1,  0, 0, variables.width,2,   null);
+				g.drawImage(variables.line1,  0, f.getHeight()-2, variables.width,2,   null);
 				 
         	}
         };
@@ -118,7 +122,7 @@ public  boolean e_car=false;
 					}
 				};
 
-				button1.setBounds(x1, 0, 300, 50);
+				button1.setBounds(x1, 5, 300, 50);
 
 				button1.setOpaque(false);
 				button1.setContentAreaFilled(false);
@@ -167,7 +171,7 @@ public  boolean e_car=false;
 					}
 				};
 
-				button2.setBounds(x2, 60, 300, 50);
+				button2.setBounds(x2, 65, 300, 50);
 
 				button2.setOpaque(false);
 				button2.setContentAreaFilled(false);
@@ -214,7 +218,7 @@ public  boolean e_car=false;
                 }
             };
 
-           button3.setBounds(x3, 120, 300, 50);
+           button3.setBounds(x3, 125, 300, 50);
 
             button3.setOpaque(false);
 			button3.setContentAreaFilled(false);
@@ -268,6 +272,10 @@ public  boolean e_car=false;
 				super.paintComponent(g);
 				g.drawImage(variables.white_fon,  0,0, variables.width,variables.height,   null);
 				g.drawImage(variables.car_panel, 0,0,variables.width/3,variables.height/3, null);
+				g.drawImage(variables.line2,  f2.getWidth()-2, 0, 2,variables.height,   null);
+				g.drawImage(variables.line2,  0, 0, 2,variables.height,   null);
+				g.drawImage(variables.line1,  0, 0, variables.width,2,   null);
+				g.drawImage(variables.line1,  0, f2.getHeight()-2, variables.width,2,   null);
 
 			}
 		};
@@ -292,7 +300,7 @@ public  boolean e_car=false;
 					}
 				};
 
-				bbutton1.setBounds(xx1, 0, 350, 50);
+				bbutton1.setBounds(xx1, 5, 350, 50);
 
 				bbutton1.setOpaque(false);
 				bbutton1.setContentAreaFilled(false);
@@ -337,7 +345,7 @@ public  boolean e_car=false;
 					}
 				};
 
-				bbutton2.setBounds(xx2, 60, 350, 100);
+				bbutton2.setBounds(xx2, 65, 350, 100);
 
 				bbutton2.setOpaque(false);
 				bbutton2.setContentAreaFilled(false);
@@ -391,7 +399,7 @@ public  boolean e_car=false;
 					}
 				};
 
-				bbutton3.setBounds(xx3, 180, 350, 50);
+				bbutton3.setBounds(xx3, 185, 350, 50);
 
 				bbutton3.setOpaque(false);
 				bbutton3.setContentAreaFilled(false);

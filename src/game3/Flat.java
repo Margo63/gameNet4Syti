@@ -4,6 +4,7 @@ import game.Button;
 import game1.Point;
 import main.MainBut;
 import main.variables;
+import player.Player;
 import quest.*;
 
 import javax.swing.*;
@@ -22,11 +23,11 @@ public class Flat {
     public static JPanel p_ask,p_dog,p_no,p_not_all;
     public  boolean collisTrue2=false;
     boolean but_true1=false,but_true2=false,but_true3=false,but_true4=false;
+    public boolean e_flat=false;
 
 
-
-    public Flat(int x,int y,Image image,int type) {
-
+    public Flat(int x,int y,Image image,int type,boolean e_flat) {
+      this.e_flat=e_flat;
       this.image=image;
       this.x=x;
       this.y=y;
@@ -38,100 +39,94 @@ public class Flat {
                 game3.Panel.player.x+game3.Panel.player.directionX*3-20<=x+image.getWidth(null) &&
                 game3.Panel.player.y+game3.Panel.player.directionY*3<y+image.getHeight(null)-20 &&
                 game3.Panel.player.y+game3.Panel.player.directionY*3+game3.Panel.player.pers.getHeight(null)>=y-20) {
-
+            e_flat=true;
             collisTrue2=true;
             type_frame=type;
 
-            System.out.println(type_frame);
+//            System.out.println(type_frame);
+//
+//            System.out.println("dogi1"+variables.dog1);
+//            System.out.println("dogi2"+variables.dog2);
+            if(Player.ee) {
+                switch (type) {
+                    case 1: // type_frame=1;
 
-            System.out.println("dogi1"+variables.dog1);
-            System.out.println("dogi2"+variables.dog2);
+                        if (Office.t_2) {
 
-             switch (type) {
-                case 1: // type_frame=1;
-
-                    if( Office.t_2){
-
-                        if(Fruit.f_4 && Vegetables.v_5  && Bread.b_3 && Milk.mi_1 && Grocery.g_2 && Meat.me_1  ) {
-                            but_true1=true;
-                            frame();
-
-                        }
-                        else {
-                            frame_not_all();
-                        }
-                }
-
-                else {
-                    frame_no();
-                }
-
-                break;
-
-                case 2:  //type_frame=2;
-
-                    if(Office.t_3) {
-                        if (Fruit.f_3 && Vegetables.v_1 && Bread.b_1 && Milk.mi_4 && Grocery.g_7 && Meat.me_3 && Candy.c_3) {
-                            but_true2 = true;
-                            frame();
-
-                        }
-                        else{
-                            frame_not_all();
-                        }
-                    }
-                    else{
-                        frame_no();
-                    }
-
-                break;
-
-                case 3:   if(Office.t_4){
-                            if(variables.dog1==false) {
-
+                            if (Fruit.f_4 && Vegetables.v_5 && Bread.b_3 && Milk.mi_1 && Grocery.g_2 && Meat.me_1) {
+                                but_true1 = true;
                                 frame();
-                            }
-                            else {
+
+                            } else {
                                 frame_not_all();
                             }
-                        }
-                        else{
+                        } else {
                             frame_no();
-                      }
-                break;
+                        }
 
-                 case 4:
-                     if(Office.t_4){
-                         if(variables.dog2==false){
+                        break;
 
-                             frame();
-                         }
-                         else{
-                            frame_not_all();
-                         }
+                    case 2:  //type_frame=2;
 
-                     }
-                     else{
-                         frame_no();
-                     }
+                        if (Office.t_3) {
+                            if (Fruit.f_3 && Vegetables.v_1 && Bread.b_1 && Milk.mi_4 && Grocery.g_7 && Meat.me_3 && Candy.c_3) {
+                                but_true2 = true;
+                                frame();
 
-                     break;
-                 case 5:
+                            } else {
+                                frame_not_all();
+                            }
+                        } else {
+                            frame_no();
+                        }
 
-                     frame_no();
+                        break;
 
-                     break;
+                    case 3:
+                        if (Office.t_4) {
+                            if (variables.dog1 == false) {
+
+                                frame();
+                            } else {
+                                frame_not_all();
+                            }
+                        } else {
+                            frame_no();
+                        }
+                        break;
+
+                    case 4:
+                        if (Office.t_4) {
+                            if (variables.dog2 == false) {
+
+                                frame();
+                            } else {
+                                frame_not_all();
+                            }
+
+                        } else {
+                            frame_no();
+                        }
+
+                        break;
+                    case 5:
+
+                        frame_no();
+
+                        break;
 
 
+                }
+                Player.ee=false;
             }
-
 
 
 
 
         }
         else{
-           collisTrue2=false;
+            e_flat=false;
+            collisTrue2=false;
         }
     }
 
@@ -326,6 +321,10 @@ public class Flat {
 
         Button.but_close(p_not_all,f_not_all);
         f_not_all.add(p_not_all);
+    }
+    public void move() {
+        x-=game3.Panel.player.directionX;
+        y-=game3.Panel.player.directionY;
     }
 
 }

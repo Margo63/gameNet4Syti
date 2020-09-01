@@ -100,8 +100,8 @@ public class Instance {
 		street = new Street(variables.street,700-variables.street.getWidth(null),s,3);
 		street2 = new Street(variables.street,700+variables.tr.getWidth(null),s,3);
 
-		gray_street = new Street(variables.gray_street,0,gs,2);
-		gray_street2 = new Street(variables.gray_street,0,gs2,2);
+		gray_street = new Street(variables.gray_street2,-10,gs,2);
+		gray_street2 = new Street(variables.gray_street,-10,gs2,2);
 		
 		transition = new Street(variables.tr,700,tr,1);
 
