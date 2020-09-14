@@ -14,10 +14,10 @@ public class Home {
 	}
 	public void collision(){
 		if (
-				Panel.player.x+Panel.player.directionX*3+Panel.player.pers.getWidth(null)-20>=x &&
-				Panel.player.x+Panel.player.directionX*3-20<=x+img.getWidth(null) &&
-				Panel.player.y+Panel.player.directionY*3<y+img.getHeight(null)-20 &&
-				Panel.player.y+Panel.player.directionY*3+Panel.player.pers.getHeight(null)>=y-20) {
+				Panel.player.x+Panel.player.directionX*3>=x &&
+				Panel.player.x+Panel.player.directionX*3-Panel.player.pers.getWidth(null)<=x+img.getWidth(null) &&
+				Panel.player.y+Panel.player.directionY*3<y+img.getHeight(null)-Panel.player.pers.getHeight(null) &&
+				Panel.player.y+Panel.player.directionY*3+Panel.player.pers.getHeight(null)/2>=y-Panel.player.pers.getHeight(null)) {
 			collisTrue = true;	
 		}
 		else{

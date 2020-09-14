@@ -21,10 +21,13 @@ public class variables {
 	public static Image icon2= new ImageIcon("image/lvl2.png").getImage();
 	public static Image icon3= new ImageIcon("image/lvl3.png").getImage();
 	public static Image icon4= new ImageIcon("image/lvl4.png").getImage();
-	public static Image bord= new ImageIcon("image/bord.png").getImage();
-	public static Image bord2= new ImageIcon("image/bord2.png").getImage();
+	//public static Image bord= new ImageIcon("image/bord.png").getImage();
+	//public static Image bord2= new ImageIcon("image/bord2.png").getImage();
 
-	public static Image fon = new ImageIcon("image/fon_menu.jpg").getImage();//фон, который рисуем
+	public static Image zadanie= new ImageIcon("image/zadanie.png").getImage();
+	public static Image vmenu= new ImageIcon("image/vmenu.png").getImage();
+
+	public static Image fon = new ImageIcon("image/BG_fon_menu.jpg").getImage();//фон, который рисуем
 	public static Image fonMenu = new ImageIcon("image/BG_fon_menu.jpg").getImage(); //фон меню
 	public static Image fon1 = new ImageIcon("image/background.png").getImage(); //фон уровня
 	public static Image heart = new ImageIcon("image/life_2.png").getImage();
@@ -123,6 +126,20 @@ public class variables {
 	public static Image office = new ImageIcon("image/office.jpg").getImage();
 	public static Image shop = new ImageIcon("image/house/shop.png").getImage();
 
+	//lvl4
+	public static Image q1 = new ImageIcon("image/game4/1.png").getImage();
+	public static Image q2 = new ImageIcon("image/game4/2.png").getImage();
+	public static Image q3 = new ImageIcon("image/game4/3.png").getImage();
+	public static Image q4 = new ImageIcon("image/game4/4.png").getImage();
+	public static Image q5 = new ImageIcon("image/game4/5.png").getImage();
+	public static Image q6 = new ImageIcon("image/game4/6.png").getImage();
+	public static Image q7 = new ImageIcon("image/game4/7.png").getImage();
+	public static Image q8 = new ImageIcon("image/game4/8.png").getImage();
+	public static Image q9 = new ImageIcon("image/game4/9.png").getImage();
+	public static Image q10 = new ImageIcon("image/game4/10.png").getImage();
+
+
+
 	//больница
 	public static Image hos_room = new ImageIcon("image/hj.jpg").getImage();
 	public static Image hos_room2 = new ImageIcon("image/game3/s1200.jpg").getImage();
@@ -186,7 +203,7 @@ public class variables {
 	
 	
 	//персонаж
-	public static Image player = new ImageIcon("image/1/pers/e1.png").getImage(); //персонаж
+	public static Image player = new ImageIcon("image/boy/B_F0.png").getImage(); //персонаж
 	public static int x = player.getWidth(MainPanel);
 	
 	/*высчитываем y в соответствии с размером экрана пользователя*/
@@ -204,19 +221,22 @@ public class variables {
 	public variables(){
 	int a;
 		for (int i = 1; i<7; i++) {
-			playerAnim[i-1] = new ImageIcon("image/1/pers/e" +i+ ".png").getImage();
-			playerAnimmRight[i-1]= new ImageIcon("image/1/pers/r"+i+".png").getImage();
-			playerAnimmLeft[i-1]= new ImageIcon("image/1/pers/l"+i+".png").getImage();
-			playerAnimmUp[i-1]= new ImageIcon("image/1/pers/f"+i+".png").getImage();
-			playerAnimmDown[i-1]= new ImageIcon("image/1/pers/b"+i+".png").getImage();
+		//	playerAnim[i-1] = new ImageIcon("image/1/pers/e" +i+ ".png").getImage();
+		//	playerAnimmRight[i-1]= new ImageIcon("image/1/pers/r"+i+".png").getImage();
+		//	playerAnimmLeft[i-1]= new ImageIcon("image/1/pers/l"+i+".png").getImage();
+		//	playerAnimmUp[i-1]= new ImageIcon("image/1/pers/f"+i+".png").getImage();
+		//	playerAnimmDown[i-1]= new ImageIcon("image/1/pers/b"+i+".png").getImage();
 		}
 		for (int i=0;i<6;i++){
 			//playerAnimmRight[i]= new ImageIcon("image/girl/r"+i+".png").getImage();
 			//playerAnimmLeft[i]= new ImageIcon("image/girl/l"+i+".png").getImage();
 		}
 		for (int i=0;i<5;i++){
-		//	playerAnimmRight[i]= new ImageIcon("image/boy/B_R"+i+".png").getImage();
-		//	playerAnimmLeft[i]= new ImageIcon("image/boy/B_L"+i+".png").getImage();
+			playerAnim[i] = new ImageIcon("image/boy/B_F0.png").getImage();
+			playerAnimmRight[i]= new ImageIcon("image/boy/B_R"+i+".png").getImage();
+			playerAnimmLeft[i]= new ImageIcon("image/boy/B_L"+i+".png").getImage();
+			playerAnimmUp[i]= new ImageIcon("image/boy/B_B"+i+".png").getImage();
+			playerAnimmDown[i]= new ImageIcon("image/boy/B_F"+i+".png").getImage();
 		}
 		
 		

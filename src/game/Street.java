@@ -34,14 +34,14 @@ public static boolean street=false;
 			  Panel.player.x >= x &&
 			  Panel.player.x <= x+im.getWidth(null) &&
 			  Panel.player.y+ Panel.player.pers.getHeight(null)/2>=y &&
-			  Panel.player.y+Panel.player.pers.getHeight(null)/2<=y+im.getHeight(null))
+			  Panel.player.y+ Panel.player.pers.getHeight(null)<=y+im.getHeight(null))
 	  {
 
 		  switch(n) {
 
 		  case 1:
 		  	  variables.street_boolean=true;
-System.out.println("street="+street);
+
 
 
 			  variables.warning=false;
@@ -70,6 +70,7 @@ System.out.println("street="+street);
 	  
 	  else {
 		  street = false;
+		//  variables.warning=false;
 	  }
 	 
   }

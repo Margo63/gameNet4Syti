@@ -78,7 +78,7 @@ public class MainFrame{
 						g.drawImage(variables.fon, variables.fx, variables.fy, variables.width, variables.height, null);break;
 					case -1://выбор мини-игры
 						g.drawImage(variables.fonMenu, 0, 0, variables.width, variables.height, null);
-						g.drawImage(variables.heart, variables.xh, variables.yh,  null);
+						//g.drawImage(variables.heart, variables.xh, variables.yh,  null);
 						break;
 					case 1://первая игра
 						painGame1(g); //метод, где задана отрисовка
@@ -174,6 +174,9 @@ public class MainFrame{
 		if(variables.e){
 			g.drawImage(variables.fon, Panel.player.x, Panel.player.y-15,30,30,  null);
 		}
+		if(variables.warning){
+			g.drawImage(variables.war, Panel.player.x, Panel.player.y-15,  null);
+		}
 
 		g.drawImage(Panel.player.pers, Panel.player.x, Panel.player.y,  null);
 
@@ -183,9 +186,7 @@ public class MainFrame{
 	   if(Minus.min) {
 	   	g.drawImage(variables.minus, Minus.minus_x, Minus.minus_y,  null);
 	   }
-	   if(variables.warning){
-	   	g.drawImage(variables.war, Panel.player.x, Panel.player.y-15,  null);
-	   }
+
 		g.drawImage(Instance.cont_pl.img, Instance.cont_pl.x, Instance.cont_pl.y, null);
 		g.drawImage(Instance.cont_gl.img, Instance.cont_gl.x, Instance.cont_gl.y, null);
 		g.drawImage(Instance.cont_org.img, Instance.cont_org.x, Instance.cont_org.y, null);
@@ -208,6 +209,7 @@ public class MainFrame{
     }
 	
     void painGame3(Graphics g) {
+		g.drawImage(variables.white_fon,0,0,variables.width,variables.height,null);
       g.drawImage(game3.Panel.gray_street.im,  game3.Panel.gray_street.x,  game3.Panel.gray_street.y, lenth3,variables.gray_street.getHeight(null),null);
       g.drawImage(game3.Panel.gray_street2.im, game3.Panel.gray_street2.x, game3.Panel.gray_street2.y, lenth3,variables.gray_street.getHeight(null), null);
 	  g.drawImage(game3.Panel.street.im,       game3.Panel.street.x,       game3.Panel.street.y,    lenth3,variables.street.getHeight(null),   null);

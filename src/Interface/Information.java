@@ -29,6 +29,11 @@ public class Information {
                 super.paintComponent(g);
                 g.drawImage(variables.white_fon,0,0,variables.width,variables.height,null);
 
+                g.drawImage(variables.line2,  frame_info.getWidth()-2, 0, 2,variables.height,   null);
+                g.drawImage(variables.line2,  0, 0, 2,variables.height,   null);
+                g.drawImage(variables.line1,  0, 0, variables.width,2,   null);
+                g.drawImage(variables.line1,  0, frame_info.getHeight()-2, variables.width,2,   null);
+
 
             }
         };

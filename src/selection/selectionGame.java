@@ -72,9 +72,11 @@ public class selectionGame {
 	//	JButton b = new JButton(variables.m);
 		
 		but6.MenuButt(6,"Мини Игра 1", x, variables.height-variables.height*2/3, variables.MainPanel);
+		//but6.setBounds( x, variables.height-variables.height*2/3,300,400);
+
 		but6.img=variables.icon1;
-		but6.w=300;
-		but6.h=400;
+		but6.w=400;
+		but6.h=412;
 
 		but6.setOpaque(false);
 		but6.setContentAreaFilled(false);
@@ -85,8 +87,8 @@ public class selectionGame {
 		but7 = new MainBut();
 		but7.MenuButt(7,"Мини игра 2", x_1,  variables.height-variables.height*2/3, variables.MainPanel);
 		but7.img=variables.icon2;
-		but7.w=300;
-		but7.h=400;
+		but7.w=400;
+		but7.h=412;
 
 		but7.setOpaque(false);
 		but7.setContentAreaFilled(false);
@@ -95,8 +97,8 @@ public class selectionGame {
 		but8 = new MainBut();
 		but8.MenuButt(8,"Мини игра 3", x_2,  variables.height-variables.height*2/3, variables.MainPanel);
 		but8.img=variables.icon3;
-		but8.w=300;
-		but8.h=400;
+		but8.w=400;
+		but8.h=412;
 
 		but8.setOpaque(false);
 		but8.setContentAreaFilled(false);
@@ -105,28 +107,35 @@ public class selectionGame {
 		but9 = new MainBut();
 		but9.MenuButt(100,"Мини игра 4", x_3,  variables.height-variables.height*2/3, variables.MainPanel);
 		but9.img=variables.icon4;
-		but9.w=300;
-		but9.h=400;
+		but9.w=400;
+		but9.h=412;
 
 		but9.setOpaque(false);
 		but9.setContentAreaFilled(false);
 		but9.setBorderPainted(false);
-		
-	
-	
-		but6.setSize(variables.width/4-10,variables.height/2);
-		but7.setSize(variables.width/4-10,variables.height/2);
-		but8.setSize(variables.width/4-10,variables.height/2);
-		but9.setSize(variables.width/4-10,variables.height/2);
+
+
+		but6.setSize(400,412);
+		but7.setSize(400,412);
+		but8.setSize(400,412);
+		but9.setSize(400,412);
+
+//		but6.setSize(variables.width/4-10,variables.height/2);
+//		but7.setSize(variables.width/4-10,variables.height/2);
+//		but8.setSize(variables.width/4-10,variables.height/2);
+//		but9.setSize(variables.width/4-10,variables.height/2);
 	}
 	void butFalse() {
+
 		MainFrame.but.setVisible(false);
 		MainFrame.but1.setVisible(false);
 		MainFrame.but2.setVisible(false);
 
-
+		//game3.Panel.but_set.setVisible(false);
 
 		Button.but.setVisible(false);
+		Button.but.remove(variables.MainPanel);
+		Button.but_set.remove(variables.MainPanel);
 		Button.but_set.setVisible(false);
 
 
@@ -134,6 +143,7 @@ public class selectionGame {
 			Button.but_set.setVisible(false);
 		}
 		catch(NullPointerException nullPointerException) {
+
 		}
 
 		try {
@@ -142,7 +152,6 @@ public class selectionGame {
 		catch (NullPointerException nullPointerException){
 
 		}
-
 		Choice.q_b1.setVisible(false);
 		Choice.q_b2.setVisible(false);
 		Choice.q_b3.setVisible(false);

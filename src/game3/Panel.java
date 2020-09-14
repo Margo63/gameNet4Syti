@@ -1,5 +1,6 @@
 package game3;
 import game.Button;
+import game.Settings;
 import game.Street;
 import main.MainBut;
 import main.MainFrame;
@@ -8,6 +9,9 @@ import player.Player;
 import selection.selectionGame;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Panel {
 	public static Player player;
@@ -37,6 +41,9 @@ public class Panel {
 	public static Flat flat4;
 	public static Flat flat5;
 	public static Flat flat6;
+	//public static JButton but_set=null;
+	//public static JButton but_back;
+
 
 	int s=variables.height-variables.street.getHeight(null)-variables.gray_street.getHeight(null)+70;
 	int gs=variables.height-variables.gray_street.getHeight(null) +70;
@@ -87,7 +94,39 @@ void but() {
 	catch(NullPointerException nullPointerException) {
 
 	}
-
+//if(but_set==null) {
+//	but_set = new JButton() {
+//
+//		protected void paintComponent(Graphics g) {
+//			super.paintComponent(g);
+//
+//			g.drawImage(variables.zadanie, 0, 0, variables.MainPanel);
+//
+//		}
+//
+//	};
+//}
+//	but_set.setOpaque(false);
+//	but_set.setBorderPainted(false);
+//	but_set.setContentAreaFilled(false);
+//
+//	but_set.setBounds(variables.width-300,0,150,50);
+//	if(variables.gameLvl==3) {
+//		but_set.setVisible(true);
+//	}
+//
+//
+//
+//	but_set.addActionListener(new ActionListener() {
+//		@Override
+//		public void actionPerformed(ActionEvent e) {
+//
+//			new Settings();
+//
+//
+//		}
+//	});
+//    variables.MainPanel.add(but_set);
    	variables.MainPanel.repaint();
 	MainFrame.frame.setFocusable(true);
 }
