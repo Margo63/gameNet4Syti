@@ -22,7 +22,7 @@ public class Office {
    public static JButton task_2;
    public static JButton task_3;
    public static JButton task_4;
-   public static boolean t_1=false,t_2=true,t_3=true,t_4=true;
+   public static boolean t_1=false,t_2=false,t_3=false,t_4=false;
    public static int x1=0,x2=0,x3=0,x4=0;
    public static int kol=0;
    public static boolean check;

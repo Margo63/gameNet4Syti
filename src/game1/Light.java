@@ -49,8 +49,8 @@ public class Light {
 
 						  Point.pl=true;
 						 Container.point++;
-						  Street.street=false;
-						 
+						 // Street.street=false;
+						//  variables.street_boolean=false;
 						
 						
 						 n=30;

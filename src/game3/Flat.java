@@ -241,6 +241,7 @@ public class Flat {
                                 }
                             }
                             else {
+
                                 for (int i = 1; i < 7; i++) {
                                     variables.playerAnim[i - 1] = new ImageIcon("image/1/pers/e" + i + ".png").getImage();
                                     variables.playerAnimmRight[i - 1] = new ImageIcon("image/1/pers/l" + i + ".png").getImage();
@@ -269,7 +270,9 @@ public class Flat {
         f_ask.add(p_ask);
     }
 
+public void park(){
 
+}
     public void frame_no(){
         if(f_no==null){
             f_no = new JFrame();

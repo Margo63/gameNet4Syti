@@ -17,6 +17,9 @@ public class variables {
 
 	public static Image line1= new ImageIcon("image/line1.png").getImage();
 	public static Image line2= new ImageIcon("image/line2.png").getImage();
+
+	public static Image ball= new ImageIcon("image/bal.png").getImage();
+
 	public static Image icon1= new ImageIcon("image/lvl1.png").getImage();
 	public static Image icon2= new ImageIcon("image/lvl2.png").getImage();
 	public static Image icon3= new ImageIcon("image/lvl3.png").getImage();
@@ -42,7 +45,7 @@ public class variables {
 	public static Image go= new ImageIcon("image/go.png").getImage();
 	public static Image information= new ImageIcon("image/information.png").getImage();
 
-	public static Image war= new ImageIcon("image/information.png").getImage();
+	public static Image war= new ImageIcon("image/warning.png").getImage();
 	public static boolean warning=false;
 	public static boolean street_boolean=false;
 
@@ -59,6 +62,8 @@ public class variables {
 	public static Image ttask2 = new ImageIcon("image/task2.png").getImage();
 	public static Image ttask3 = new ImageIcon("image/task3.png").getImage();
 	public static Image ttask4 = new ImageIcon("image/task4.png").getImage();
+
+	public static Image e_but = new ImageIcon("image/e.png").getImage();
 	
 	
 	//lvl1

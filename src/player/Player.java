@@ -487,8 +487,8 @@ public class Player {
 	  time= new Timer(100, new ActionListener() {
 		  @Override
 		  public void actionPerformed(ActionEvent e) {
-		  	System.out.println(variables.width/4);
-			  System.out.println(variables.height/3);
+		  	//System.out.println(variables.width/4);
+			 // System.out.println(variables.height/3);
 			  if (variables.gameLvl == 1) {
 				  Instance.gray.collision();
 

@@ -21,10 +21,10 @@ public class selectionGame {
 	public static MainBut but8;
 	public static MainBut but9;
 	
-	public int x=variables.width-variables.width, y=variables.height/2;
-	public int x_1=variables.width-variables.width*3/4,
-			   x_2=variables.width-variables.width*2/4,
-		       x_3=variables.width-variables.width/4,
+	public int x=variables.width-1350, y=variables.height/2;
+	public int x_1=variables.width-1030,
+			   x_2=variables.width-710,
+		       x_3=variables.width-390,
 		       x_4=variables.width-150;
 	
 	
@@ -67,7 +67,14 @@ public class selectionGame {
 
 		but3 =new MainBut();
 		but3.MenuButt(5, "Очки", variables.width/2-75,  100, variables.MainPanel);
-		
+		but3.img=variables.ball;
+		but3.w=150;
+		but3.h=50;
+
+		but3.setOpaque(false);
+		but3.setContentAreaFilled(false);
+		but3.setBorderPainted(false);
+
 		but6 = new MainBut() ;
 	//	JButton b = new JButton(variables.m);
 		

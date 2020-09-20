@@ -171,15 +171,17 @@ public class MainFrame{
 		g.drawImage(Light.light, Light.x,   Light.y,  null);
 
 
-		if(variables.e){
-			g.drawImage(variables.fon, Panel.player.x, Panel.player.y-15,30,30,  null);
-		}
-		if(variables.warning){
-			g.drawImage(variables.war, Panel.player.x, Panel.player.y-15,  null);
-		}
+
 
 		g.drawImage(Panel.player.pers, Panel.player.x, Panel.player.y,  null);
 
+
+		if(variables.e){
+			g.drawImage(variables.e_but, Panel.player.x+Panel.player.pers.getWidth(null), Panel.player.y-15,60,42,  null);
+		}
+		if(variables.warning){
+			g.drawImage(variables.war, Panel.player.x+Panel.player.pers.getWidth(null), Panel.player.y-15,  null);
+		}
 			   if(Point.pl){
 	   	g.drawImage(variables.plus, Point.plus_x, Point.plus_y,  null);
 	   }
