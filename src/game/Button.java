@@ -1,9 +1,12 @@
 package game;
 
+import game1.Panel;
 import game4.Choice;
 import main.MainBut;
 import main.MainFrame;
 import main.variables;
+import player.Player;
+import selection.selectionGame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,9 +14,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Button {
-    public static MainBut but=null;
-    public static MainBut but_3=null;
-   // public static JButton but_3;
+    public static JButton but=null;
+
+    public static JButton but_3=null;
+
+
     public static MainBut but_set=null;
     public static JButton but_cl=null;
 
@@ -22,9 +27,31 @@ public class Button {
     }
 
     public static void button_3(){
-        if(but_3==null)
-        but_3 = new MainBut();
-        but_3.MenuButt(8,"Назад",variables.width-150,  0, variables.MainPanel);
+        if(but_3==null) {
+            but_3 = new JButton(){
+                protected void paintComponent(Graphics g){
+                    super.paintComponent(g);
+                    g.drawImage(variables.nazad,0,0,150,50,null);
+                }
+            };
+        }
+        but_3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                variables.gameLvl = 3;
+
+                try {
+                    Button.but_3.setVisible(false);
+                }
+                catch(NullPointerException nullPointerException) {
+                }
+
+                new game3.Panel();
+                variables.MainPanel.repaint();
+            }
+        });
+      //  but_3.MenuButt(8,"Назад",variables.width-150,  0, variables.MainPanel);
         but_3.setBounds(variables.width-150,  0,150,50);
         but_3.setVisible(false);
         but_3.setOpaque(false);
@@ -43,26 +70,70 @@ public class Button {
     }
 
    public static void button(){
-        if(but==null)
-        but = new MainBut();
-        but.MenuButt(1, "Назад в меню", variables.width-150,  0, variables.MainPanel);
+
+
+
+        if(but==null) {
+
+            but = new JButton() {
+
+                protected void paintComponent(Graphics g) {
+                    super.paintComponent(g);
+                    g.drawImage(variables.vmenu, 0, 0, 150, 50, null);
+
+                }
+
+            };
+        }
+        but.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new selectionGame();
+
+
+
+                Panel.player.time.stop();
+                game2.Panel.player.time.stop();
+                game3.Panel.player.time.stop();
+
+
+                if(Choice.trueButChoice){
+
+                    Choice.trueButChoice = false;
+                    Choice.q_b0.setVisible(false);
+                    Choice.q_b1.setVisible(false);
+                    Choice.q_b2.setVisible(false);
+                    Choice.q_b3.setVisible(false);
+                    Choice.q_b4.setVisible(false);
+                    Choice.q_b5.setVisible(false);
+                    Choice.q_b6.setVisible(false);
+                    Choice.q_b7.setVisible(false);
+                    Choice.q_b8.setVisible(false);
+                    Choice.q_b9.setVisible(false);
+                }
+
+            }
+        });
+
+
+
+
         but.setVisible(true);
-        but.img=variables.vmenu;
-        but.w=150;
-        but.h=50;
+
         but.setOpaque(false);
         but.setContentAreaFilled(false);
         but.setBorderPainted(false);
 
+        but.setBounds(variables.width-150,0,150,50);
         variables.MainPanel.add(but);
         variables.MainPanel.repaint();
-
-
         but.setFocusable(false);
         MainFrame.frame.setFocusable(true);
 
 
     }
+
+
     public static void but_setting(){
         if(but_set==null)
         but_set = new MainBut();

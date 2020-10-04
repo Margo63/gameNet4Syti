@@ -263,8 +263,8 @@ public class Player {
 		  Instance.car1.car_move();
 		  Instance.car2.car_move();
 
-		  Light.x -= Panel.player.directionX;
-		  Light.y -= Panel.player.directionY;
+		  //Light.xx -= Panel.player.directionX;
+		 // Light.y -= Panel.player.directionY;
 
 	//  }
 	}
@@ -284,8 +284,11 @@ public class Player {
 		Instance.container.move_trash();
 		Instance.cardboard.move_trash();
 
-		MainFrame.lightx-=Panel.player.directionX/3;
-		MainFrame.lighty-=Panel.player.directionY/3;
+
+
+		Light.xx-=Panel.player.directionX/5;
+		Light.y-=Panel.player.directionY/5;
+
 	  	
 }
 	 void moveHouse() {
@@ -300,12 +303,12 @@ public class Player {
 		 game3.Panel.gray_street.move_st();
 		 game3.Panel.gray_street2.move_st();
 	}
-	void moveDoc(){
+	 void moveDoc(){
 		game3.Panel.doc_blood.move();
 		game3.Panel.doctor.move();
 		game3.Panel.door.move();
 	}
-	void moveShop(){
+	 void moveShop(){
 		game3.Panel.meat.move();
 		game3.Panel.milk.move();
 		game3.Panel.vegetables.move();
@@ -314,10 +317,10 @@ public class Player {
 		game3.Panel.bread.move();
 		game3.Panel.egg.move();
 	}
-	void moveOffice(){
+	 void moveOffice(){
 		game3.Panel.stand.move();
 	}
-	void moveFlat(){
+	 void moveFlat(){
 		game3.Panel.flat1.move();
 		game3.Panel.flat2.move();
 		game3.Panel.flat3.move();
@@ -530,10 +533,26 @@ public class Player {
                      (y+directionY +pers.getHeight(null)<Instance.gray_street.y+Instance.gray_street.im.getHeight(null))
 
                      ) {
-                      pers = array[i];
-                      x+=directionX/3;
-                      y+=directionY/3;
-                      i++;
+
+
+					  if(variables.gameLvl == 1) {
+						  if(Instance.gray_street.y+Instance.gray_street.im.getHeight(null)-directionY>=variables.height
+								  && Instance.gray_street.x<=0+directionX
+								  && Instance.gray.x-directionX>variables.height) {
+
+
+							    moveHome();
+							    moveTrash();
+
+
+						  }
+					  }
+
+					  pers = array[i];
+					  x+=directionX/3;
+					  y+=directionY/3;
+					  i++;
+
 
                      }
 
@@ -557,14 +576,20 @@ public class Player {
 
 			  if (i>=array.length-1) {
 
-				  if(variables.gameLvl == 1) {
-					  if(Instance.gray_street.y+Instance.gray_street.im.getHeight(null)-directionY>=variables.height
-					     && Instance.gray_street.x<=0+directionX
-					     && Instance.gray.x-directionX>variables.height) {
-						  moveHome();
-						  moveTrash();
-					  }
-				  }
+//				  if(variables.gameLvl == 1) {
+//					  if(Instance.gray_street.y+Instance.gray_street.im.getHeight(null)-directionY>=variables.height
+//					     && Instance.gray_street.x<=0+directionX
+//					     && Instance.gray.x-directionX>variables.height) {
+//
+//
+//						//  moveHome();
+//						//  moveTrash();
+//
+//
+//					  }
+//				  }
+
+
 				  if(variables.gameLvl==3){
 				  	if(game3.Panel.gray_street.y+ game3.Panel.gray_street.im.getHeight(null)-directionY>=variables.height
 					   && game3.Panel.gray_street.x<=0+directionX

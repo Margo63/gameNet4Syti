@@ -24,10 +24,10 @@ public boolean collisTrue2=false;
 		this.image=image;
 	}
 	 public void coll() {
-		if (game3.Panel.player.x+game3.Panel.player.directionX*3+game3.Panel.player.pers.getWidth(null)>=x &&
-				game3.Panel.player.x+game3.Panel.player.directionX*3-20<=x+image.getWidth(null) &&
-				game3.Panel.player.y+game3.Panel.player.directionY*3<y+image.getHeight(null) &&
-				game3.Panel.player.y+game3.Panel.player.directionY*3+game3.Panel.player.pers.getHeight(null)>=y){
+		if (game3.Panel.player.x+game3.Panel.player.directionX*3>=x &&
+				game3.Panel.player.x+game3.Panel.player.directionX*3-game3.Panel.player.pers.getWidth(null)<=x+image.getWidth(null) &&
+				game3.Panel.player.y+game3.Panel.player.directionY*3<y+image.getHeight(null)-game3.Panel.player.pers.getHeight(null) &&
+				game3.Panel.player.y+game3.Panel.player.directionY*3+game3.Panel.player.pers.getHeight(null)/2>=y-game3.Panel.player.pers.getHeight(null)){
 
 			e_house=true;
             collisTrue2=true;

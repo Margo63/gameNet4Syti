@@ -65,9 +65,12 @@ public void trash_cont() {
 }
 public void move_cont() {
 	 
-	x-=Panel.player.directionX;
-	y-=Panel.player.directionY;
+	x-=Panel.player.directionX/5;
+	y-=Panel.player.directionY/5;
 }
+
+
+
 void frame(){
 	if(frame==null){
 		frame = new JFrame();

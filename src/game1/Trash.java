@@ -84,8 +84,8 @@ public class Trash {
 	}
  public void move_trash() {
 	 
-		x-=Panel.player.directionX;
-		y-=Panel.player.directionY;
+		x-=Panel.player.directionX/5;
+		y-=Panel.player.directionY/5;
 	}
  
  

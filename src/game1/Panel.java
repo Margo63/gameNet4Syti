@@ -26,7 +26,6 @@ public class Panel {
 
 		new variables();
 		variables();
-		//obj();
 		but();
 		Button.button();
 		Button.but_setting();
@@ -35,12 +34,13 @@ public class Panel {
 
 	    new Light();
 		new Instance(); //экземпляры объектов
-		
+
 		player =new player.Player();
 		player.array = variables.playerAnim;
 		player.pers = variables.player;
 		player.x = 0;
-		player.y = Instance.gray_street2.y;
+
+		player.y = variables.height-variables.street.getHeight(null)-2*variables.gray_street.getHeight(null)-variables.cont.getHeight(null)+25 +70;
 		player.arrayD = variables.playerAnimmDown;
 		player.arrayR = variables.playerAnimmRight;
 		player.arrayL = variables.playerAnimmLeft;

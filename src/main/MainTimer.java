@@ -15,7 +15,7 @@ public class MainTimer {
 	public static int time;
 	
 	
-	 MainTimer() {
+	 public MainTimer() {
 		 
 		 t= new Timer(3, new ActionListener() {
 			  public void actionPerformed(ActionEvent e) {

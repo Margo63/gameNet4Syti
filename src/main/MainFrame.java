@@ -27,8 +27,8 @@ public class MainFrame{
 	int lenth3 =variables.gray.getWidth(null)+variables.shop.getWidth(null)+variables.hospital.getWidth(null)+variables.office.getWidth(null)+30;
 
 	public static JFrame frame;
-	public static int lighty=variables.height-variables.height/3-variables.height/6-variables.light.getHeight(null);
-	public static int lightx=300;
+	//public static int lighty=variables.height-variables.height/3-variables.height/6-variables.light.getHeight(null);
+	//public static int lightx=300;
 	public MainFrame(){
 		createFrame(); 
 		
@@ -167,8 +167,8 @@ public class MainFrame{
 		g.drawImage(Instance.plastic_bag.img, Instance.plastic_bag.x, Instance.plastic_bag.y, null);
 
 
-		
-		g.drawImage(Light.light, Light.x,   Light.y,  null);
+		g.drawImage(Light.image, Light.xx,  Light.y,  null);
+		//g.drawImage(Instance.light.image, Instance.light.xx,  Instance.light.y,  null);
 
 
 
@@ -224,7 +224,7 @@ public class MainFrame{
 
 		if(variables.e){
 
-			g.drawImage(variables.fon, game3.Panel.player.x, game3.Panel.player.y-15,30,30,  null);
+			g.drawImage(variables.e_but, game3.Panel.player.x, game3.Panel.player.y-15,60,42,  null);
 		}
 		if(Minus.min) {
 			g.drawImage(variables.minus, Minus.minus_x, Minus.minus_y,  null);

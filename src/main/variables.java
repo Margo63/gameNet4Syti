@@ -29,6 +29,10 @@ public class variables {
 
 	public static Image zadanie= new ImageIcon("image/zadanie.png").getImage();
 	public static Image vmenu= new ImageIcon("image/vmenu.png").getImage();
+	public static Image nazad= new ImageIcon("image/nazad.png").getImage();
+
+	public static Image welcome= new ImageIcon("image/welcome.png").getImage();
+	public static Image not_welcome= new ImageIcon("image/not_welcome.png").getImage();
 
 	public static Image fon = new ImageIcon("image/BG_fon_menu.jpg").getImage();//фон, который рисуем
 	public static Image fonMenu = new ImageIcon("image/BG_fon_menu.jpg").getImage(); //фон меню
@@ -93,7 +97,7 @@ public class variables {
 	public static Image container= new ImageIcon("image/1/trash/container.png").getImage();
 	public static Image plastic_bag= new ImageIcon("image/1/trash/plastic_bag.png").getImage();
 
-	public static Image light= new ImageIcon("image/5.png").getImage();
+	public static Image light= new ImageIcon("image/1/s0.png").getImage();
 
 	//контейнер
 	public static Image cont= new ImageIcon("image/1/cont_ev.png").getImage();

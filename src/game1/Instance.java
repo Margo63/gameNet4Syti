@@ -43,6 +43,8 @@ public class Instance {
 	public static Street gray_street2;
 	public static Street transition;
 
+	//public static Light light;
+
 	public static Car car1;
 	public static Car car2;
 
@@ -88,6 +90,10 @@ public class Instance {
 	
 	
 	void home(){
+
+		//light =  new Light(100,100,variables.light);
+
+
 		green = new Home(variables.orange.getWidth(null)-100+variables.car_gasoline.getWidth(null)+500, house-100, variables.orange);
 		red = new Home(100, house3-100, variables.gray);
 		red2 = new Home(100, house3-100, variables.orange);

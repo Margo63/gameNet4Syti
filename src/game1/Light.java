@@ -12,15 +12,17 @@ import main.variables;
 
 public class Light {
 
-	public static Image light = new ImageIcon("image/1/s0.png").getImage();
+	public static Image image = new ImageIcon("image/1/s0.png").getImage();
 	public static Image lights[]= new Image[4];
 	public static  Timer time_light;
 	int i;
 	int n=1200;
-	public static int x=650, y=variables.height-variables.height/3-variables.height/12-light.getHeight(null)+70;;
+	public static int xx=650, y=variables.height-variables.street.getHeight(null)-variables.gray_street.getHeight(null)*2-variables.tr.getHeight(null);
 	
-	Light() {
-
+	Light(/*int x,int y,Image image*/) {
+//		this.xx=x;
+//		this.y=y;
+//		this.image=image;
 		
 		for(int i=0;i<4;i++) {
 			lights[i] = new ImageIcon("image/1/s"+i+".png").getImage();
@@ -36,7 +38,7 @@ public class Light {
 		  time_light = new Timer (3000,new ActionListener() {
 			  public void actionPerformed (ActionEvent e) {
 				  if(i<4) {
-					  light=lights[i];
+					  image=lights[i];
 					  i++;
 					// System.out.println(i);
 					 // System.out.println(Street.street);
@@ -67,12 +69,17 @@ public class Light {
 				
 				  
 				  else {
-					  light=lights[0];
+					  image=lights[0];
 					  i=0;
 				  }
 				 variables.MainPanel.repaint(); 
 			  }
 		  });
 		  time_light.start();
+	  }
+
+	  public void light_move(){
+		  xx-=Panel.player.directionX/5;
+		  y-=Panel.player.directionY/5;
 	  }
 }

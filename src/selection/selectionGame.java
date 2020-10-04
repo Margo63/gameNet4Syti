@@ -1,6 +1,8 @@
 package selection;
 
 import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 import javax.swing.*;
@@ -10,24 +12,25 @@ import game.Button;
 import game4.Choice;
 import main.MainBut;
 import main.MainFrame;
+import main.MainTimer;
 import main.variables;
 import game1.Panel;
 
 
 public class selectionGame {
-	public static MainBut but3;
-	public static MainBut but6;
-	public static MainBut but7;
-	public static MainBut but8;
-	public static MainBut but9;
-	
+	public static JButton but3=null;
+	public static JButton but6=null;
+	public static JButton but7=null;
+	public static JButton but8=null;
+	public static JButton but9=null;
+
 	public int x=variables.width-1350, y=variables.height/2;
 	public int x_1=variables.width-1030,
 			   x_2=variables.width-710,
 		       x_3=variables.width-390,
 		       x_4=variables.width-150;
-	
-	
+
+
 	public selectionGame(){
 		if (variables.gameLvl == 1){
 			Panel.player.time.stop();
@@ -45,7 +48,7 @@ public class selectionGame {
 
 
 		variables.MainPanel.repaint();
-		
+
 		MainFrame.frame.setFocusable(true);
 		variables.MainPanel.setFocusable(true);
 
@@ -58,26 +61,184 @@ public class selectionGame {
 		variables.MainPanel = new JPanel(){
 			protected void paintComponent(Graphics g) {
 			super.paintComponent(g);
-			
+
 		}
 		};
 		variables.MainPanel.repaint();
 	}
 	void button() {
 
-		but3 =new MainBut();
-		but3.MenuButt(5, "Очки", variables.width/2-75,  100, variables.MainPanel);
-		but3.img=variables.ball;
-		but3.w=150;
-		but3.h=50;
+	if(but3==null)	{
+		but3 =new JButton(){
+			protected void paintComponent(Graphics g) {
+				super.paintComponent(g);
+				g.drawImage(variables.ball, 0, 0, 150,50,null);
+
+			}
+
+
+		};
+	}
+
+	but3.setVisible(true);
+	but3.setBounds( variables.width/2-75,  100,150,50);
+
+		//but3.MenuButt(5, "Очки", variables.width/2-75,  100, variables.MainPanel);
+		//but3.img=variables.ball;
+		//but3.w=150;
+		//but3.h=50;
 
 		but3.setOpaque(false);
 		but3.setContentAreaFilled(false);
 		but3.setBorderPainted(false);
+		variables.MainPanel.add(but3);
+		but3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new Interface.infoFrame();
 
-		but6 = new MainBut() ;
+			}
+		});
+
+
+		if(but6==null)	{
+			but6 =new JButton(){
+				protected void paintComponent(Graphics g) {
+					super.paintComponent(g);
+					g.drawImage(variables.icon1, 0, 0, 400,412,null);
+
+				}
+
+
+			};
+		}
+
+		but6.setVisible(true);
+		but6.setBounds( x,  variables.height-variables.height*2/3,400,412);
+
+
+		but6.setOpaque(false);
+		but6.setContentAreaFilled(false);
+		but6.setBorderPainted(false);
+		variables.MainPanel.add(but6);
+		but6.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(variables.first) {
+					new Panel();
+					variables.gameLvl = 1;
+					variables.MainPanel.repaint();
+					new MainTimer();
+				}
+
+			}
+		});
+
+
+		if(but7==null)	{
+			but7 =new JButton(){
+				protected void paintComponent(Graphics g) {
+					super.paintComponent(g);
+					g.drawImage(variables.icon2, 0, 0, 400,412,null);
+
+				}
+
+
+			};
+		}
+
+		but7.setVisible(true);
+		but7.setBounds( x_1,  variables.height-variables.height*2/3,400,412);
+
+
+
+		but7.setOpaque(false);
+		but7.setContentAreaFilled(false);
+		but7.setBorderPainted(false);
+		variables.MainPanel.add(but7);
+		but7.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				variables.gameLvl= 2;
+				//Button.button_3();
+				new game2.Panel();
+
+			}
+		});
+
+
+
+
+		if(but8==null)	{
+			but8 =new JButton(){
+				protected void paintComponent(Graphics g) {
+					super.paintComponent(g);
+					g.drawImage(variables.icon3, 0, 0, 400,412,null);
+
+				}
+
+
+			};
+		}
+
+		but8.setVisible(true);
+		but8.setBounds( x_2,  variables.height-variables.height*2/3,400,412);
+		but8.setOpaque(false);
+		but8.setContentAreaFilled(false);
+		but8.setBorderPainted(false);
+		variables.MainPanel.add(but8);
+		but8.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				variables.gameLvl = 3;
+
+				try {
+					Button.but_3.setVisible(false);
+				}
+				catch(NullPointerException nullPointerException) {
+				}
+
+				new game3.Panel();
+				variables.MainPanel.repaint();
+
+			}
+		});
+
+
+		if(but9==null)	{
+			but9 =new JButton(){
+				protected void paintComponent(Graphics g) {
+					super.paintComponent(g);
+					g.drawImage(variables.icon4, 0, 0, 400,412,null);
+
+				}
+
+
+			};
+		}
+
+		but9.setVisible(true);
+		but9.setBounds( x_3,  variables.height-variables.height*2/3,400,412);
+
+		but9.setOpaque(false);
+		but9.setContentAreaFilled(false);
+		but9.setBorderPainted(false);
+		variables.MainPanel.add(but9);
+		but9.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				variables.gameLvl=4;
+				new game4.Choice();
+				variables.MainPanel.repaint();
+
+
+			}
+		});
+
+		/*but6 = new MainBut() ;
 	//	JButton b = new JButton(variables.m);
-		
+
 		but6.MenuButt(6,"Мини Игра 1", x, variables.height-variables.height*2/3, variables.MainPanel);
 		//but6.setBounds( x, variables.height-variables.height*2/3,300,400);
 
@@ -89,8 +250,8 @@ public class selectionGame {
 		but6.setContentAreaFilled(false);
 		but6.setBorderPainted(false);
 
-		
-		
+
+
 		but7 = new MainBut();
 		but7.MenuButt(7,"Мини игра 2", x_1,  variables.height-variables.height*2/3, variables.MainPanel);
 		but7.img=variables.icon2;
@@ -100,7 +261,7 @@ public class selectionGame {
 		but7.setOpaque(false);
 		but7.setContentAreaFilled(false);
 		but7.setBorderPainted(false);
-		
+
 		but8 = new MainBut();
 		but8.MenuButt(8,"Мини игра 3", x_2,  variables.height-variables.height*2/3, variables.MainPanel);
 		but8.img=variables.icon3;
@@ -110,7 +271,7 @@ public class selectionGame {
 		but8.setOpaque(false);
 		but8.setContentAreaFilled(false);
 		but8.setBorderPainted(false);
-		
+
 		but9 = new MainBut();
 		but9.MenuButt(100,"Мини игра 4", x_3,  variables.height-variables.height*2/3, variables.MainPanel);
 		but9.img=variables.icon4;
@@ -120,7 +281,7 @@ public class selectionGame {
 		but9.setOpaque(false);
 		but9.setContentAreaFilled(false);
 		but9.setBorderPainted(false);
-
+*/
 
 		but6.setSize(400,412);
 		but7.setSize(400,412);

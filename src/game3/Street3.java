@@ -26,15 +26,15 @@ public class Street3 {
             //    game3.Panel.player.y+ game3.Panel.player.directionY*5<y+im.getHeight(null) &&
             //    game3.Panel.player.y+ game3.Panel.player.directionY*5+ game3.Panel.player.pers.getHeight(null)>=y
 
-                game3.Panel.player.x >= x &&
-                game3.Panel.player.x <= x+im.getWidth(null) &&
-                game3.Panel.player.y+ game3.Panel.player.pers.getHeight(null)/2>=y &&
-                game3.Panel.player.y+game3.Panel.player.pers.getHeight(null)/2<=y+im.getHeight(null))
+                game3.Panel.player.x-game3.Panel.player.directionX*5+game3.Panel.player.pers.getWidth(null)>=x &&
+                        game3.Panel.player.x-game3.Panel.player.directionX*5<=x+im.getWidth(null) &&
+                        game3.Panel.player.y+game3.Panel.player.pers.getHeight(null)/6*5+game3.Panel.player.directionY<y+im.getHeight(null) &&
+                        game3.Panel.player.y+game3.Panel.player.directionY+game3.Panel.player.pers.getHeight(null)>=y)
         {
             switch(n) {
                 case 1:
                     variables.street_boolean=true;
-                    System.out.println("street="+street);
+                   // System.out.println("street="+street);
 
                     variables.warning=false;
 

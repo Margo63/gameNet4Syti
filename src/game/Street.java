@@ -78,8 +78,8 @@ public static boolean street=false;
   public void move_st() {
 
 
-		x-=Panel.player.directionX;
-		y-=Panel.player.directionY;
+		x-=Panel.player.directionX/5;
+		y-=Panel.player.directionY/5;
 
 
 	}   
